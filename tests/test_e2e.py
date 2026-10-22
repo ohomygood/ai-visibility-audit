@@ -80,6 +80,16 @@ class TestE2E(unittest.TestCase):
         page = f'<script type="application/ld+json">{json.dumps(pj)}</script>'
         res = check_schema_page("u", page, "product")
         self.assertFalse(any(i["missing_required"] for i in res["items"]))
+        # audit.json (served to buyers) must not expose server paths: outputs are relative to the report dir
+        raw = (out / "audit.json").read_text()
+        self.assertNotIn(str(out), raw)
+        self.assertNotIn(self.tmp.name, raw)
+        self.assertNotIn("/app/data", raw)
+        saved = json.loads(raw)
+        self.assertEqual(saved["fixpack"]["zip"], "fixpack.zip")
+        self.assertEqual(saved["outputs"]["html_en"], "report.en.html")
+        for v in saved["outputs"].values():
+            self.assertTrue((out / v).exists() and not Path(v).is_absolute())
 
     def test_js_only_schema(self):
         from aiv.audit import run_audit

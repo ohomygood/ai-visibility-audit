@@ -339,7 +339,7 @@ def write_fixpack(res: dict, profile, out_dir: Path, provider: Provider, meter: 
         for f in sorted(fp.rglob("*")):
             if f.is_file():
                 z.write(f, f.relative_to(fp.parent))
-    return {"dir": str(fp), "zip": str(zpath), "files": files}
+    return {"dir": fp.name, "zip": zpath.name, "files": files}   # relative to the report dir
 
 
 FIXPACK_README = """# {name} — AI 可见度修复包 / AI Visibility Fix Pack

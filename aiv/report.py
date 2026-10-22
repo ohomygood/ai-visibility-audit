@@ -234,15 +234,15 @@ def write_reports(res: dict, out_dir: Path) -> dict:
     for lang in ("zh", "en"):
         pth = out_dir / f"report.{lang}.html"
         pth.write_text(render_html(res, lang), encoding="utf-8")
-        outs[f"html_{lang}"] = str(pth)
+        outs[f"html_{lang}"] = pth.name   # relative to the report dir (no server paths in audit.json)
     md = out_dir / "report.md"
     md.write_text(render_markdown(res), encoding="utf-8")
-    outs["markdown"] = str(md)
+    outs["markdown"] = md.name
     if res["mode"] == "full" and os.environ.get("AIV_NO_PDF") != "1":
         for lang in ("zh", "en"):
             pdf = out_dir / f"report.{lang}.pdf"
             if html_to_pdf(out_dir / f"report.{lang}.html", pdf):
-                outs[f"pdf_{lang}"] = str(pdf)
+                outs[f"pdf_{lang}"] = pdf.name
     return outs
 
 

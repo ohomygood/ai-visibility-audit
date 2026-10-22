@@ -87,3 +87,7 @@ no card. Zero-new-account path does not exist for the backend.
 2. Cloudflare: `npx wrangler pages deploy site --project-name aiv-landing`.
 3. Render: New → Blueprint → this repo → `deploy/backend/render.yaml`; set `GEMINI_API_KEY`, `AIV_STRIPE_WEBHOOK_SECRET`, `AIV_STRIPE_PAYMENT_LINK`; set `AIV_CORS_ORIGINS` to the Pages origin.
 4. Stripe webhook → `https://<backend>/api/stripe/webhook`.
+
+## 2026-10-22 18:30 (UTC+8): cleanup
+- `audit.json` (served at `/r/<id>/audit.json`) no longer exposes server paths: `outputs` and `fixpack.dir/zip` are file names relative to the report dir (`report.en.html`, `fixpack.zip`). The CLI summary prints the absolute `out_dir` separately.
+- No `AIV_WECHAT_ENABLED` switch exists in code or config (test `test_no_wechat_config_switch`); the leftover Render env var is unused.

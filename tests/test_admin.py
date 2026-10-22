@@ -255,6 +255,14 @@ class TestStripeOnlyCopy(unittest.TestCase):
            "2 个 ai 引擎", "2 ai engines", "可用本地货币付款", "早鸟", "coupon", "优惠码")
     CONTACT = "go_with_prob@mail.grokbot.com"
 
+    def test_no_wechat_config_switch(self):
+        """The AIV_WECHAT_ENABLED code path and config are gone (Stripe only)."""
+        root = Path(__file__).resolve().parents[1]
+        files = [*root.glob("aiv/**/*.py"), *root.glob("config/*.example"), *root.glob("deploy/**/*"), root / "README.md"]
+        for f in files:
+            if f.is_file():
+                self.assertNotIn("WECHAT_ENABLED", f.read_text(errors="ignore"), str(f))
+
     def assert_clean(self, text, where):
         low = text.lower()
         for b in self.BAD:

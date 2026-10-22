@@ -5,6 +5,7 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
 
 from .audit import run_audit
 
@@ -73,8 +74,11 @@ def main(argv=None):
                "findings": len(res["findings"]), "crawl_seconds": res["crawl_seconds"],
                "total_seconds": res["total_seconds"], "requests": res["request_count"],
                "llm_calls": res["llm_calls"], "llm_cost_usd": res["llm_cost_usd"], "outputs": res["outputs"]}
+    from .audit import DATA_DIR
+    out = Path(a.out) if a.out else DATA_DIR / "reports" / res["audit_id"]   # audit.json keeps paths relative to this dir
+    summary["out_dir"] = str(out)
     if res.get("fixpack"):
-        summary["fixpack"] = res["fixpack"]["zip"]
+        summary["fixpack"] = str(out / res["fixpack"]["zip"])
     json.dump(summary, sys.stdout, ensure_ascii=False, indent=1)
     print()
     return 0
