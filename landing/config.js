@@ -1,7 +1,7 @@
 // Placeholders — fill in after approval (domain, Cloudflare, Stripe). Do not commit real secrets here.
 window.AIV_CONFIG = {
-  API_BASE: "",                                            // "" = same origin (local dev server); prod: "https://api.__AIV_DOMAIN__"
-  SITE_URL: "https://__AIV_DOMAIN__",                      // PENDING: domain purchase
+  API_BASE: "",                                            // "" = same origin (local dev server); prod: Render API URL (unchanged by the custom domain)
+  SITE_URL: "https://__AIV_DOMAIN__",                      // custom domain https://audit.aiseenlab.com (build: AIV_SITE_URL)
   // Live Stripe Payment Link, $19 USD one-off. Adaptive Pricing is always on for Payment Links: checkout may show local currency.
   // Always append ?client_reference_id=<audit_id>[_<base32 store domain>] (the API's pay_url) so the payment maps
   // to the audit and the order can be rebuilt from Stripe alone after the server's disk is wiped.

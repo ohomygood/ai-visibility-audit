@@ -2,7 +2,8 @@
 
 | Part | URL | Host / plan |
 |---|---|---|
-| Landing + privacy | https://ai-visibility-audit-bvb.pages.dev (privacy: `/privacy`) | Cloudflare Pages project `ai-visibility-audit`, direct upload of `site/` |
+| Landing + privacy | https://audit.aiseenlab.com (privacy: `/privacy`, terms: `/terms`) — old host https://ai-visibility-audit-bvb.pages.dev 301-redirects there (`site/_worker.js`) | Cloudflare Pages project `ai-visibility-audit` (custom domain `audit.aiseenlab.com`), direct upload of `site/` |
+| Brand page | https://aiseenlab.com (+ www) | Cloudflare Pages project `aiseenlab-site` |
 | Backend API | https://ai-visibility-audit-api.onrender.com (health: `/healthz`) | Render free web service `ai-visibility-audit-api` (Docker, Singapore), `srv-dbcpdg29lscs73em5hsg` |
 | Source | https://github.com/ohomygood/ai-visibility-audit | public, all rights reserved (`LICENSE`) |
 
@@ -28,7 +29,7 @@ State (updated 2026-10-22 13:25 UTC+8): **payments live**.
 ## Rebuild and redeploy
 
 ```bash
-AIV_SITE_URL=https://ai-visibility-audit-bvb.pages.dev AIV_API_BASE=https://ai-visibility-audit-api.onrender.com \
+AIV_SITE_URL=https://audit.aiseenlab.com AIV_API_BASE=https://ai-visibility-audit-api.onrender.com \
 AIV_STRIPE_PAYMENT_LINK=https://buy.stripe.com/fZu00k2l84Zz9YibSt0Ny02 ./scripts/build_static.sh
 CLOUDFLARE_ACCOUNT_ID=<account> npx wrangler pages deploy site --project-name ai-visibility-audit --branch main
 ```
@@ -85,7 +86,7 @@ no card. Zero-new-account path does not exist for the backend.
 ## Steps once approved (do not run before)
 1. `AIV_SITE_URL=… AIV_API_BASE=… AIV_STRIPE_PAYMENT_LINK=… ./scripts/build_static.sh` (refuses placeholders).
 2. Cloudflare: `npx wrangler pages deploy site --project-name aiv-landing`.
-3. Render: New → Blueprint → this repo → `deploy/backend/render.yaml`; set `GEMINI_API_KEY`, `AIV_STRIPE_WEBHOOK_SECRET`, `AIV_STRIPE_PAYMENT_LINK`; set `AIV_CORS_ORIGINS` to the Pages origin.
+3. Render: New → Blueprint → this repo → `deploy/backend/render.yaml`; set `GEMINI_API_KEY`, `AIV_STRIPE_WEBHOOK_SECRET`, `AIV_STRIPE_PAYMENT_LINK`; set `AIV_CORS_ORIGINS` to the site origins (comma list: pages.dev + https://audit.aiseenlab.com, https://xeng.aiseenlab.com, https://aiseenlab.com).
 4. Stripe webhook → `https://<backend>/api/stripe/webhook`.
 
 ## 2026-10-22 18:30 (UTC+8): cleanup

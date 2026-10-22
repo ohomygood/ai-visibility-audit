@@ -6,6 +6,8 @@ cd "$(dirname "$0")/.."
 : "${AIV_SITE_URL:=https://__AIV_DOMAIN__}" "${AIV_API_BASE:=}" "${AIV_STRIPE_PAYMENT_LINK:=https://buy.stripe.com/__PENDING_USD_19__}"
 rm -rf site && mkdir -p site && cp landing/*.html landing/*.js landing/*.css site/   # text assets only, never images
 cp deploy/cloudflare-pages/_headers site/_headers
+# pages.dev -> custom domain redirect, only when the site URL is a custom domain (no self-redirect loop)
+case "$AIV_SITE_URL" in *.pages.dev*|*__AIV_DOMAIN__*) ;; *) cp deploy/cloudflare-pages/_worker.js site/_worker.js ;; esac
 python3 - "$AIV_SITE_URL" "$AIV_API_BASE" "$AIV_STRIPE_PAYMENT_LINK" <<'PY'
 import sys, pathlib, re
 site, api, pay = sys.argv[1].rstrip("/"), sys.argv[2].rstrip("/"), sys.argv[3]
