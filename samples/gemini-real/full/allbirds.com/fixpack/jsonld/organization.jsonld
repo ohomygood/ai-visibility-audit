@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Allbirds",
+  "url": "https://www.allbirds.com/",
+  "logo": "http://www.allbirds.com/cdn/shop/files/logo-seo.jpg?v=1753720776",
+  "description": "Allbirds: The world’s most comfortable shoes, flats, and clothing made with natural materials like merino wool and eucalyptus. FREE shipping & returns.",
+  "sameAs": [
+    "http://pinterest.com/weareallbirds",
+    "https://twitter.com/allbirds",
+    "https://www.facebook.com/weareallbirds",
+    "https://www.instagram.com/allbirds",
+    "https://www.tiktok.com/@weareallbirds",
+    "https://www.youtube.com/channel/UCnGErLCau5qNJ0Xwe6uEyTw"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "__SUPPORT_EMAIL__",
+    "availableLanguage": [
+      "en",
+      "zh"
+    ]
+  }
+}

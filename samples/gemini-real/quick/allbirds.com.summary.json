@@ -1,0 +1,20 @@
+{
+ "audit_id": "20261022-111531-b877fe",
+ "domain": "allbirds.com",
+ "platform": "shopify",
+ "score": 80,
+ "grade": "B",
+ "mention_rate": 0.8,
+ "simulated": false,
+ "findings": 6,
+ "crawl_seconds": 36.1,
+ "total_seconds": 82.0,
+ "requests": 30,
+ "llm_calls": 5,
+ "llm_cost_usd": 0.0,
+ "outputs": {
+  "html_zh": "samples/gemini-real/quick/allbirds.com/report.zh.html",
+  "html_en": "samples/gemini-real/quick/allbirds.com/report.en.html",
+  "markdown": "samples/gemini-real/quick/allbirds.com/report.md"
+ }
+}

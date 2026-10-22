@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 可见度体检 · colourpop.com</title><style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+max-width:960px;margin:0 auto;padding:24px;color:#1d2433;line-height:1.55}
+h1{font-size:26px;margin:0}h2{font-size:19px;margin-top:32px;border-bottom:2px solid #eef1f6;padding-bottom:6px}
+.muted{color:#6b7385;font-size:13px}.card{background:#f7f9fc;border:1px solid #e3e8f0;border-radius:10px;padding:16px;margin:12px 0}
+.score{font-size:54px;font-weight:700}.grade{font-size:20px;padding:2px 10px;border-radius:6px;background:#1d2433;color:#fff;margin-left:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin:8px 0}th,td{border-bottom:1px solid #e8ecf2;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#f2f5fa}.bar{height:8px;background:#e3e8f0;border-radius:4px;overflow:hidden}.bar>i{display:block;height:100%;background:#2e7d32}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;color:#fff;font-size:12px}
+.ok{color:#2e7d32;font-weight:600}.bad{color:#c62828;font-weight:600}.warn{color:#ef6c00;font-weight:600}
+.banner{background:#fff4e5;border:1px solid #ffcc80;padding:10px 14px;border-radius:8px;margin:12px 0}
+.lock{background:linear-gradient(180deg,#f7f9fc,#e9eef7);border:1px dashed #9aa7bd;border-radius:10px;padding:18px;text-align:center}
+.btn{display:inline-block;background:#1d4ed8;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600}
+.toggle{float:right;font-size:13px}code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:12.5px}
+body.lang-zh .en{display:none}body.lang-en .zh{display:none}
+@media print{.toggle,.btn{display:none}body{padding:0}}
+</style></head><body class="lang-en">
+<div class="toggle"><a href="#" onclick="document.body.className='lang-zh';return false">中文</a> · <a href="#" onclick="document.body.className='lang-en';return false">English</a></div>
+<h1><span class="zh">AI 可见度体检报告</span><span class="en">AI Visibility Audit</span></h1>
+<p class="muted">ColourPop · <a href="https://colourpop.com/">colourpop.com</a> · <span class="zh">平台</span><span class="en">Platform</span>: shopify · 2026-10-22 11:32 (UTC+0800) · <span class="zh">免费简检</span><span class="en">Free quick check</span> · ID 20261022-113231-98de44</p>
+<div class="card"><span class="score">88</span><span class="muted">/100</span><span class="grade">A</span> <span class="muted"><span class="zh">技术就绪度</span><span class="en">Technical readiness</span></span><table><tr><td><span class="zh">AI 爬虫能否访问</span><span class="en">AI crawler access</span></td><td style="width:45%"><div class="bar"><i style="width:100%"></i></div></td><td>30/30</td></tr><tr><td><span class="zh">robots.txt 规则</span><span class="en">robots.txt rules</span></td><td style="width:45%"><div class="bar"><i style="width:100%"></i></div></td><td>15/15</td></tr><tr><td><span class="zh">结构化数据 (Schema)</span><span class="en">Structured data (schema)</span></td><td style="width:45%"><div class="bar"><i style="width:83%"></i></div></td><td>29/35</td></tr><tr><td><span class="zh">llms.txt</span><span class="en">llms.txt</span></td><td style="width:45%"><div class="bar"><i style="width:40%"></i></div></td><td>4/10</td></tr><tr><td><span class="zh">站点地图</span><span class="en">Sitemap</span></td><td style="width:45%"><div class="bar"><i style="width:100%"></i></div></td><td>10/10</td></tr></table><p class="muted"><span class="zh">AI 回答中提到你的比例</span><span class="en">Share of AI answers that mention you</span>: <b>40%</b> · <span class="zh">品牌声量占比</span><span class="en">Share of voice</span>: <b>5%</b></p></div>
+<h2><span class="zh">发现的问题</span><span class="en">Findings</span> (3)</h2><table><tr><th><span class="zh">级别</span><span class="en">Severity</span></th><th><span class="zh">问题</span><span class="en">Issue</span></th><th><span class="zh">修复文件</span><span class="en">Fix file</span></th></tr>
+<tr><td><span class="pill" style="background:#ef6c00"><span class="zh">中</span><span class="en">Medium</span></span></td><td><span class="zh">/products/magical-skies-shadow-palette-and-brush-set 没有 AggregateRating（评分），AI 购物推荐常引用评分</span><span class="en">/products/magical-skies-shadow-palette-and-brush-set has no AggregateRating; AI shopping answers often cite ratings</span> <span class="muted">×3</span></td><td><code>shopify/aiv-product-jsonld.liquid</code></td></tr>
+<tr><td><span class="pill" style="background:#607d8b"><span class="zh">低</span><span class="en">Low</span></span></td><td><span class="zh">/products/magical-skies-shadow-palette-and-brush-set 的 Product 建议补充：brand, aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn</span><span class="en">/products/magical-skies-shadow-palette-and-brush-set: Product could add brand, aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn</span> <span class="muted">×3</span></td><td><code>jsonld/</code></td></tr>
+<tr><td><span class="pill" style="background:#607d8b"><span class="zh">低</span><span class="en">Low</span></span></td><td><span class="zh">/llms.txt 是 Shopify 自动生成的通用“代理购物说明”，没有你店铺自己的介绍、主推商品和政策链接</span><span class="en">/llms.txt is Shopify&#x27;s auto-generated generic agent-shopping file, with no store-specific summary, key products or policy links</span></td><td><code>llms.txt</code></td></tr>
+</table>
+<h2><span class="zh">AI 爬虫访问测试</span><span class="en">AI crawler access test</span></h2><p class="muted"><span class="zh">用各家官方 User-Agent 请求首页和商品页。</span><span class="en">Homepage and product pages requested with each vendor’s official User-Agent.</span> CDN: cloudflare</p><table><tr><th>Bot</th><th><span class="zh">结果</span><span class="en">Result</span></th><th><span class="zh">状态码</span><span class="en">HTTP status</span></th></tr>
+<tr><td>GPTBot</td><td class="ok"><span class="zh">可访问</span><span class="en">Allowed</span></td><td><code>200 200 200 200</code></td></tr>
+<tr><td>OAI-SearchBot</td><td class="ok"><span class="zh">可访问</span><span class="en">Allowed</span></td><td><code>200 200 200 200</code></td></tr>
+<tr><td>ChatGPT-User</td><td class="ok"><span class="zh">可访问</span><span class="en">Allowed</span></td><td><code>200 200 200 200</code></td></tr>
+<tr><td>ClaudeBot</td><td class="ok"><span class="zh">可访问</span><span class="en">Allowed</span></td><td><code>200 200 200 200</code></td></tr>
+<tr><td>PerplexityBot</td><td class="ok"><span class="zh">可访问</span><span class="en">Allowed</span></td><td><code>200 200 200 200</code></td></tr>
+</table>
+<h2>robots.txt</h2>
+<table><tr><th>Token</th><th><span class="zh">类型</span><span class="en">Type</span></th><th><span class="zh">是否允许</span><span class="en">Allowed</span></th><th><span class="zh">依据</span><span class="en">Rule</span></th></tr>
+<tr><td>GPTBot</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>OAI-SearchBot</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>ChatGPT-User</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>ClaudeBot</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Claude-SearchBot</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Claude-User</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>PerplexityBot</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Perplexity-User</td><td><span class="zh">回答时抓取</span><span class="en">answer-time</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Google-Extended</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Applebot-Extended</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>CCBot</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+<tr><td>Bytespider</td><td><span class="zh">训练</span><span class="en">training</span></td><td class="ok">✓</td><td class="muted">Allow: / (group: *)</td></tr>
+</table>
+<h2><span class="zh">结构化数据</span><span class="en">Structured data</span></h2><table><tr><th><span class="zh">页面</span><span class="en">Page</span></th><th>JSON-LD</th><th>Microdata</th><th><span class="zh">缺失</span><span class="en">Missing</span></th></tr>
+<tr><td><a href="https://colourpop.com/">/</a></td><td>Organization, SearchAction, WebSite</td><td>–</td><td class="ok">–</td></tr>
+<tr><td><a href="https://colourpop.com/products/magical-skies-shadow-palette-and-brush-set">/products/magical-skies-shadow-palette-and-brush-set</a></td><td>Brand, Offer, Organization, Product</td><td>–</td><td class="ok">–</td></tr>
+<tr><td><a href="https://colourpop.com/products/wrapped-with-a-bow">/products/wrapped-with-a-bow</a></td><td>Brand, Offer, Organization, Product</td><td>–</td><td class="ok">–</td></tr>
+<tr><td><a href="https://colourpop.com/products/holiday-sweethearts">/products/holiday-sweethearts</a></td><td>Brand, Offer, Organization, Product</td><td>–</td><td class="ok">–</td></tr>
+</table>
+<h2>llms.txt</h2><p class="ok"><span class="zh">存在（5678 字节，8 个链接）</span><span class="en">Present (5678 bytes, 8 links)</span><span class="zh">，但这是 Shopify 自动生成的通用文件</span><span class="en"> — but it is Shopify's generic auto-generated file</span></p>
+<h2><span class="zh">AI 推荐测试</span><span class="en">AI recommendation test</span></h2><p class="muted">5 <span class="zh">个买家问题</span><span class="en">buyer questions</span> × 1 <span class="zh">个引擎</span><span class="en">engines</span> · <span class="zh">每题采样</span><span class="en">samples per question</span>: Gemini ×1</p>
+<p class="muted"><b><span class="zh">本报告使用的引擎</span><span class="en">Engines used in this report</span>:</b> Gemini (gemini-3.5-flash-lite ×5) — <span class="zh">仅模型自身知识，未联网搜索</span><span class="en">model knowledge only, no live web search</span></p>
+<table><tr><th><span class="zh">引擎</span><span class="en">Engine</span></th><th><span class="zh">提到你</span><span class="en">Mentioned you</span></th><th><span class="zh">比例</span><span class="en">Rate</span></th></tr>
+<tr><td>Gemini</td><td>2/5</td><td>40%</td></tr>
+</table>
+<div class="lock"><h3><span class="zh">解锁完整报告 + 修复包（$19 / ¥129 一次性，7 天内可退款）</span><span class="en">Unlock the full report + fix pack ($19 / ¥129 one-off, 7-day refund)</span></h3><p><span class="zh">25 个买家问题 × AI 引擎（Gemini 每题采样 3 次；ChatGPT / Perplexity 启用后各 2 次）、竞品份额、AI 引用来源缺口，以及可直接粘贴的 robots.txt、JSON-LD、llms.txt、5 篇内容草稿和 Cloudflare 放行步骤。</span><span class="en">25 buyer questions × AI engines (Gemini 3 samples each; ChatGPT / Perplexity 2 each once enabled), competitor share of voice, cited-source gaps, plus paste-ready robots.txt, JSON-LD, llms.txt, 5 content drafts and Cloudflare steps.</span></p><a class="btn" href="__STRIPE_PAYMENT_LINK__?client_reference_id=20261022-113231-98de44"><span class="zh">立即解锁 $19 / ¥129</span><span class="en">Unlock for $19 / ¥129</span></a></div>
+<h2><span class="zh">方法与隐私</span><span class="en">Method & privacy</span></h2><p class="muted"><span class="zh">只读检测：共 30 个 GET 请求，每个域名每秒最多 1 个。AI 推荐测试只调用官方 API，不抓取 chatgpt.com 等网页端。原始数据 7 天后自动删除。爬取耗时 36.2 秒，总耗时 36.2 秒，AI 调用 5 次，成本 $0.0000。</span><span class="en">Read-only: 30 GET requests, at most 1 per second per domain. The AI test uses official APIs only; we never scrape chatgpt.com or other web UIs. Raw data is deleted after 7 days. Crawl 36.2s, total 36.2s, 5 AI calls, cost $0.0000.</span></p>
+<p class="muted">__AIV_DOMAIN__ · AI Visibility Audit v0.1.0</p></body></html>

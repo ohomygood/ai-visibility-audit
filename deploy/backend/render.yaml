@@ -1,0 +1,24 @@
+# Render service (free plan). Created via the Render API on 2026-10-22; this file documents the settings.
+# Free plan caveats: spins down after 15 min idle (~1 min cold start); ephemeral disk (reports, ledgers and
+# admin logs vanish on restart -> ADMIN_AUDIT stdout lines in Render logs are the durable record).
+services:
+  - type: web
+    name: ai-visibility-audit-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: deploy/backend/Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - { key: AIV_ENV, value: production }
+      - { key: AIV_ENGINE_MODE, value: gemini-only }
+      - { key: AIV_TRUST_PROXY, value: "1" }
+      - { key: AIV_CORS_ORIGINS, value: "https://ai-visibility-audit-bvb.pages.dev" }
+      - { key: AIV_CONTACT_URL, value: "https://ai-visibility-audit-bvb.pages.dev" }
+      - { key: AIV_RETENTION_DAYS, value: "7" }
+      - { key: GEMINI_API_KEY, sync: false }        # free-tier key
+      - { key: ADMIN_TOKEN, sync: false }           # openssl rand -hex 32
+      # Set later, when Stripe is ready (paywall stays locked until then):
+      - { key: STRIPE_RESTRICTED_KEY, sync: false }
+      - { key: AIV_STRIPE_PAYMENT_LINK_ID, sync: false }
+      - { key: STRIPE_WEBHOOK_SECRET, sync: false }

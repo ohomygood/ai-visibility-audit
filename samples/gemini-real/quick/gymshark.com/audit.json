@@ -1,0 +1,1469 @@
+{
+ "audit_id": "20261022-113307-829a30",
+ "mode": "quick",
+ "version": "0.1.0",
+ "url": "https://www.gymshark.com",
+ "root": "https://www.gymshark.com/",
+ "created_at": "2026-10-22 11:33 (UTC+0800)",
+ "profile": {
+  "base_url": "https://www.gymshark.com/",
+  "final_url": "https://www.gymshark.com/",
+  "platform": "shopify",
+  "name": "Gymshark",
+  "description": "Unlock your full potential with our game-changing workout clothes. Shop gym clothing for the gym, running & everything in-between. Free delivery on orders over $75",
+  "currency": "",
+  "language": "en-US",
+  "logo": "http://cdn.shopify.com/s/files/1/0098/8822/files/gymshark_social_banner_1200x1200.jpg?v=1549554764",
+  "social": [
+   "https://auth.govx.com/shopify/verify",
+   "https://www.facebook.com/GymShark",
+   "https://www.instagram.com/gymshark",
+   "https://www.pinterest.com/gymshark",
+   "https://www.tiktok.com/@gymshark",
+   "https://www.twitter.com/gymshark",
+   "https://www.youtube.com/user/GymSharkTV"
+  ],
+  "product_types": [],
+  "collections": [
+   "https://www.gymshark.com/collections/accessories",
+   "https://www.gymshark.com/collections/socks",
+   "https://www.gymshark.com/collections/gym-bags",
+   "https://www.gymshark.com/collections/equipment",
+   "https://www.gymshark.com/collections/new-accessories",
+   "https://www.gymshark.com/collections/must-have-acc",
+   "https://www.gymshark.com/collections/seasonal-accessories",
+   "https://www.gymshark.com/collections/running-accessories",
+   "https://www.gymshark.com/collections/back-in-stock-acc",
+   "https://www.gymshark.com/collections/bags",
+   "https://www.gymshark.com/collections/backpacks",
+   "https://www.gymshark.com/collections/duffel-bags",
+   "https://www.gymshark.com/collections/tote-bags",
+   "https://www.gymshark.com/collections/crossbody-bags",
+   "https://www.gymshark.com/collections/small-bags"
+  ],
+  "policy_pages": [
+   "https://www.gymshark.com/pages/about-us"
+  ],
+  "products": [
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-blue-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-oversized-pants-pants-blue-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-blue-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-blue-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-blue-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-crew-pullovers-blue-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-t-shirt-ss-tops-blue-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-t-shirt-ss-tops-blue-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-t-shirt-ss-tops-purple-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-t-shirt-ss-tops-purple-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-t-shirt-ss-tops-grey-aw26",
+    "title": "",
+    "handle": "gymshark-gs-x-sam-sulek-t-shirt-ss-tops-grey-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.gymshark.com/products/gymshark-power-washed-oversized-t-shirt-ss-tops-green-aw26",
+    "title": "",
+    "handle": "gymshark-power-washed-oversized-t-shirt-ss-tops-green-aw26",
+    "vendor": "",
+    "product_type": "",
+    "tags": [],
+    "description": "",
+    "price": "",
+    "compare_at_price": "",
+    "sku": "",
+    "available": null,
+    "image": "",
+    "gtin": ""
+   }
+  ],
+  "homepage_status": 200,
+  "notes": [
+   "currency not detected; fix files use a placeholder"
+  ],
+  "domain": "gymshark.com"
+ },
+ "bot_access": {
+  "bots": {
+   "GPTBot": {
+    "pages": [
+     {
+      "url": "https://www.gymshark.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "OAI-SearchBot": {
+    "pages": [
+     {
+      "url": "https://www.gymshark.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ChatGPT-User": {
+    "pages": [
+     {
+      "url": "https://www.gymshark.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ClaudeBot": {
+    "pages": [
+     {
+      "url": "https://www.gymshark.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "PerplexityBot": {
+    "pages": [
+     {
+      "url": "https://www.gymshark.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudfront",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   }
+  },
+  "baseline_blocked": false,
+  "cdn": [
+   "cloudfront"
+  ]
+ },
+ "robots": {
+  "exists": true,
+  "status": 200,
+  "tokens": {
+   "GPTBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "OAI-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ChatGPT-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ClaudeBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "PerplexityBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Perplexity-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Google-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Applebot-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "CCBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Bytespider": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26": "no matching rule (group: *)",
+     "/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   }
+  },
+  "sitemaps": [
+   "https://www.gymshark.com/sitemap.xml",
+   "https://www.gymshark.com/sitemap.xml",
+   "https://www.gymshark.com/sitemap.xml"
+  ],
+  "raw": "# we use Shopify as our ecommerce platform\n\nUser-agent: *\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /988822/checkouts\nDisallow: /988822/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: /collections/*/products*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: *es-US$\nDisallow: *es-us$\nAllow: /es-US$\nAllow: /es-us$\nSitemap: https://www.gymshark.com/sitemap.xml\n\n# Google adsbot ignores robots.txt unless specifically named!\nUser-agent: adsbot-google\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /carts\nDisallow: /orders\nDisallow: /988822/checkouts\nDisallow: /988822/orders\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\n\nUser-agent: Nutch\nDisallow: /\n\nUser-agent: AhrefsBot\nCrawl-delay: 10\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /988822/checkouts\nDisallow: /988822/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nSitemap: https://www.gymshark.com/sitemap.xml\n\nUser-agent: AhrefsSiteAudit\nCrawl-delay: 10\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /988822/checkouts\nDisallow: /988822/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nSitemap: https://www.gymshark.com/sitemap.xml\n\nUser-agent: MJ12bot\nCrawl-Delay: 10\n\nUser-agent: Pinterest\nCrawl-delay: 1\n"
+ },
+ "schema": [
+  {
+   "url": "https://www.gymshark.com/",
+   "kind": "home",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Organization",
+    "WebSite"
+   ],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [
+    {
+     "type": "Organization",
+     "declared_types": [
+      "Organization"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "contactPoint|email|telephone"
+     ],
+     "source": "json-ld",
+     "count": 1
+    }
+   ],
+   "entity_count": 1,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "kind": "product",
+   "jsonld_blocks": 1,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product",
+    "ProductGroup",
+    "PropertyValue"
+   ],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "sku",
+      "offers",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "brand",
+      "aggregateRating|review"
+     ],
+     "source": "json-ld",
+     "count": 7
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "url",
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 7
+    }
+   ],
+   "entity_count": 15,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "kind": "product",
+   "jsonld_blocks": 1,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product",
+    "ProductGroup",
+    "PropertyValue"
+   ],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "sku",
+      "offers",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "brand",
+      "aggregateRating|review"
+     ],
+     "source": "json-ld",
+     "count": 7
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "url",
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 7
+    }
+   ],
+   "entity_count": 15,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "kind": "product",
+   "jsonld_blocks": 1,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product",
+    "ProductGroup",
+    "PropertyValue"
+   ],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "sku",
+      "offers",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "brand",
+      "aggregateRating|review"
+     ],
+     "source": "json-ld",
+     "count": 7
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "url",
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 7
+    }
+   ],
+   "entity_count": 15,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  }
+ ],
+ "llms_txt": {
+  "llms.txt": {
+   "exists": false,
+   "status": 404,
+   "final_url": "https://www.gymshark.com/llms.txt",
+   "bytes": 0,
+   "has_h1": false,
+   "links": 0,
+   "platform_default": false
+  },
+  "llms-full.txt": {
+   "exists": false,
+   "status": 404,
+   "final_url": "https://www.gymshark.com/llms-full.txt",
+   "bytes": 0,
+   "has_h1": false,
+   "links": 0,
+   "platform_default": false
+  }
+ },
+ "sitemap": {
+  "url": "https://www.gymshark.com/sitemap.xml",
+  "status": 200,
+  "exists": true,
+  "listed_in_robots": true
+ },
+ "crawl_seconds": 28.2,
+ "visibility": {
+  "questions": [
+   {
+    "id": "q1",
+    "kind": "category",
+    "text": "What are the best gym clothing brands to buy online right now?"
+   },
+   {
+    "id": "q2",
+    "kind": "category",
+    "text": "Where can I buy high-quality gym clothing online with international shipping?"
+   },
+   {
+    "id": "q3",
+    "kind": "brand",
+    "text": "Is Gymshark a legit and good store? What do customers say?"
+   },
+   {
+    "id": "q4",
+    "kind": "competitor",
+    "text": "What are some good alternatives to Gymshark?"
+   },
+   {
+    "id": "q5",
+    "kind": "budget",
+    "text": "Best gym clothing under 100 USD — which brands would you recommend?"
+   }
+  ],
+  "engines": [
+   "Gemini"
+  ],
+  "samples_per_question": {
+   "Gemini": 1
+  },
+  "simulated": false,
+  "estimated_cost_usd": 0.0,
+  "per_engine": {
+   "Gemini": {
+    "answered": 5,
+    "mentioned": 5,
+    "rate": 1.0,
+    "errors": 0,
+    "simulated": false
+   }
+  },
+  "per_question": {
+   "q1": {
+    "Gemini": "1/1"
+   },
+   "q2": {
+    "Gemini": "1/1"
+   },
+   "q3": {
+    "Gemini": "1/1"
+   },
+   "q4": {
+    "Gemini": "1/1"
+   },
+   "q5": {
+    "Gemini": "1/1"
+   }
+  },
+  "overall_mention_rate": 1.0,
+  "share_of_voice": 0.15151515151515152,
+  "top_competitors": [
+   [
+    "Lululemon",
+    2
+   ],
+   [
+    "Vuori",
+    2
+   ],
+   [
+    "Alphalete Athletics",
+    2
+   ],
+   [
+    "Alo Yoga",
+    2
+   ],
+   [
+    "Nike",
+    1
+   ],
+   [
+    "Fabletics",
+    1
+   ],
+   [
+    "ASOS",
+    1
+   ],
+   [
+    "Vuori Clothing",
+    1
+   ],
+   [
+    "Trendy Designs & Fit",
+    1
+   ],
+   [
+    "Size Inclusivity & Variety",
+    1
+   ],
+   [
+    "Community and App",
+    1
+   ],
+   [
+    "Sizing Inconsistencies",
+    1
+   ]
+  ],
+  "top_cited_domains": [
+   [
+    "gymshark.com",
+    4
+   ],
+   [
+    "shop.lululemon.com",
+    2
+   ],
+   [
+    "vuoriclothing.com",
+    2
+   ],
+   [
+    "nike.com",
+    2
+   ],
+   [
+    "aloyoga.com",
+    2
+   ],
+   [
+    "amazon.com",
+    2
+   ],
+   [
+    "alphaletearthletics.com",
+    1
+   ],
+   [
+    "fabletics.com",
+    1
+   ],
+   [
+    "lululemon.com",
+    1
+   ],
+   [
+    "asos.com",
+    1
+   ],
+   [
+    "buffbunny.com",
+    1
+   ],
+   [
+    "alphaleteathletics.com",
+    1
+   ],
+   [
+    "oneractive.com",
+    1
+   ],
+   [
+    "alphalethetics.com",
+    1
+   ],
+   [
+    "adidas.com",
+    1
+   ]
+  ],
+  "store_cited": true,
+  "rows": [
+   {
+    "engine": "Gemini",
+    "q": "q1",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Lululemon",
+     "Gymshark",
+     "Vuori",
+     "Nike",
+     "Alphalete Athletics",
+     "Fabletics"
+    ],
+    "domains": [
+     "shop.lululemon.com",
+     "gymshark.com",
+     "vuoriclothing.com",
+     "nike.com",
+     "alphaletearthletics.com",
+     "fabletics.com"
+    ],
+    "excerpt": "Here are some of the best gym clothing brands to buy online right now, depending on what you're looking for in terms of performance, style, and budget:\n\n*   **Lululemon** \n    *   **Why buy:** If you want premium quality, exceptional comfort, and a sleek aesthetic that transitions easily from the gym to running errands, Lululemon is hard to beat. Their Align leggings and Metal Vent Tech shirts are cult favorites for a reason—they hold up wash after wash and feel buttery-soft. \n    *   **Shop here:** [Lululemon](https://shop.lululemon.com)\n\n*   **Gymshark**\n    *   **Why buy:** Gymshark is a go"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q2",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Gymshark",
+     "Lululemon",
+     "Alo Yoga",
+     "VUORI",
+     "ASOS",
+     "Vuori Clothing"
+    ],
+    "domains": [
+     "gymshark.com",
+     "lululemon.com",
+     "aloyoga.com",
+     "asos.com",
+     "vuoriclothing.com"
+    ],
+    "excerpt": "If you are looking for high-quality gym clothing with international shipping, there are several top-tier brands and retailers known for their durability, technical fabrics, and stylish designs. Here are some of the best places to shop online:\n\n1. **Gymshark**\n   * **Why shop here:** Gymshark is one of the most popular fitness apparel brands globally, famous for its contouring seamless leggings, comfortable hoodies, and moisture-wicking shirts. They have dedicated international websites for dozens of countries, making global shipping seamless.\n   * **Website:** [Gymshark](https://www.gymshark.c"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q3",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Gymshark",
+     "Trendy Designs & Fit",
+     "Size Inclusivity & Variety",
+     "Community and App",
+     "Sizing Inconsistencies",
+     "Stock Availability"
+    ],
+    "domains": [
+     "gymshark.com"
+    ],
+    "excerpt": "Yes, **Gymshark** is definitely a legitimate and massively popular online fitness apparel brand. Founded in the UK in 2012, it has grown into one of the most recognizable workout clothing brands in the world, particularly known for its seamless leggings, shorts, and athletic wear for both men and women. \n\nYou can check out their official site here: [Gymshark Official Website](https://www.gymshark.com).\n\nHere is a breakdown of what customers generally say about Gymshark, covering both the pros and cons:\n\n### The Positives (What Customers Love)\n* **Trendy Designs & Fit:** Gymshark is famous for "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q4",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "The Vibe",
+     "DFYNE",
+     "Alo Yoga",
+     "CRZ YOGA",
+     "Buffbunny",
+     "Amplify collection",
+     "Oner Active",
+     "CRZ YOGA on Amazon"
+    ],
+    "domains": [
+     "aloyoga.com",
+     "buffbunny.com",
+     "alphaleteathletics.com",
+     "oneractive.com",
+     "amazon.com"
+    ],
+    "excerpt": "If you love Gymshark for its body-hugging fits, seamless fabrics, and trendy aesthetic, but you're looking to switch things up, there are several fantastic activewear brands that offer a similar (or even better) mix of style, performance, and price. \n\nHere are some of the best alternatives to Gymshark, along with why you should check them out:\n\n### 1. **Alo Yoga**\n* **The Vibe:** Premium, trendy, and favored by celebrities and influencers. \n* **Why buy:** If you want to move away from heavy gym lifting culture toward a more sleek, athleisure-first aesthetic, [Alo Yoga](https://www.aloyoga.com)"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q5",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "\"We Made Too Much\"",
+     "Alphalete Athletics",
+     "CRZ YOGA Amazon Storefront",
+     "Nike Sale",
+     "Adidas Outlet"
+    ],
+    "domains": [
+     "gymshark.com",
+     "alphalethetics.com",
+     "shop.lululemon.com",
+     "amazon.com",
+     "nike.com",
+     "adidas.com"
+    ],
+    "excerpt": "If you’re looking for high-quality gym clothing where most (or all) of your outfit stays under $100, there are several fantastic brands that offer a great mix of durability, comfort, and style. \n\nHere are my top recommendations for the best gym clothing brands under $100:\n\n### 1. **Gymshark**\n* **Why buy:** Gymshark is a massive favorite in the fitness community for a reason. They offer trendy, squat-proof leggings, supportive sports bras, and breathable men's stringers and joggers that usually range between $30 and $60. The style is modern, and the fabrics hold up well to heavy lifting and sw"
+   }
+  ]
+ },
+ "llm_cost_usd": 0.0,
+ "llm_calls": 5,
+ "simulated": false,
+ "engines": [
+  {
+   "name": "gemini",
+   "engine": "Gemini",
+   "simulated": false,
+   "model": "gemini-3.5-flash-lite ×5",
+   "note": "model knowledge only (no live web search: not available on this API tier)"
+  }
+ ],
+ "engine_info": {
+  "mode": "gemini-only",
+  "spec": "gemini",
+  "notes": []
+ },
+ "site_unreachable": false,
+ "score": {
+  "total": 83,
+  "max": 100,
+  "parts": {
+   "crawler_access": {
+    "score": 30,
+    "max": 30
+   },
+   "robots_txt": {
+    "score": 15,
+    "max": 15
+   },
+   "structured_data": {
+    "score": 28,
+    "max": 35
+   },
+   "llms_txt": {
+    "score": 0,
+    "max": 10
+   },
+   "sitemap": {
+    "score": 10,
+    "max": 10
+   }
+  },
+  "grade": "B"
+ },
+ "findings": [
+  {
+   "severity": "medium",
+   "key": "no_rating",
+   "zh": "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26 没有 AggregateRating（评分），AI 购物推荐常引用评分",
+   "en": "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26 has no AggregateRating; AI shopping answers often cite ratings",
+   "fix": "shopify/aiv-product-jsonld.liquid",
+   "count": 3
+  },
+  {
+   "severity": "medium",
+   "key": "llms_txt",
+   "zh": "没有 /llms.txt：AI 助手缺少一份关于你店铺的简明说明",
+   "en": "No /llms.txt: AI assistants have no concise, curated summary of your store",
+   "fix": "llms.txt",
+   "count": 1
+  },
+  {
+   "severity": "low",
+   "key": "rec:Product",
+   "zh": "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26 的 Product 建议补充：sku, offers, aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "en": "/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26: Product could add sku, offers, aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "fix": "jsonld/",
+   "count": 3
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 829,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products.json?limit=30",
+   "ua": "discovery",
+   "status": 403,
+   "ms": 7,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 1083,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 1034,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 917,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 30,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 25,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 25,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 22,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 16,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 18,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 16,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 17,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 16,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 18,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 16,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 18,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 17,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 19,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 17,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 20,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 17,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-zip-through-hoodie-pullovers-black-aw26",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 19,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-oversized-pants-pants-black-aw26",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 17,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/products/gymshark-gs-x-sam-sulek-crew-pullovers-black-aw26",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 20,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/robots.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 107,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/llms.txt",
+   "ua": "discovery",
+   "status": 404,
+   "ms": 132,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/llms-full.txt",
+   "ua": "discovery",
+   "status": 404,
+   "ms": 105,
+   "error": null
+  },
+  {
+   "url": "https://www.gymshark.com/sitemap.xml",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 72,
+   "error": null
+  }
+ ],
+ "request_count": 29,
+ "total_seconds": 65.6,
+ "outputs": {
+  "html_zh": "samples/gemini-real/quick/gymshark.com/report.zh.html",
+  "html_en": "samples/gemini-real/quick/gymshark.com/report.en.html",
+  "markdown": "samples/gemini-real/quick/gymshark.com/report.md"
+ }
+}

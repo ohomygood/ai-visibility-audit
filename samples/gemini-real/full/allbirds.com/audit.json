@@ -1,0 +1,3785 @@
+{
+ "audit_id": "20261022-112243-17fcc1",
+ "mode": "full",
+ "version": "0.1.0",
+ "url": "https://www.allbirds.com",
+ "root": "https://www.allbirds.com/",
+ "created_at": "2026-10-22 11:22 (UTC+0800)",
+ "profile": {
+  "base_url": "https://www.allbirds.com/",
+  "final_url": "https://www.allbirds.com/",
+  "platform": "shopify",
+  "name": "Allbirds",
+  "description": "Allbirds: The world’s most comfortable shoes, flats, and clothing made with natural materials like merino wool and eucalyptus. FREE shipping & returns.",
+  "currency": "USD",
+  "language": "en-US",
+  "logo": "http://www.allbirds.com/cdn/shop/files/logo-seo.jpg?v=1753720776",
+  "social": [
+   "http://pinterest.com/weareallbirds",
+   "https://twitter.com/allbirds",
+   "https://www.facebook.com/weareallbirds",
+   "https://www.instagram.com/allbirds",
+   "https://www.tiktok.com/@weareallbirds",
+   "https://www.youtube.com/channel/UCnGErLCau5qNJ0Xwe6uEyTw"
+  ],
+  "product_types": [
+   "Shoes"
+  ],
+  "collections": [
+   "https://www.allbirds.com/collections/new-arrivals-26",
+   "https://www.allbirds.com/collections/shop-all-26",
+   "https://www.allbirds.com/collections/mens-new-arrivals",
+   "https://www.allbirds.com/collections/mens-bestsellers",
+   "https://www.allbirds.com/collections/mens-terralux-cl",
+   "https://www.allbirds.com/collections/mens",
+   "https://www.allbirds.com/collections/mens-sneakers",
+   "https://www.allbirds.com/collections/mens-loungers",
+   "https://www.allbirds.com/collections/mens-sandals",
+   "https://www.allbirds.com/collections/mens-active-shoes",
+   "https://www.allbirds.com/collections/mens-mizzles",
+   "https://www.allbirds.com/collections/mens-socks",
+   "https://www.allbirds.com/collections/mens-apparel",
+   "https://www.allbirds.com/collections/womens-new-arrivals",
+   "https://www.allbirds.com/collections/womens-bestsellers"
+  ],
+  "policy_pages": [
+   "https://www.allbirds.com/pages/returns-exchanges"
+  ],
+  "products": [
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+    "title": "Men's Cruiser Slip On - Natural Black (Blizzard Sole)",
+    "handle": "mens-cruiser-slip-on-natural-black",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-f15c8f7993c846b8f954c3ac60e2cf58",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => mens",
+     "allbirds::hue => black",
+     "allbirds::master => mens-cruiser-slip-on",
+     "allbirds::material => tree",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => lounger"
+    ],
+    "description": "Slip-on ease meets everyday style. Cruiser Slip On pairs a clean, minimalist look with a breathable tree knit upper for comfort you'll notice right away. Easy to wear, easy to style, and comfortable enough for pretty much anywhere the day takes you.",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12642M080",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12649_26Q1_Cruiser-Slip-On-Natural-Black-Blizzard-Sole_PDP_LEFT.png?v=1768947275",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-tree-runners",
+    "title": "Men's Tree Runner - Jet Black (White Sole)",
+    "handle": "mens-tree-runners",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => 4.52",
+     "allbirds::cfId => color-mens-tree-runners-jet-black-white",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => mens",
+     "allbirds::hue => black",
+     "allbirds::master => mens-tree-runners",
+     "allbirds::material => tree",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "The Allbirds Tree Runner is a breathable and lightweight sneaker made with responsibly sourced eucalyptus tree fiber that feels silky smooth and cool on your skin. These shoes are perfect for everyday casual wear, walking, and warmer weather.",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "TR3MJBW080",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/TR3MJBW080_SHOE_LEFT_GLOBAL_MENS_TREE_RUNNER_JET_BLACK_WHITE.png?v=1751165486",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+    "title": "Women's Wool Runner Mizzles - Natural Black (Natural Black Sole)",
+    "handle": "womens-wool-runner-mizzles-natural-black-1",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::cfId => color-womens-wool-runner-mizzles-natural-black-rugged-khaki",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => womens",
+     "allbirds::hue => black",
+     "allbirds::master => womens-wool-runner-mizzles",
+     "allbirds::material => wool",
+     "allbirds::price-tier => tier-1",
+     "allbirds::silhouette => runner",
+     "collection:apr26"
+    ],
+    "description": "The Wool Runner Mizzle is our rain-ready sneaker that keeps your feet warm, cozy, and dry in unpredictable weather. Cozy ZQ Merino Wool is combined with our bio-based water repellent shield so you can walk comfortably in the rain. These shoes are great everyday shoes, with all condition traction to grip slippery surfaces.",
+    "price": "99.00",
+    "compare_at_price": "125.00",
+    "sku": "AB006ZW050",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/AB006YM_SHOE_ANGLE_GLOBAL_MENS_WOOL_RUNNER_MIZZLE2_NATURAL_BLACK_RUGGED_KHAKI.png?v=1776206836",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-wool-piper-go-natural-black",
+    "title": "Women's Wool Piper Go - Natural Black (Natural White Sole)",
+    "handle": "womens-wool-piper-go-natural-black",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => 6.98",
+     "allbirds::cfId => color-womens-wool-piper-go-ntrl-blck-ntrl-wht",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => womens",
+     "allbirds::hue => black",
+     "allbirds::master => womens-wool-piper-go",
+     "allbirds::material => wool",
+     "allbirds::price-tier => tier-4",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "A classic style elevated with refined details and cushy support to be the comfiest finishing touch to any fit.",
+    "price": "60.00",
+    "compare_at_price": "120.00",
+    "sku": "A10981W050",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A10976_24Q3_Wool_Piper_2_Natural_Black_Natural_White_PDP_LEFT-2000x2000_ac210616-f73b-458e-a9be-36fbba346e71.png?v=1776209058",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-allbirds-flip-flop-dusty-pink",
+    "title": "Women's Allbirds Flip Flop - Dusty Pink",
+    "handle": "womens-allbirds-flip-flop-dusty-pink",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-a4d5d0f6620dc304306f503bf67bc5f9",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => pink",
+     "allbirds::master => womens-allbirds-flip-flop",
+     "allbirds::material => sugar",
+     "allbirds::price-tier => tier-3",
+     "allbirds::silhouette => zeffer"
+    ],
+    "description": "Sun on your feet. Comfort underneath. Light, easy, and made for warm weather, these flip flops bring everyday comfort to sunny days, beach walks, and everything in between. Just slip them on and go.",
+    "price": "25.00",
+    "compare_at_price": "50.00",
+    "sku": "A12513W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12513_26Q2_Allbirds-Flip-Flop-Dusty-Pink_PDP_LEFT.png?v=1774646345",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-canvas-runner-nz",
+    "title": "Men's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)",
+    "handle": "mens-canvas-runner-nz",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-1cef6be0d20d9c20d604095208afc4c8",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => blue",
+     "allbirds::hue => white",
+     "allbirds::master => mens-canvas-runner-nz",
+     "allbirds::material => cotton",
+     "allbirds::price-tier => msrp"
+    ],
+    "description": "",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12498M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12500_26Q1_Runner-NZ-Canvas-Stripes-Deep-Navy-Blizzard-Sole_PDP_LEFT.png?v=1774550585",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-canvas-runner-nz",
+    "title": "Women's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)",
+    "handle": "womens-canvas-runner-nz",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-d7abb4d45ba4287f808f45adf8aff699",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => blue",
+     "allbirds::hue => white",
+     "allbirds::master => womens-canvas-runner-nz",
+     "allbirds::material => cotton",
+     "allbirds::price-tier => msrp"
+    ],
+    "description": "",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12500W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12500_26Q1_Runner-NZ-Canvas-Stripes-Deep-Navy-Blizzard-Sole_PDP_LEFT_bda73f01-c2a8-43d5-b680-0a4e86b8926f.png?v=1774550676",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-terry",
+    "title": "Men's Cruiser Terry - Warm White (Warm White Sole)",
+    "handle": "mens-cruiser-terry",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-c0caa82b89acc82dffb6692bb6e73286",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => white",
+     "allbirds::master => mens-cruiser-terry",
+     "allbirds::material => tree-fiber-blend",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "",
+    "price": "115.00",
+    "compare_at_price": "",
+    "sku": "A12374M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12370_26Q1_Cruiser-Terry-Warm-White-Warm-White_PDP_LEFT_f79ee143-f5b7-419a-8cfe-68557b63b868.png?v=1774566144",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-canvas-burnt-olive",
+    "title": "Men's Canvas Cruiser - Burnt Olive (Natural White Sole)",
+    "handle": "mens-cruiser-canvas-burnt-olive",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-fe9c7c3e73ebdd08ed3b0babd388543d",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => green",
+     "allbirds::master => mens-cruiser-canvas",
+     "allbirds::material => canvas",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that feels light, breathable, and ready to wear on repeat. Comfortable enough for all day. Simple enough to go with everything.",
+    "price": "75.00",
+    "compare_at_price": "",
+    "sku": "A12486M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12483_26Q1_Cruiser-Canvas-Burnt-Olive-Natural-White_PDP_LEFT.png?v=1768946185",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-cruiser-canvas-burnt-olive",
+    "title": "Women's Cruiser Canvas - Burnt Olive (Natural White Sole)",
+    "handle": "womens-cruiser-canvas-burnt-olive",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-e0dfb4c1216d346a77eb7997af56a4d4",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => green",
+     "allbirds::master => womens-cruiser-canvas",
+     "allbirds::material => canvas",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that feels light, breathable, and ready to wear on repeat. Comfortable enough for all day. Simple enough to go with everything.",
+    "price": "75.00",
+    "compare_at_price": "",
+    "sku": "A12483W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12483_26Q1_Cruiser-Canvas-Burnt-Olive-Natural-White_PDP_LEFT_7e736263-b2a2-486c-badd-47c2b38eb728.png?v=1768946365",
+    "gtin": ""
+   }
+  ],
+  "homepage_status": 200,
+  "notes": [],
+  "domain": "allbirds.com"
+ },
+ "bot_access": {
+  "bots": {
+   "GPTBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "OAI-SearchBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ChatGPT-User": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 429,
+      "error": null,
+      "challenge": false,
+      "rate_limited": true,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": null,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 1,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ClaudeBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "PerplexityBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   }
+  },
+  "baseline_blocked": false,
+  "cdn": [
+   "cloudflare"
+  ]
+ },
+ "robots": {
+  "exists": true,
+  "status": 200,
+  "tokens": {
+   "GPTBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "OAI-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ChatGPT-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ClaudeBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "PerplexityBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Perplexity-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Google-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Applebot-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "CCBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Bytespider": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   }
+  },
+  "sitemaps": [
+   "https://www.allbirds.com/sitemap.xml"
+  ],
+  "raw": "\nUser-agent: *\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /recommendations/products\nDisallow: /*/recommendations/products\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteDisallow: /collections/*-loop\n    Disallow: /a/click*\n    Disallow: /q/*\n    Disallow: /e/encryptedUnsubscribe*\nSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: adsbot-google\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /carts\nDisallow: /orders\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /cdn/wpm/*.js\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /services/login_with_shop\nUser-agent: Nutch\nDisallow: /\nUser-agent: AhrefsBot\nCrawl-delay: 10\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: AhrefsSiteAudit\nCrawl-delay: 10\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: MJ12bot\nCrawl-delay: 10\nUser-agent: Pinterest\nCrawl-delay: 1\n"
+ },
+ "schema": [
+  {
+   "url": "https://www.allbirds.com/",
+   "kind": "home",
+   "jsonld_blocks": 0,
+   "jsonld_types": [],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [],
+   "entity_count": 0,
+   "missing_types": [
+    "Organization"
+   ],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "description",
+      "brand",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 13
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "itemCondition",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 13
+    }
+   ],
+   "entity_count": 28,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "description",
+      "brand",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 7
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "itemCondition",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 7
+    }
+   ],
+   "entity_count": 16,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [
+      "name"
+     ],
+     "missing_recommended": [
+      "sku",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    }
+   ],
+   "entity_count": 2,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  }
+ ],
+ "llms_txt": {
+  "llms.txt": {
+   "exists": true,
+   "status": 200,
+   "final_url": "https://www.allbirds.com/llms.txt",
+   "bytes": 5767,
+   "has_h1": true,
+   "links": 8,
+   "platform_default": true
+  },
+  "llms-full.txt": {
+   "exists": true,
+   "status": 200,
+   "final_url": "https://www.allbirds.com/llms-full.txt",
+   "bytes": 5772,
+   "has_h1": true,
+   "links": 8,
+   "platform_default": true
+  }
+ },
+ "sitemap": {
+  "url": "https://www.allbirds.com/sitemap.xml",
+  "status": 200,
+  "exists": true,
+  "listed_in_robots": true
+ },
+ "crawl_seconds": 44.2,
+ "visibility": {
+  "questions": [
+   {
+    "id": "q1",
+    "kind": "category",
+    "text": "What are the best shoes brands to buy online right now?"
+   },
+   {
+    "id": "q2",
+    "kind": "category",
+    "text": "Where can I buy high-quality shoes online with international shipping?"
+   },
+   {
+    "id": "q3",
+    "kind": "brand",
+    "text": "Is Allbirds a legit and good store? What do customers say?"
+   },
+   {
+    "id": "q4",
+    "kind": "competitor",
+    "text": "What are some good alternatives to Allbirds?"
+   },
+   {
+    "id": "q5",
+    "kind": "budget",
+    "text": "Best shoes under 140 USD — which brands would you recommend?"
+   },
+   {
+    "id": "q6",
+    "kind": "category",
+    "text": "Which shoes brands have the best reviews in 2026?"
+   },
+   {
+    "id": "q7",
+    "kind": "category",
+    "text": "Recommend a direct-to-consumer shoes brand worth trying."
+   },
+   {
+    "id": "q8",
+    "kind": "use_case",
+    "text": "I want to buy shoes as a gift. Which online stores do you recommend?"
+   },
+   {
+    "id": "q9",
+    "kind": "category",
+    "text": "What are the most popular shoes brands on Shopify?"
+   },
+   {
+    "id": "q10",
+    "kind": "values",
+    "text": "Which shoes brands are the most sustainable or ethically made?"
+   },
+   {
+    "id": "q11",
+    "kind": "value",
+    "text": "What shoes brand offers the best value for money?"
+   },
+   {
+    "id": "q12",
+    "kind": "brand",
+    "text": "Allbirds vs its competitors: which is better for shoes?"
+   },
+   {
+    "id": "q13",
+    "kind": "brand",
+    "text": "Does Allbirds ship internationally and what is its return policy?"
+   },
+   {
+    "id": "q14",
+    "kind": "brand",
+    "text": "What is Allbirds known for?"
+   },
+   {
+    "id": "q15",
+    "kind": "competitor",
+    "text": "Brands similar to Allbirds for shoes?"
+   },
+   {
+    "id": "q16",
+    "kind": "category",
+    "text": "What are the top-rated online stores for shoes?"
+   },
+   {
+    "id": "q17",
+    "kind": "use_case",
+    "text": "What shoes would you recommend for everyday use?"
+   },
+   {
+    "id": "q18",
+    "kind": "value",
+    "text": "Which premium shoes brands are actually worth the price?"
+   },
+   {
+    "id": "q19",
+    "kind": "category",
+    "text": "What new or up-and-coming shoes brands should I know about?"
+   },
+   {
+    "id": "q20",
+    "kind": "values",
+    "text": "Which shoes brands offer free returns and a good warranty?"
+   },
+   {
+    "id": "q21",
+    "kind": "use_case",
+    "text": "Best shoes for travel — which brands?"
+   },
+   {
+    "id": "q22",
+    "kind": "category",
+    "text": "Which shoes brands do Reddit users recommend most?"
+   },
+   {
+    "id": "q23",
+    "kind": "budget",
+    "text": "Affordable shoes brands with good quality?"
+   },
+   {
+    "id": "q24",
+    "kind": "use_case",
+    "text": "What shoes should a first-time buyer get?"
+   },
+   {
+    "id": "q25",
+    "kind": "category",
+    "text": "Which independent shoes brands sell directly online instead of on Amazon?"
+   }
+  ],
+  "engines": [
+   "Gemini"
+  ],
+  "samples_per_question": {
+   "Gemini": 3
+  },
+  "simulated": false,
+  "estimated_cost_usd": 0.0,
+  "per_engine": {
+   "Gemini": {
+    "answered": 75,
+    "mentioned": 51,
+    "rate": 0.68,
+    "errors": 0,
+    "simulated": false
+   }
+  },
+  "per_question": {
+   "q1": {
+    "Gemini": "3/3"
+   },
+   "q2": {
+    "Gemini": "0/3"
+   },
+   "q3": {
+    "Gemini": "3/3"
+   },
+   "q4": {
+    "Gemini": "3/3"
+   },
+   "q5": {
+    "Gemini": "1/3"
+   },
+   "q6": {
+    "Gemini": "2/3"
+   },
+   "q7": {
+    "Gemini": "3/3"
+   },
+   "q8": {
+    "Gemini": "0/3"
+   },
+   "q9": {
+    "Gemini": "3/3"
+   },
+   "q10": {
+    "Gemini": "3/3"
+   },
+   "q11": {
+    "Gemini": "0/3"
+   },
+   "q12": {
+    "Gemini": "3/3"
+   },
+   "q13": {
+    "Gemini": "3/3"
+   },
+   "q14": {
+    "Gemini": "3/3"
+   },
+   "q15": {
+    "Gemini": "3/3"
+   },
+   "q16": {
+    "Gemini": "0/3"
+   },
+   "q17": {
+    "Gemini": "3/3"
+   },
+   "q18": {
+    "Gemini": "1/3"
+   },
+   "q19": {
+    "Gemini": "0/3"
+   },
+   "q20": {
+    "Gemini": "3/3"
+   },
+   "q21": {
+    "Gemini": "3/3"
+   },
+   "q22": {
+    "Gemini": "2/3"
+   },
+   "q23": {
+    "Gemini": "0/3"
+   },
+   "q24": {
+    "Gemini": "3/3"
+   },
+   "q25": {
+    "Gemini": "3/3"
+   }
+  },
+  "overall_mention_rate": 0.68,
+  "share_of_voice": 0.0752212389380531,
+  "top_competitors": [
+   [
+    "Rothy's",
+    31
+   ],
+   [
+    "Zappos",
+    24
+   ],
+   [
+    "REI",
+    21
+   ],
+   [
+    "Nordstrom",
+    19
+   ],
+   [
+    "On Running",
+    12
+   ],
+   [
+    "Thursday Boot Co",
+    12
+   ],
+   [
+    "Cariuma",
+    12
+   ],
+   [
+    "HOKA",
+    10
+   ],
+   [
+    "Brooks Running",
+    9
+   ],
+   [
+    "Veja",
+    8
+   ],
+   [
+    "Foot Locker",
+    8
+   ],
+   [
+    "New Balance",
+    7
+   ]
+  ],
+  "top_cited_domains": [
+   [
+    "allbirds.com",
+    45
+   ],
+   [
+    "zappos.com",
+    24
+   ],
+   [
+    "rothys.com",
+    23
+   ],
+   [
+    "rei.com",
+    21
+   ],
+   [
+    "nordstrom.com",
+    20
+   ],
+   [
+    "hoka.com",
+    18
+   ],
+   [
+    "thursdayboots.com",
+    17
+   ],
+   [
+    "on.com",
+    15
+   ],
+   [
+    "cariuma.com",
+    14
+   ],
+   [
+    "newbalance.com",
+    13
+   ],
+   [
+    "brooksrunning.com",
+    13
+   ],
+   [
+    "vans.com",
+    12
+   ],
+   [
+    "dsw.com",
+    12
+   ],
+   [
+    "veja-store.com",
+    11
+   ],
+   [
+    "adidas.com",
+    10
+   ]
+  ],
+  "store_cited": true,
+  "rows": [
+   {
+    "engine": "Gemini",
+    "q": "q1",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop here",
+     "Allbirds",
+     "New Balance",
+     "Rothy's",
+     "Vans",
+     "HOKA"
+    ],
+    "domains": [
+     "allbirds.com",
+     "newbalance.com",
+     "rothys.com",
+     "vans.com",
+     "hoka.com"
+    ],
+    "excerpt": "When buying shoes online, you want brands that offer great fit guides, easy return policies, and high-quality comfort. Here are some of the best shoe brands to shop online right now, depending on what you're looking for:\n\n### 1. Best for Everyday Comfort & Walking: **Allbirds**\n* **Why buy:** Known as \"the world's most comfortable shoes,\" Allbirds makes lightweight, minimalist sneakers from sustainable materials like merino wool and eucalyptus fiber. They are breathable, great for travel, and best of all, most of their shoes are machine washable.\n* **Shop here:** [Allbirds](https://www.allbird"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q1",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop",
+     "Hoka",
+     "On",
+     "Zappos",
+     "Nordstrom",
+     "Allbirds",
+     "New Balance",
+     "On Running",
+     "Vans",
+     "Rothy's"
+    ],
+    "domains": [
+     "allbirds.com",
+     "newbalance.com",
+     "hoka.com",
+     "on-running.com",
+     "vans.com",
+     "rothys.com",
+     "zappos.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "Here are some of the best shoe brands to buy online right now, categorized by what they do best, along with why they are worth checking out:\n\n### 1. Best for All-Day Comfort & Walking: **Allbirds**\n* **Why buy:** Famous for their super-soft merino wool and eucalyptus fiber sneakers, Allbirds are lightweight, incredibly breathable, and—best of all—machine washable. They feel like slippers but look like clean, minimalist everyday shoes. Plus, their online sizing guide and easy return policy make shopping risk-free.\n* **Shop:** [Allbirds](https://www.allbirds.com)\n\n### 2. Best Trendy & Retro Snea"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q1",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop",
+     "Sézane",
+     "Vivaia",
+     "Zappos",
+     "Allbirds",
+     "Steve Madden",
+     "REI",
+     "Nordstrom",
+     "Hoka",
+     "On Running"
+    ],
+    "domains": [
+     "allbirds.com",
+     "stevemadden.com",
+     "sezane.com",
+     "vivaia.com",
+     "rei.com",
+     "nordstrom.com",
+     "hoka.com",
+     "on.com",
+     "zappos.com"
+    ],
+    "excerpt": "Buying shoes online is easier than ever, especially with brands that offer generous return policies, virtual try-ons, and free shipping. Here are some of the best shoe brands to buy online right now, categorized by what they do best:\n\n### 1. Best for Everyday Comfort & Walking: **Allbirds**\n* **Why buy online:** Allbirds is famous for its merino wool and eucalyptus fiber sneakers that feel like slippers. Because their sizing is straightforward and their materials have a lot of give, they are a safe bet for online shopping. Plus, they have a fantastic 30-day \"no questions asked\" return policy, "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q2",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Net-a-Porter / Mr Porter",
+     "Farfetch",
+     "Meermin",
+     "Thursday Boot Co",
+     "END. Clothing",
+     "SSENSE",
+     "Clarks",
+     "Net-a-Porter",
+     "Mr Porter"
+    ],
+    "domains": [
+     "net-a-porter.com",
+     "mrporter.com",
+     "farfetch.com",
+     "meermin.com",
+     "thursdayboots.com",
+     "endclothing.com",
+     "ssense.com",
+     "clarks.com"
+    ],
+    "excerpt": "If you are looking for high-quality shoes online that offer international shipping, here are some of the best online stores and brands to check out, depending on your style:\n\n### 1. **For Luxury, Designer, and Contemporary Footwear**\n*   **Net-a-Porter / Mr Porter:** These are premier destinations for high-end designer shoes for women and men, respectively. They carry top-tier luxury brands like Gucci, Saint Laurent, Christian Louboutin, and Common Projects, and they offer seamless, reliable international shipping with duties calculated at checkout. ([Net-a-Porter](https://www.net-a-porter.com"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q2",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "MR PORTER",
+     "NET-A-PORTER",
+     "Farfetch",
+     "End. Clothing",
+     "SSENSE",
+     "Nordstrom"
+    ],
+    "domains": [
+     "mrporter.com",
+     "net-a-porter.com",
+     "farfetch.com",
+     "endclothing.com",
+     "ssense.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "When it comes to buying high-quality shoes online with international shipping, there are several top-tier retailers known for their curated selections, craftsmanship, and reliable global delivery. Here are some of the best places to shop:\n\n*   **[MR PORTER](https://www.mrporter.com)** (For Men) & **[NET-A-PORTER](https://www.net-a-porter.com)** (For Women): These sister sites are the gold standard for luxury online shopping. They carry everything from heritage shoemakers like Church's and Crockett & Jones to high-fashion sneakers from Common Projects and Gucci. They offer seamless internationa"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q2",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Net-a-Porter / Mr Porter",
+     "Farfetch",
+     "Meermin",
+     "Thursday Boot Co",
+     "SSENSE",
+     "COS",
+     "Selfridges",
+     "Net-a-Porter",
+     "Mr Porter"
+    ],
+    "domains": [
+     "net-a-porter.com",
+     "mrporter.com",
+     "farfetch.com",
+     "meermin.com",
+     "thursdayboots.com",
+     "ssense.com",
+     "cos.com",
+     "selfridges.com"
+    ],
+    "excerpt": "For high-quality shoes with reliable international shipping, here are some of the best online stores categorized by style and price point:\n\n### 1. For Luxury & Designer Shoes\n*   **Net-a-Porter / Mr Porter:** These sister sites are premier destinations for high-end designer footwear (think Gucci, Saint Laurent, and Common Projects). They offer exceptional customer service, beautifully packaged items, and seamless international shipping with duties calculated at checkout. Check out [Net-a-Porter](https://www.net-a-porter.com) and [Mr Porter](https://www.mrporter.com).\n*   **Farfetch:** Farfetch"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q3",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Incredible Comfort",
+     "Sustainability",
+     "Easy Maintenance",
+     "Versatile Style",
+     "Durability Issues",
+     "Weather Resistance",
+     "Allbirds Official Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Yes, **Allbirds** is definitely a legitimate and well-known brand. Founded in 2016, they became famous for pioneering the sustainable footwear trend by using eco-friendly materials like merino wool and eucalyptus fiber to create ultra-comfortable, minimalist shoes (most notably their Wool Runners). \n\n### What Customers Say\nOverall, public opinion on Allbirds is generally very positive, though experiences vary depending on what you're looking for in a shoe. \n\n**The Pros (What customers love):**\n* **Incredible Comfort:** Almost all reviews highlight how comfortable Allbirds are right out of the "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q3",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Extreme Comfort",
+     "Sustainability",
+     "Machine Washable",
+     "Versatile, Casual Style",
+     "Durability in Wet Weather",
+     "Allbirds Official Website",
+     "Nordstrom"
+    ],
+    "domains": [
+     "allbirds.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "Yes, Allbirds is definitely a legitimate and well-known brand. They pioneered the sustainable footwear trend, becoming famous for their ultra-comfortable, minimalist shoes made from natural materials like merino wool and eucalyptus tree fiber. \n\nHere is a breakdown of what customers generally say about them:\n\n### The Pros (What Customers Love)\n*   **Extreme Comfort:** Almost universally, reviewers rave about how comfortable Allbirds shoes are. Many people love wearing them all day without socks because the materials are soft and breathable.\n*   **Sustainability:** Eco-conscious shoppers apprec"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q3",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Extreme Comfort",
+     "No Socks Needed",
+     "Sustainability",
+     "Machine Washable",
+     "Allbirds Official Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Yes, Allbirds is definitely a legit and popular store. Founded in 2014, they pioneered the sustainable footwear movement by using eco-friendly materials like merino wool and eucalyptus fiber. \n\n### What Customers Say\nOverall, customers generally love Allbirds for specific reasons, though there are a few common complaints depending on what you're looking for in a shoe.\n\n**The Pros (What people love):**\n* **Extreme Comfort:** They are famous for being lightweight, breathable, and incredibly soft. Many customers love them as everyday walking shoes, especially for travel because they are easy to s"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q4",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Rothy's Official Website",
+     "Cariuma Website",
+     "Vessi Website",
+     "Tropicfeel Website",
+     "REI",
+     "On Official Website"
+    ],
+    "domains": [
+     "rothys.com",
+     "cariuma.com",
+     "vessi.com",
+     "shop.tropicfeel.com",
+     "rei.com",
+     "on.com"
+    ],
+    "excerpt": "If you love Allbirds for their sustainable materials, minimalist aesthetic, and cloud-like comfort, but want to try something new, there are several fantastic brands on the market right now. \n\nHere are some of the best alternatives to Allbirds, depending on what you're looking for:\n\n### 1. Rothy’s (Best for durability and style)\n* **Why buy:** Like Allbirds, Rothy’s are famous for being eco-friendly and machine-washable. However, instead of wool or eucalyptus fiber, Rothy's are knit from single-use plastic water bottles. They are slightly more structured and dressier than Allbirds, making them"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q4",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Check them out",
+     "Rothy's",
+     "VIVAIA",
+     "On Running",
+     "Cariuma",
+     "Veja",
+     "Toms"
+    ],
+    "domains": [
+     "rothys.com",
+     "vivaia.com",
+     "on.com",
+     "cariuma.com",
+     "veja-store.com",
+     "toms.com"
+    ],
+    "excerpt": "If you love Allbirds for their sustainable materials, minimalist aesthetic, and cloud-like comfort, but want to try something a little different, there are several fantastic brands on the market right now. \n\nHere are some of the best alternatives to Allbirds, categorized by what they do best:\n\n### 1. The Direct Competitor: **Rothy's**\n* **Why buy them:** If you like the washable, knit-to-shape design of Allbirds (especially the Tree Runners), Rothy's is the ultimate alternative. They are made from recycled plastic water bottles and feature incredible comfort, a sleeker silhouette, and a more p"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q4",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Rothy’s",
+     "Vessi",
+     "100% waterproof",
+     "Cariuma",
+     "Giesswein",
+     "Alohas",
+     "Rothy's",
+     "Rothys.com",
+     "Vessi.com",
+     "Cariuma.com",
+     "Giesswein-USA.com",
+     "Alohas.io"
+    ],
+    "domains": [
+     "rothys.com",
+     "vessi.com",
+     "cariuma.com",
+     "us.giesswein.com",
+     "alohas.io"
+    ],
+    "excerpt": "If you love the comfort, sustainability, and minimalist style of Allbirds—like their iconic wool runners—there are several fantastic brands on the market that offer similar eco-friendly sneakers and everyday shoes. \n\nHere are some of the best alternatives to check out:\n\n*   **Rothy’s:** If you like Allbirds' washable, lightweight sneaker style, Rothy’s is one of the best alternatives. They are famous for making shoes (and bags) out of recycled plastic water bottles. They are extremely durable, look a bit more polished and tailored than Allbirds, and are 100% machine washable. Check them out at"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q5",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "574",
+     "327",
+     "2002R",
+     "Stan Smiths",
+     "Superstars",
+     "Sambas",
+     "Bounce",
+     "Boost",
+     "Air Force 1 '07",
+     "Air Max SC",
+     "P-6000",
+     "Old Skool",
+     "Sk8-Hi",
+     "Authentic",
+     "Vans \"ComfyCush\"",
+     "\"PopCush\"",
+     "Clifton 8",
+     "Transport",
+     "New Balance Official Store",
+     "Foot Locker",
+     "Adidas Official Website",
+     "JD Sports",
+     "Nike.com",
+     "Vans Online Store",
+     "Zappos",
+     "REI",
+     "Hoka Official Site"
+    ],
+    "domains": [
+     "newbalance.com",
+     "footlocker.com",
+     "adidas.com",
+     "jdsports.com",
+     "nike.com",
+     "finishline.com",
+     "vans.com",
+     "zappos.com",
+     "rei.com",
+     "hoka.com"
+    ],
+    "excerpt": "If you’re looking for the best shoes under $140, there are several standout brands that offer an incredible mix of comfort, durability, and style without breaking the bank. Here are my top recommendations:\n\n### 1. **New Balance**\n* **Why buy:** New Balance has mastered the intersection of trendy street style and high-end comfort. Their \"Made in USA/UK\" lines are expensive, but their general-release lifestyle and running shoes are absolute steals under $140. Models like the **574** (classic retro style, often under $90) and the **327** or **2002R** (depending on sales) offer unmatched everyday "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q5",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "574",
+     "327",
+     "550",
+     "Brooks Ghost",
+     "Ride",
+     "Stan Smith",
+     "Grand Court",
+     "Desert Boot",
+     "New Balance Official Site",
+     "Foot Locker",
+     "REI",
+     "Brooks Running",
+     "Adidas Official Store",
+     "Zappos",
+     "Clarks USA Site",
+     "DSW"
+    ],
+    "domains": [
+     "newbalance.com",
+     "footlocker.com",
+     "rei.com",
+     "brooksrunning.com",
+     "adidas.com",
+     "zappos.com",
+     "clarksusa.com",
+     "dsw.com"
+    ],
+    "excerpt": "You can get some incredible, high-quality footwear under $140 if you look at the right brands. Depending on whether you are looking for everyday sneakers, running shoes, or something a bit more polished, here are my top brand recommendations within your budget:\n\n### 1. For Everyday Style & Comfort: **New Balance**\n* **Why I recommend them:** New Balance dominates the sub-$140 casual sneaker market right now. Models like the **574** (usually around $90) offer timeless retro style, while the **327** or **550** (often hovering right around $100–$130) give you that trendy, sought-after look withou"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q5",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Stan Smith",
+     "Superstar",
+     "Cloudfoam",
+     "NMD",
+     "Brooks",
+     "Saucony",
+     "Adidas Official Store",
+     "Brooks Running",
+     "Allbirds",
+     "Vans Official Store",
+     "Zappos"
+    ],
+    "domains": [
+     "adidas.com",
+     "brooksrunning.com",
+     "saucony.com",
+     "allbirds.com",
+     "vans.com",
+     "zappos.com"
+    ],
+    "excerpt": "You can find some incredible, high-quality footwear under $140 that doesn’t skimp on comfort or style. Depending on what you are looking for—whether it's running, everyday walking, or smart-casual wear—here are my top brand recommendations:\n\n### 1. For Everyday Comfort & Streetwear: **Adidas**\n* **Why I recommend them:** Adidas makes some of the most reliable and iconic lifestyle sneakers on the market. Models like the **Stan Smith**, **Superstar**, and various iterations of the **Cloudfoam** or **NMD** lines are usually well under $140 and offer all-day wearability. \n* **Where to shop:** Chec"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q6",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "On Running Official Store",
+     "REI",
+     "HOKA Official Website",
+     "Dick's Sporting Goods",
+     "Brooks Running Website",
+     "Allbirds Official Store",
+     "Foot Locker",
+     "New Balance Website"
+    ],
+    "domains": [
+     "on.com",
+     "rei.com",
+     "hoka.com",
+     "dickssportinggoods.com",
+     "brooksrunning.com",
+     "allbirds.com",
+     "footlocker.com",
+     "newbalance.com"
+    ],
+    "excerpt": "Based on current customer satisfaction, comfort innovation, and durability ratings, several shoe brands are dominating the reviews in 2026. Whether you are looking for running shoes, everyday walking comfort, or stylish streetwear, here are the top-rated brands right now and why people love them:\n\n### 1. **On Running** (Best for Athletic & All-Day Comfort)\n* **Why they are top-rated:** On (famous for their CloudTec sole technology) has surged to the top of review charts for both serious runners and people who stand all day at work. Reviewers constantly praise their lightweight feel, modern aes"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q6",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Cloudmonster",
+     "Cloud 5",
+     "Shop here",
+     "Hoka Bondi",
+     "Clifton",
+     "Ghost",
+     "Adrenaline GTS",
+     "On Running",
+     "REI",
+     "Hoka Official",
+     "Zappos",
+     "Birkenstock",
+     "Nordstrom",
+     "Brooks Running",
+     "Dick's Sporting Goods",
+     "New Balance",
+     "Foot Locker"
+    ],
+    "domains": [
+     "on.com",
+     "rei.com",
+     "hoka.com",
+     "zappos.com",
+     "birkenstock.com",
+     "nordstrom.com",
+     "brooksrunning.com",
+     "dickssportinggoods.com",
+     "newbalance.com",
+     "footlocker.com"
+    ],
+    "excerpt": "Shoe trends and reviews for 2026 show that shoppers are prioritizing a mix of high-tech comfort, everyday versatility, and sustainable materials. Based on current consumer feedback, expert roundups, and wearer reviews across platforms like Reddit and running forums, here are the top-rated shoe brands of 2026:\n\n### 1. **On Running (On Cloud)**\n* **Best For:** Everyday walking, running, and all-day wear\n* **Why shoppers love them:** On has maintained its massive popularity thanks to its signature CloudTec cushioning, which offers a cloud-like strike without feeling too squishy. Reviewers consist"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q6",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop directly",
+     "Brooks",
+     "Nike",
+     "HOKA Official Website",
+     "On Running",
+     "Allbirds",
+     "New Balance",
+     "Brooks Running",
+     "Zappos",
+     "REI"
+    ],
+    "domains": [
+     "hoka.com",
+     "on.com",
+     "allbirds.com",
+     "newbalance.com",
+     "wwws.brooksrunning.com",
+     "nike.com",
+     "zappos.com",
+     "rei.com"
+    ],
+    "excerpt": "Based on current trends, customer feedback, and performance reviews heading into 2026, several shoe brands consistently rank at the top for comfort, durability, and style. Depending on what you are looking for—running, everyday walking, or style—here are the brands with the best overall reviews:\n\n### 1. Best for Running & Maximum Cushioning: **HOKA**\n* **Why people love them:** HOKA continues to dominate running and walking shoe reviews due to its signature thick, lightweight foam midsoles. They are heavily recommended by podiatrists, nurses, marathon runners, and anyone who spends all day on "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q7",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "One direct-to-consumer shoe brand definitely worth trying is **Allbirds**. \n\nThey completely changed the game by using sustainably sourced materials—like merino wool and eucalyptus tree fiber—to make sneakers that feel remarkably lightweight and cozy, almost like wearing slippers. They’re super breathable, machine washable, and versatile enough for travel, light workouts, or casual everyday wear. Plus, they have a great return policy if you want to test them out risk-free.\n\nYou can check them out directly at [Allbirds](https://www.allbirds.com)."
+   },
+   {
+    "engine": "Gemini",
+    "q": "q7",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "One direct-to-consumer shoe brand definitely worth trying is **Allbirds**. \n\nThey completely changed the game by using natural, sustainable materials like merino wool and eucalyptus tree fiber to create sneakers that feel like walking on clouds. They are incredibly lightweight, machine-washable, and versatile enough for travel, work, or casual everyday wear. \n\nCheck them out at [Allbirds](https://www.allbirds.com)."
+   },
+   {
+    "engine": "Gemini",
+    "q": "q7",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Sustainability",
+     "All-Day Comfort",
+     "Versatility",
+     "Allbirds Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "If you are looking for a fantastic direct-to-consumer (DTC) shoe brand to try, I highly recommend checking out **Allbirds**. \n\nThey completely changed the game for comfortable, everyday footwear by using innovative, sustainable materials like Merino wool and eucalyptus fiber. Their shoes are famously lightweight, incredibly breathable, and—best of all—you can toss most of their styles right into the washing machine to keep them looking brand new. \n\nHere are a few reasons to give them a try:\n* **Sustainability:** They are a certified B Corp focused on low carbon footprints and renewable materia"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q8",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "365-day return policy",
+     "Nordstrom",
+     "REI",
+     "Pro-tip for gifting shoes"
+    ],
+    "domains": [
+     "zappos.com",
+     "nordstrom.com",
+     "dsw.com",
+     "rei.com"
+    ],
+    "excerpt": "Buying shoes as a gift can be tricky, especially with sizing, but these online stores make the process smooth with great selection, reliable shipping, and easy return policies:\n\n*   **[Zappos](https://www.zappos.com):** This is my top recommendation for gift-giving. Zappos has a massive selection of brands, but more importantly, they offer legendary customer service and a **365-day return policy**. If the shoes don't fit the recipient, exchanges and returns are completely hassle-free.\n*   **[Nordstrom](https://www.nordstrom.com):** If you're looking for higher-end, trendy, or designer shoes, N"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q8",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "Nordstrom",
+     "REI",
+     "StockX"
+    ],
+    "domains": [
+     "zappos.com",
+     "nordstrom.com",
+     "dsw.com",
+     "rei.com",
+     "goat.com",
+     "stockx.com"
+    ],
+    "excerpt": "Buying shoes as a gift can be tricky since you need to worry about sizing, but many online stores make the process easy with great return policies and wide selections. Here are some of the best online stores to check out, depending on who you are shopping for and the style you want:\n\n*   **Zappos** ([zappos.com](https://www.zappos.com)): This is arguably the best place to buy shoes as a gift. They have a massive inventory ranging from everyday sneakers to high-end dress shoes, and their customer service is legendary. Best of all, they offer free shipping and a generous 365-day return policy, w"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q8",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "Nordstrom",
+     "REI",
+     "Amazon",
+     "Pro-Tip for Gift Shoes"
+    ],
+    "domains": [
+     "zappos.com",
+     "nordstrom.com",
+     "dsw.com",
+     "rei.com",
+     "amazon.com"
+    ],
+    "excerpt": "Buying shoes as a gift can be tricky since you need to worry about sizing and returns, but several online stores make the process seamless with great selections, gift cards, and generous return policies. \n\nHere are my top recommendations for online shoe stores:\n\n*   **[Zappos](https://www.zappos.com):** This is arguably the best place to buy shoes as a gift because of their legendary 365-day return policy and 24/7 customer service. If the recipient needs a different size or style, exchanges are completely stress-free. They also have a massive selection ranging from everyday sneakers to high-en"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q9",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Shop here",
+     "Rothy’s",
+     "Thursday Boot Co",
+     "Cariuma",
+     "Rothy's",
+     "Thursday Boot Company",
+     "APL"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "thursdayboots.com",
+     "cariuma.com",
+     "athleticpropulsionlabs.com"
+    ],
+    "excerpt": "Shopify powers millions of independent online stores, and several footwear brands have achieved massive popularity and cult status on the platform by offering direct-to-consumer comfort, sustainability, and trend-focused styles. \n\nHere are some of the most popular shoe brands built on Shopify, along with a few reasons why people love them:\n\n*   **Allbirds**\n    *   **Why they’re popular:** Famous for their incredibly comfortable, machine-washable sneakers made from sustainable materials like merino wool and eucalyptus fiber, Allbirds pioneered the \"cloud-like comfort for everyday wear\" trend.\n"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q9",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop here",
+     "Allbirds",
+     "Rothy's",
+     "Cariuma",
+     "Orthofeet"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "cariuma.com",
+     "orthofeet.com"
+    ],
+    "excerpt": "Shopify powers hundreds of thousands of independent and direct-to-consumer (DTC) brands, and over the last few years, it has become the go-to platform for some of the most hyped, innovative, and fast-growing footwear companies in the world. \n\nHere are some of the most popular and successful shoe brands currently running their stores on Shopify:\n\n### 1. **Allbirds**\n* **Why they are popular:** Famous for their ultra-comfortable, sustainable wool and tree-fiber sneakers, Allbirds practically pioneered the modern DTC \"startup shoe\" movement. They built their massive global brand largely on Shopif"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q9",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Rothy’s",
+     "Cariuma",
+     "Thursday Boot Co",
+     "Rothy's",
+     "Thursday Boots",
+     "Athletic Propulsion Labs"
+    ],
+    "domains": [
+     "allbirds.com",
+     "紡rothys.com",
+     "cariuma.com",
+     "thursdayboots.com",
+     "athleticpropulsionlabs.com"
+    ],
+    "excerpt": "Shopify powers some of the coolest, fastest-growing footwear brands on the internet today, ranging from sustainable everyday sneakers to high-performance running shoes and trendy casual wear. \n\nHere are some of the most popular and successful shoe brands built on Shopify:\n\n*   **Allbirds:** Famous for their ultra-comfortable, machine-washable wool and tree-fiber sneakers, Allbirds is one of Shopify’s biggest success stories. They pioneered the \"sustainable comfort\" casual shoe trend. Check them out at [Allbirds](https://www.allbirds.com).\n*   **Rothy’s:** Known for making stylish flats, loafer"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q10",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Veja",
+     "Rothy’s",
+     "Nisolo",
+     "Rothy's",
+     "Cariuma"
+    ],
+    "domains": [
+     "allbirds.com",
+     "veja-store.com",
+     "is.gd",
+     "nisolo.com",
+     "cariuma.com"
+    ],
+    "excerpt": "When it comes to shopping for shoes that are genuinely sustainable, ethically made, and transparent about their supply chains, a few standout brands are leading the industry. Whether you are looking for everyday sneakers, running shoes, or casual wear, here are some of the best brands to check out:\n\n*   **Allbirds:** Known for using renewable materials like merino wool, eucalyptus fiber, and sugarcane-based SweetFoam®, Allbirds is a B Corp that focuses heavily on lowering its carbon footprint. They even label the carbon footprint right on their products so you can see the impact. You can brows"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q10",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Veja",
+     "Rothy’s",
+     "Nisolo",
+     "Allbirds Website",
+     "Veja Official Store",
+     "Rothy's",
+     "Nisolo Website",
+     "Ethical Wares"
+    ],
+    "domains": [
+     "allbirds.com",
+     "veja-store.com",
+     "rothys.com",
+     "nisolo.com",
+     "ethicalwares.com"
+    ],
+    "excerpt": "When looking for shoes that are both stylish and genuinely sustainable or ethically made, several brands stand out for using eco-friendly materials, ensuring fair labor practices, and focusing on durability. \n\nHere are some of the top brands leading the way in sustainable footwear:\n\n*   **Allbirds:** A household name in sustainable footwear, Allbirds is known for using renewable materials like merino wool, eucalyptus fiber, and sugarcane-based EVA foam (SweetFoam). They are a certified B Corp and have clear carbon footprint labeling on all their products. You can shop their collection directly"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q10",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop here",
+     "Bonus Retailer",
+     "The Folklore",
+     "Net-a-Porter's NET SUSTAIN shop",
+     "Allbirds Official Website",
+     "Veja Official Website",
+     "Rothy’s Official Website",
+     "Nisolo Official Website",
+     "Tropicfeel Official Website"
+    ],
+    "domains": [
+     "allbirds.com",
+     "veja-store.com",
+     "rothys.com",
+     "nisolo.com",
+     "shop.tropicfeel.com",
+     "thefolklore.com",
+     "net-a-porter.com"
+    ],
+    "excerpt": "When it comes to shopping for shoes that are genuinely sustainable, ethical, and kind to both people and the planet, a few standout brands are leading the industry by using recycled materials, ensuring fair labor practices, and prioritizing transparency. \n\nHere are some of the best sustainable and ethical shoe brands you can shop right now:\n\n### 1. **Allbirds**\n* **Why shop here:** Allbirds is practically a household name in sustainable footwear. They are a certified B Corporation known for using renewable materials like merino wool, eucalyptus tree fiber, and sugarcane-based EVA foam (SweetFo"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q11",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Clearance and Sale section",
+     "Pro-Tip for Maximum Value",
+     "Skechers Official Website",
+     "DSW",
+     "Vans",
+     "Zappos",
+     "Saucony's Official Store",
+     "Running Warehouse",
+     "Thursday Boot Co",
+     "Nike Sale Page",
+     "Nordstrom Rack",
+     "REI"
+    ],
+    "domains": [
+     "skechers.com",
+     "dsw.com",
+     "vans.com",
+     "zappos.com",
+     "saucony.com",
+     "runningwarehouse.com",
+     "thursdayboots.com",
+     "nike.com",
+     "nordstromrack.com",
+     "rei.com"
+    ],
+    "excerpt": "When it comes to the absolute best value for money in shoes, it really depends on what style you are looking for. However, a few standout brands consistently deliver high quality, durability, and comfort without breaking the bank. \n\nHere are my top recommendations for the best value shoe brands across different categories:\n\n### 1. Best for Everyday Casual & Comfort: **Skechers**\n* **Why:** Skechers has evolved far beyond just walking shoes; they offer an incredible variety of casual sneakers, slip-ons, and work shoes. Their proprietary memory foam and \"Slip-ins\" technology rival brands that co"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q11",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Check them out",
+     "Vans Official Website",
+     "Adidas Sale Page",
+     "Zappos",
+     "Brooks Running",
+     "Thursday Boot Co. Store",
+     "DSW.com"
+    ],
+    "domains": [
+     "vans.com",
+     "adidas.com",
+     "zappos.com",
+     "brooksrunning.com",
+     "thursdayboots.com",
+     "dsw.com"
+    ],
+    "excerpt": "When it comes to the absolute best value for money in shoes, it really depends on what style you are looking for. However, a few standout brands consistently deliver high quality, durability, and comfort without breaking the bank. \n\nHere are my top recommendations for brands that offer the best bang for your buck:\n\n### 1. Best Everyday Casual & Sneakers: **Vans** or **Adidas**\n* **Why:** If you want classic style that holds up well to daily wear, Vans and Adidas are hard to beat. Vans sneakers (like the Old Skool or Authentic) usually range from $60 to $80 and last for years, aging gracefully "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q11",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Vans",
+     "Adidas",
+     "Brooks",
+     "Saucony",
+     "Thursday Boot Co",
+     "Skechers",
+     "Pro-Tip for Maximum Value",
+     "Vans Official Website",
+     "Adidas Official Website",
+     "Brooks Running",
+     "Thursday Boot Company",
+     "Skechers Official Website"
+    ],
+    "domains": [
+     "vans.com",
+     "adidas.com",
+     "brooksrunning.com",
+     "saucony.com",
+     "thursdayboots.com",
+     "skechers.com"
+    ],
+    "excerpt": "When it comes to the absolute best value for money in shoes, it really depends on what style you are looking for—whether it's everyday sneakers, durable boots, or comfortable running shoes. However, a few brands consistently punch above their weight class by offering high-end materials, durability, and comfort without the luxury markup. \n\nHere are the top shoe brands that offer the best value for your money across different categories:\n\n### 1. Best for Everyday Casual Sneakers: **Vans** or **Adidas**\n* **Vans:** If you want a classic, versatile sneaker that lasts, Vans are hard to beat. Most s"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q12",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop Vessi",
+     "Shop Rothy’s",
+     "Shop Hoka",
+     "Shop On Running",
+     "Shop Cariuma",
+     "Choose Allbirds if",
+     "Choose a competitor if",
+     "Vessi",
+     "Rothy’s",
+     "Hoka",
+     "On Running",
+     "Cariuma",
+     "Allbirds",
+     "Rothy's",
+     "On"
+    ],
+    "domains": [
+     "vessi.com",
+     "rothys.com",
+     "hoka.com",
+     "on.com",
+     "cariuma.com",
+     "allbirds.com"
+    ],
+    "excerpt": "When comparing Allbirds to its competitors, it really comes down to what you value most: ultimate cloud-like comfort and sustainability, or better durability, arch support, and athletic performance. \n\nAllbirds revolutionized the market with its superfine Merino wool and eucalyptus tree fiber sneakers (like the famous Wool Runner and Tree Runner), making them the ultimate lightweight, breathable, and machine-washable travel shoes. However, some users find they lack structured arch support and wear out faster than traditional sneakers.\n\nHere is how Allbirds compares to its top competitors, depen"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q12",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "The Vibe",
+     "Hero Product",
+     "Shop at",
+     "The Competitor Edge",
+     "Buy Allbirds if",
+     "Buy a Competitor if",
+     "On",
+     "Brooks",
+     "Vessi",
+     "Rothy's",
+     "Allbirds Wool Runners",
+     "Allbirds Official Store",
+     "Vessi Official Store",
+     "Rothy's Official Store",
+     "On Cloud",
+     "Brooks Ghost",
+     "REI",
+     "Zappos"
+    ],
+    "domains": [
+     "allbirds.com",
+     "vessi.com",
+     "rothys.com",
+     "on-running.com",
+     "brooksrunning.com",
+     "rei.com",
+     "zappos.com"
+    ],
+    "excerpt": "When deciding between Allbirds and its competitors, it really comes down to what you value most: **classic minimalist comfort (Allbirds)** versus **performance, durability, or waterproof features (competitors).** \n\nAllbirds revolutionized the market with its super-soft, eco-friendly Merino wool and eucalyptus fiber shoes. They are unmatched for a cozy, barefoot-style casual shoe. However, competitors have caught up and often surpass them in terms of arch support, durability, and versatility.\n\nHere is how Allbirds compares to its top competitors, along with where you can shop them:\n\n### 1. Allb"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q12",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Check them out",
+     "Choose Allbirds if",
+     "Choose a competitor if",
+     "Rothy's",
+     "On Running",
+     "Hoka",
+     "Veja",
+     "Merrell",
+     "Shop Allbirds"
+    ],
+    "domains": [
+     "rothys.com",
+     "on-running.com",
+     "hoka.com",
+     "veja-store.com",
+     "merrell.com",
+     "allbirds.com"
+    ],
+    "excerpt": "When comparing Allbirds to its competitors, it really comes down to what you value most in a shoe: **ultimate comfort and sustainability** (Allbirds) versus **durability, performance, and versatility** (competitors). \n\nAllbirds revolutionized the market with their super-soft Merino wool and eucalyptus fiber sneakers, making them the ultimate lightweight, breathable, slip-on-and-go travel shoes. However, they aren't the best for heavy workouts, and some find they lack arch support over long distances.\n\nHere is how Allbirds stacks up against its top competitors, depending on what you're looking "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q13",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "The Window",
+     "30 days",
+     "Condition",
+     "Cost",
+     "Final Sale",
+     "Allbirds website",
+     "Help Center / Returns page"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Yes, **Allbirds** does ship internationally to many countries worldwide! \n\nWhen you visit the [Allbirds website](https://www.allbirds.com), it usually auto-detects your location, or you can use the country selector at the bottom of the page to browse the specific regional store for your shipping destination. Keep in mind that shipping times, costs, and available duties/taxes vary depending on where you are having the order sent.\n\nAs for their **return policy**, Allbirds is known for being very customer-friendly:\n* **The Window:** You have **30 days** from the date of purchase (or delivery, dep"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q13",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Timeframe",
+     "30 days",
+     "Condition",
+     "Cost",
+     "Allbirds Returns Portal"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Yes, **Allbirds** does ship internationally! They ship to many countries worldwide directly through their localized international websites. When you visit the Allbirds website, it should automatically detect your location, or you can manually select your country from the region selector at the bottom of the page to see if they ship to your specific location, along with local currency, shipping times, and duties.\n\n### Return Policy\nAllbirds has a very customer-friendly return and exchange policy:\n* **Timeframe:** You have **30 days** from the date of purchase to return or exchange items.\n* **Co"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q13",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Timeframe",
+     "30 days",
+     "Condition",
+     "Cost",
+     "Final Sale",
+     "Allbirds Help Center"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Yes, **Allbirds** does ship internationally to many countries worldwide! \n\nWhen you visit their website at [Allbirds](https://www.allbirds.com), the site usually auto-detects your location and routes you to the correct regional store (like Canada, the UK, EU, Australia, etc.). If you are shipping to a country outside of their main regional storefronts, they still offer international shipping to a wide variety of destinations at checkout. Shipping fees and delivery times vary depending on the destination.\n\n### **Return Policy**\nAllbirds has a very customer-friendly return policy:\n* **Timeframe:"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q14",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "The Wool Runners",
+     "The Tree Runners",
+     "Allbirds Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Allbirds is best known for creating exceptionally comfortable, eco-friendly footwear made primarily from natural and sustainable materials like Merino wool, eucalyptus tree fiber, and sugarcane. \n\nThey are most famous for a few standout products:\n* **The Wool Runners:** Often called the \"world's most comfortable shoes,\" these were their breakout product, made from soft, renewable Merino wool.\n* **The Tree Runners:** Lightweight, breathable everyday sneakers made from cooling eucalyptus fiber.\n\nIf you want to check out their latest styles and sustainable collections, you can shop directly on th"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q14",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "The Wool Runners",
+     "Sustainability",
+     "Machine Washability",
+     "Allbirds Official Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Allbirds is best known for creating exceptionally comfortable, eco-friendly footwear made from sustainable materials like Merino wool and eucalyptus tree fiber. \n\nHere are the key things they are famous for:\n\n* **The Wool Runners:** These are the shoes that put Allbirds on the map. Made from soft, temperature-regulating Merino wool, they are famous for being lightweight, incredibly cozy, and famously worn without socks.\n* **Sustainability:** Allbirds pioneered the use of renewable natural materials in mainstream footwear long before it became an industry standard. They prominently label the ca"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q14",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Wool Runners",
+     "Sustainability",
+     "Minimalist Design",
+     "All-Day Comfort",
+     "Allbirds Website"
+    ],
+    "domains": [
+     "allbirds.com"
+    ],
+    "excerpt": "Allbirds is best known for creating exceptionally comfortable, eco-friendly footwear made from sustainable materials like merino wool, eucalyptus tree fiber, and sugarcane. They famously popularized the \"casual everyday sneaker\" trend, particularly with their flagship **Wool Runners**, which are beloved for being lightweight, breathable, and machine-washable. \n\nHere are a few things that really define the brand:\n\n*   **Sustainability:** They are a certified B Corp and were pioneers in labeling the carbon footprint of every product they make. They've even shared their proprietary carbon-reducti"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q15",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Rothy’s",
+     "Vessi",
+     "Vivaia",
+     "Giesswein",
+     "Kizik",
+     "Rothys.com",
+     "Vessi.com",
+     "Vivaia.com",
+     "Giesswein.com",
+     "Kizik.com"
+    ],
+    "domains": [
+     "rothys.com",
+     "vessi.com",
+     "vivaia.com",
+     "giesswein.com",
+     "kizik.com"
+    ],
+    "excerpt": "If you love Allbirds for their focus on sustainability, supreme comfort, and minimalist everyday style, there are several fantastic brands that offer a very similar vibe. Here are the top brands I recommend checking out:\n\n*   **Rothy’s:** Known for their incredibly comfortable flats, sneakers, and loafers, Rothy's are made entirely from recycled plastic water bottles. They have a sleek, knit aesthetic similar to the Allbirds Tree runners, and the best part is that the entire shoe is machine washable. You can shop their collection directly at [Rothys.com](https://rothys.com).\n*   **Vessi:** If "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q15",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "100% waterproof",
+     "Rothy’s",
+     "Cariuma",
+     "Vessi",
+     "Birdies",
+     "On"
+    ],
+    "domains": [
+     "rothys.com",
+     "cariuma.com",
+     "vessi.com",
+     "birdies.com",
+     "on.com"
+    ],
+    "excerpt": "If you love Allbirds for their lightweight feel, sustainable materials, and minimalist, everyday style, there are several fantastic brands that hit that exact same sweet spot. \n\nHere are some of the best brands similar to Allbirds, depending on what you love most about them:\n\n### 1. Rothy’s\n* **Why they’re similar:** Like Allbirds, [Rothy’s](https://rothys.com) is famous for making incredibly comfortable, eco-friendly footwear out of recycled plastic water bottles. They have a similarly sleek, minimalist aesthetic and are beloved because you can throw them right in the washing machine when the"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q15",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Rothy’s",
+     "Vessi",
+     "Vivaia",
+     "Everlane",
+     "Rothy's",
+     "Keds"
+    ],
+    "domains": [
+     "rothys.com",
+     "vessi.com",
+     "vivaia.com",
+     "keds.com",
+     "everlane.com"
+    ],
+    "excerpt": "If you love Allbirds for their focus on sustainability, supreme comfort, minimalist design, and washable materials, there are several fantastic brands that offer a very similar vibe. \n\nHere are the best brands similar to Allbirds, along with why you should check them out:\n\n*   **Rothy’s:** Famous for their seamless knit shoes made from recycled plastic water bottles. Like Allbirds, they are extremely lightweight, stylish, and—best of all—fully machine washable. They lean a bit more toward flats, loafers, and everyday casual sneakers. Check them out at [Rothy's](https://rothys.com).\n*   **Vessi"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q16",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "Nordstrom",
+     "REI",
+     "Foot Locker",
+     "Pro-tip before you buy"
+    ],
+    "domains": [
+     "zappos.com",
+     "nordstrom.com",
+     "dsw.com",
+     "rei.com",
+     "footlocker.com"
+    ],
+    "excerpt": "When you're shopping for shoes online, the best store really depends on what style you're looking for—whether it's everyday sneakers, high-end designer heels, running shoes, or rugged boots. \n\nHere are the top-rated online shoe stores, known for their huge selections, customer service, and easy return policies:\n\n*   **[Zappos](https://www.zappos.com):** Universally considered the gold standard for online shoe shopping. Zappos boasts a massive inventory of brands ranging from Nike and Adidas to Birkenstock and Brooks. Their standout feature is their legendary 365-day return policy and stellar 2"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q16",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "Nordstrom",
+     "REI",
+     "Foot Locker",
+     "DSW VIP loyalty program"
+    ],
+    "domains": [
+     "zappos.com",
+     "dsw.com",
+     "nordstrom.com",
+     "rei.com",
+     "footlocker.com"
+    ],
+    "excerpt": "When shopping for shoes online, several stores stand out for their incredible selection, easy return policies, and customer service. Here are the top-rated online stores for shoes, broken down by what they do best:\n\n*   **[Zappos](https://www.zappos.com):** The gold standard for online shoe shopping. Zappos is legendary for its massive selection of brands, lightning-fast shipping, and a stress-free 365-day return policy. Customer service is available 24/7, making it almost risk-free to find your size and style.\n*   **[DSW (Designer Shoe Warehouse)](https://www.dsw.com):** If you love name-bran"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q16",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Zappos",
+     "Nordstrom",
+     "REI",
+     "Foot Locker",
+     "DSW VIP loyalty program"
+    ],
+    "domains": [
+     "zappos.com",
+     "dsw.com",
+     "nordstrom.com",
+     "rei.com",
+     "footlocker.com"
+    ],
+    "excerpt": "When you are looking for the best online shoe stores, a few top-rated retailers consistently stand out for their massive selections, customer service, and easy return policies. Here are the top online stores for shoes, along with why they are shopper favorites:\n\n*   **[Zappos](https://www.zappos.com):** Widely considered the gold standard for online shoe shopping. Zappos is famous for its incredible 365-day return policy and legendary 24/7 customer service. They carry almost every brand imaginable, from everyday sneakers to luxury heels, and shipping is exceptionally fast.\n*   **[DSW (Designer"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q17",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds Official Website",
+     "Zappos",
+     "On Running Website",
+     "New Balance Official Website",
+     "Nordstrom",
+     "Veja's Website"
+    ],
+    "domains": [
+     "allbirds.com",
+     "zappos.com",
+     "on-running.com",
+     "newbalance.com",
+     "nordstrom.com",
+     "veja-store.com"
+    ],
+    "excerpt": "For everyday use, you want a pair of shoes that strike the perfect balance between all-day comfort, durability, and versatility so they can match almost any casual outfit. \n\nHere are a few of the top brands and models I recommend, depending on your style:\n\n*   **Allbirds (The Tree Runners or Wool Runners):** If comfort and breathability are your top priorities, Allbirds are hard to beat. They are famously lightweight, made from sustainable materials, and feel almost like wearing slippers while still offering proper support for walking around town. Check them out on the [Allbirds Official Websi"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q17",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Check them out",
+     "Allbirds Wool Runners",
+     "Adidas Originals",
+     "Vionic Shoes",
+     "Nike Everyday Shoes"
+    ],
+    "domains": [
+     "allbirds.com",
+     "adidas.com",
+     "vionicshoes.com",
+     "nike.com"
+    ],
+    "excerpt": "For everyday use, you want a shoe that balances all-day comfort, durability, and versatility so it can match most of your wardrobe. Here are some of the best brands and models I recommend, depending on your style:\n\n### 1. The Ultimate Everyday Sneaker: **Allbirds**\n* **Why I recommend them:** If comfort and breathability are your top priorities, Allbirds are hard to beat. They are made from merino wool or eucalyptus tree fiber, making them incredibly lightweight, soft, and—best of all—machine washable. They have a minimalist look that goes great with jeans, joggers, or casual shorts.\n* **Check"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q17",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Check them out",
+     "Allbirds",
+     "Nike",
+     "New Balance",
+     "Vans"
+    ],
+    "domains": [
+     "allbirds.com",
+     "nike.com",
+     "newbalance.com",
+     "vans.com"
+    ],
+    "excerpt": "For everyday use, you want a shoe that strikes the perfect balance between all-day comfort, durability, and versatility so it matches most of your wardrobe. Depending on your personal style, here are my top recommendations for everyday sneakers:\n\n**1. The Ultimate All-Rounder: Allbirds Wool Runners**\n*   **Why I recommend them:** If comfort and breathability are your top priorities, these are hard to beat. They are made from soft merino wool, feel like wearing slippers, are machine washable, and have a minimalist look that goes great with casual wear. \n*   **Check them out:** [Allbirds](https:"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q18",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allen Edmonds",
+     "Alden",
+     "Thursday Boots",
+     "Red Wing Heritage",
+     "On Running",
+     "Allbirds",
+     "Grailed",
+     "Poshmark"
+    ],
+    "domains": [
+     "allenedmonds.com",
+     "aldenshop.com",
+     "mrporter.com",
+     "thursdayboots.com",
+     "redwingheritage.com",
+     "on.com",
+     "allbirds.com",
+     "grailed.com",
+     "poshmark.com"
+    ],
+    "excerpt": "When you're shelling out top dollar for shoes, you want a mix of premium materials, timeless design, and—crucially—either long-lasting durability or the ability to be resoled. \n\nHere are the premium shoe brands that are genuinely worth the investment, broken down by category:\n\n### 1. The Heritage Dress Shoe Kings: **Allen Edmonds & Alden**\nIf you need a pair of dress shoes, oxfords, or loafers that will literally last you decades, these are the gold standard. \n*   **Why they’re worth it:** Brands like [Allen Edmonds](https://www.allenedmonds.com) and [Alden](https://www.aldenshop.com) use Good"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q18",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Shop here",
+     "Allen Edmonds Official Website",
+     "Thursday Boot Company",
+     "Koio Collective",
+     "Birkenstock Official Website",
+     "R.M. Williams"
+    ],
+    "domains": [
+     "allenedmonds.com",
+     "thursdayboots.com",
+     "koio.co",
+     "birkenstock.com",
+     "rmwilliams.com"
+    ],
+    "excerpt": "When it comes to premium shoes, \"worth the price\" usually comes down to three things: top-tier materials, comfort that lasts all day, and the ability to be resoled or repaired rather than thrown away. \n\nHere are a few premium shoe brands that genuinely deliver on their price tags, along with why they are worth it:\n\n### 1. Allen Edmonds (For Dress & Heritage Shoes)\n* **Why they’re worth it:** Based in Wisconsin, Allen Edmonds is famous for its Goodyear-welted construction. This means the soles can be completely replaced by the factory when they wear out, effectively making these a \"buy it for l"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q18",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Red Wing Heritage",
+     "Wolverine",
+     "Allen Edmonds",
+     "Meermin",
+     "Oliver Cabell",
+     "Hoka",
+     "Grailed",
+     "Poshmark",
+     "Browse Red Wing Heritage",
+     "Shop Wolverine",
+     "Explore Allen Edmonds",
+     "Check out Meermin",
+     "Browse Oliver Cabell",
+     "Shop On",
+     "Explore Hoka"
+    ],
+    "domains": [
+     "thursdayboots.com",
+     "redwingshoes.com",
+     "wolverine.com",
+     "allenedmonds.com",
+     "meermin.com",
+     "mrporter.com",
+     "olivercabell.com",
+     "on.com",
+     "hoka.com"
+    ],
+    "excerpt": "When it comes to premium shoes, \"worth the price\" usually comes down to three things: **durability, comfort, and the ability to be resoled.** Fast-fashion footwear falls apart in a year, but a truly well-made pair of shoes can last a decade or more if you care for them. \n\nHere are some premium shoe brands that genuinely justify their price tags, broken down by category:\n\n### 1. Everyday Boots & Heritage Leather\nIf you want boots that look better the older they get and can be completely rebuilt by a cobbler when the soles wear out, these are the gold standards:\n*   **Thursday Boot Co. (Entry Pr"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q19",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "The Vibe",
+     "Shop here",
+     "VIVAIA",
+     "Norda Run",
+     "REI",
+     "Cariuma",
+     "Autry Action Shoes",
+     "SSENSE",
+     "ROA Hiking",
+     "Farfetch"
+    ],
+    "domains": [
+     "vivaia.com",
+     "nordarun.com",
+     "rei.com",
+     "cariuma.com",
+     "autry-usa.com",
+     "ssense.com",
+     "roahiking.com",
+     "farfetch.com"
+    ],
+    "excerpt": "It’s an exciting time for footwear, with several disruptive, up-and-coming brands focusing on comfort, sustainability, and unique aesthetics rather than just traditional athletic status symbols. \n\nHere are a few exciting shoe brands you should definitely have on your radar:\n\n### 1. **VIVAIA** (Best for Sustainable Everyday Style)\n* **The Vibe:** Chic, professional, and incredibly comfortable. \n* **Why buy:** VIVAIA has taken off by making stylish flats, heels, and boots out of recycled plastic water bottles. Their shoes are famously knit-to-fit, machine washable, and feature ergonomic insoles "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q19",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "The Vibe",
+     "Shop",
+     "Cariuma Official Website",
+     "Salomon",
+     "SSENSE",
+     "Autry Action Shoes",
+     "ROA Hiking",
+     "End. Clothing",
+     "Alohas",
+     "On Running"
+    ],
+    "domains": [
+     "cariuma.com",
+     "salomon.com",
+     "ssense.com",
+     "autry-usa.com",
+     "roahiking.com",
+     "endclothing.com",
+     "alohas.io",
+     "on.com"
+    ],
+    "excerpt": "If you’re looking to step outside the mainstream and try some fresh, up-and-coming footwear brands, there are several exciting labels making waves right now for their unique designs, comfort, and sustainability. \n\nHere are a few buzzworthy shoe brands you should know:\n\n### 1. **Cariuma**\n* **The Vibe:** Sustainable, retro-classic skate style.\n* **Why buy:** Cariuma has exploded in popularity by making ridiculously comfortable, everyday canvas and leather sneakers with a heavy focus on eco-friendly materials (like organic cotton, natural rubber, and bamboo). Plus, they plant a pair of trees in "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q19",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "The Vibe",
+     "Check them out",
+     "SSENSE",
+     "Garmentory",
+     "Saysh",
+     "Cariuma",
+     "ROA Hiking",
+     "Vibram",
+     "Alohas"
+    ],
+    "domains": [
+     "saysh.com",
+     "cariuma.com",
+     "roahiking.com",
+     "vibram.com",
+     "alohas.io"
+    ],
+    "excerpt": "If you are looking to refresh your rotation with some fresh, up-and-coming footwear brands, here are a few exciting names making waves right now—ranging from ultra-comfortable everyday sneakers to trendy fashion footwear:\n\n### **1. Saysh**\n* **The Vibe:** Premium lifestyle and running shoes designed by women, for women (though they have expanded sizing). \n* **Why buy:** Founded by Olympic track star Allyson Felix, Saysh focuses on a fit specifically engineered to the female foot anatomy. Their sneakers are sleek, incredibly comfortable, and have a powerful mission behind them. \n* **Check them "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q20",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Free Returns",
+     "30 days",
+     "Warranty",
+     "Shop",
+     "30-day guarantee",
+     "\"Run Happy Promise.\"",
+     "90 days",
+     "30-day free returns",
+     "6-month warranty",
+     "Nordstrom",
+     "Zappos",
+     "365-day free returns",
+     "Allbirds.com",
+     "HOKA.com",
+     "BrooksRunning.com",
+     "On-running.com",
+     "Oofos.com",
+     "Nordstrom.com",
+     "Zappos.com"
+    ],
+    "domains": [
+     "allbirds.com",
+     "hoka.com",
+     "brooksrunning.com",
+     "on.com",
+     "oofos.com",
+     "nordstrom.com",
+     "zappos.com"
+    ],
+    "excerpt": "If you want to shop with peace of mind knowing you can easily return your shoes if they don’t fit—and that you're covered if they fall apart—several top brands stand out for offering both **free returns** and **strong warranties**. \n\nHere are the best shoe brands that check both boxes, along with where to shop them:\n\n### 1. **Allbirds**\n* **Free Returns:** Allbirds offers free returns and exchanges on all items within **30 days**, even if you’ve worn them outside. (Just use their prepaid shipping label).\n* **Warranty:** They stand by their materials and craftsmanship. If you experience a defec"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q20",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Free Returns",
+     "Warranty",
+     "Shop",
+     "Zappos",
+     "Allbirds Website",
+     "HOKA Official Store",
+     "Brooks Running Website",
+     "Danner Website"
+    ],
+    "domains": [
+     "allbirds.com",
+     "hoka.com",
+     "brooksrunning.com",
+     "danner.com",
+     "zappos.com"
+    ],
+    "excerpt": "Finding shoe brands that combine both free returns and a strong warranty can save you a lot of hassle. Here are some of the best brands that offer consumer-friendly return policies and stand behind the quality of their footwear:\n\n### 1. **Allbirds**\n* **Free Returns:** Allbirds offers free returns and exchanges within 30 days, **even if you have worn them outside**. \n* **Warranty:** They stand by their products with a 1-year limited warranty against manufacturing defects.\n* **Shop:** You can browse their comfortable, eco-friendly sneakers directly on the [Allbirds Website](https://www.allbirds"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q20",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Free Returns",
+     "Good Warranty",
+     "1-year warranty",
+     "Shop here",
+     "30 days",
+     "30-day trial period",
+     "90-day \"Run Happy Promise.\"",
+     "Nordstrom",
+     "Allbirds",
+     "Rothy's",
+     "HOKA",
+     "Brooks Running"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "hoka.com",
+     "brooksrunning.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "If you want peace of mind when buying shoes online, finding brands that combine a generous return policy with a solid quality warranty is key. Here are some of the best shoe brands that offer both free returns and great warranties:\n\n### 1. **Allbirds**\n* **Free Returns:** They offer a **30-day \"no questions asked\" return policy** on all items, including shoes that have been worn outside. They provide a prepaid return label, making the process completely free and easy.\n* **Good Warranty:** Allbirds backs their products with a **1-year warranty** against defects in materials and workmanship. If "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q21",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Wool Runners",
+     "Tree Breezers",
+     "Shop",
+     "Bondi",
+     "Clifton",
+     "Arizona",
+     "Boston",
+     "Allbirds",
+     "On",
+     "REI",
+     "Vionic Shoes",
+     "Rothy's",
+     "Hoka",
+     "Dick's Sporting Goods",
+     "Birkenstock",
+     "Nordstrom"
+    ],
+    "domains": [
+     "allbirds.com",
+     "on.com",
+     "rei.com",
+     "vionicshoes.com",
+     "rothys.com",
+     "hoka.com",
+     "dickssportinggoods.com",
+     "birkenstock.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "When looking for the best travel shoes, you want a mix of comfort for walking miles, versatility to match different outfits, and ideally, easy packability and slip-on convenience for airport security. \n\nHere are the top brands travelers swear by, depending on your style:\n\n### 1. Allbirds\n* **Why buy:** Known as the ultimate comfortable travel shoe, Allbirds (like the popular **Wool Runners** or **Tree Breezers**) are made from sustainable materials like merino wool and eucalyptus fiber. They are insanely lightweight, breathable, can be worn without socks, and—best of all—they are machine washa"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q21",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "HOKA",
+     "HOKA Bondi",
+     "Clifton",
+     "On Running",
+     "Cloud 5",
+     "Allbirds",
+     "Vessi",
+     "100% waterproof",
+     "Veja",
+     "Veja Campo",
+     "Esplar",
+     "Teva",
+     "Hurricane XLT2",
+     "Birkenstock",
+     "Milano",
+     "Rothy’s",
+     "The Point",
+     "The Flat",
+     "Shop HOKA",
+     "Shop On Running",
+     "Shop Allbirds",
+     "Shop Vessi",
+     "Shop Veja via Nordstrom",
+     "Shop Teva",
+     "Shop Birkenstock",
+     "Shop Rothy's"
+    ],
+    "domains": [
+     "hoka.com",
+     "on-running.com",
+     "allbirds.com",
+     "vessi.com",
+     "nordstrom.com",
+     "teva.com",
+     "birkenstock.com",
+     "rothys.com"
+    ],
+    "excerpt": "When it comes to travel, the \"best\" shoe really depends on what kind of trip you’re taking, but the golden rule is comfort, versatility, and packability. \n\nHere are the top brands travelers swear by, broken down by style:\n\n### 1. The Ultimate Walking Shoes (For heavy sightseeing)\nIf you’re going to be logging 15,000+ steps a day on cobblesterol streets or museum floors, you want maximum support and cushioning.\n*   **HOKA:** Known for maximum-cushion soles, shoes like the **HOKA Bondi** or **Clifton** are an absolute lifesaver for knee and lower-back pain during long days of walking. [Shop HOKA"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q21",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Pro-Tip for Packing",
+     "Allbirds Tree Runners",
+     "ECCO Soft 7 Sneaker",
+     "Rothy's",
+     "On Running",
+     "Teva Original Universal",
+     "Birkenstock Arizona"
+    ],
+    "domains": [
+     "allbirds.com",
+     "us.ecco.com",
+     "rothys.com",
+     "on.com",
+     "teva.com",
+     "birkenstock.com"
+    ],
+    "excerpt": "When traveling, you need shoes that hit the sweet spot between comfort for walking miles, versatility to match different outfits, and ease of packing. Here are some of the absolute best travel shoe brands, depending on your style:\n\n### 1. Best for Walking & All-Day Support: **Allbirds**\n* **Why we love them:** Famous for their Merino wool and tree-fiber sneakers, Allbirds are incredibly lightweight, breathable, and—best of all—machine washable. They feel like slippers but offer solid support for pounding the pavement all day.\n* **Top pick:** The [Allbirds Tree Runners](https://www.allbirds.com"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q22",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Veja",
+     "Red Wing Heritage",
+     "Blundstone",
+     "Thursday Boot Co",
+     "Saucony",
+     "Birkenstock",
+     "Allbirds Website",
+     "Nordstrom",
+     "Veja Official Store",
+     "Adidas Official Website",
+     "Red Wing Shoes",
+     "REI",
+     "Thursday Boots",
+     "Zappos",
+     "Hoka Official",
+     "Dick's Sporting Goods",
+     "Saucony.com",
+     "Birkenstock USA"
+    ],
+    "domains": [
+     "allbirds.com",
+     "nordstrom.com",
+     "veja-store.com",
+     "adidas.com",
+     "redwingshoes.com",
+     "blundstone.com",
+     "rei.com",
+     "thursdayboots.com",
+     "zappos.com",
+     "hoka.com",
+     "dickssportinggoods.com",
+     "saucony.com",
+     "birkenstock.com"
+    ],
+    "excerpt": "Based on popular Reddit communities like r/BuyItForLife, r/malefashionadvice, r/femalefashionadvice, and r/RunningShoeGeeks, Reddit users generally prioritize durability, comfort, versatility, and foot health over fast-fashion trends. \n\nHere are the shoe brands that Reddit users recommend the most, broken down by category:\n\n### 1. Everyday Casual & Sneakers\n*   **Allbirds:** Highly recommended on subreddits focused on travel and comfort. Redditors love them because they are lightweight, breathable, and machine-washable. You can find them directly on the [Allbirds Website](https://www.allbirds."
+   },
+   {
+    "engine": "Gemini",
+    "q": "q22",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Red Wing Heritage",
+     "Thursday Boot Company",
+     "Blundstone",
+     "Brooks",
+     "Birkenstock",
+     "Pro-tip",
+     "Adidas Website",
+     "New Balance Website",
+     "Nike.com",
+     "Red Wing Shoes",
+     "Thursday Boots",
+     "Zappos",
+     "REI",
+     "Brooks Running",
+     "Birkenstock.com"
+    ],
+    "domains": [
+     "adidas.com",
+     "newbalance.com",
+     "nike.com",
+     "redwingshoes.com",
+     "thursdayboots.com",
+     "zappos.com",
+     "rei.com",
+     "brooksrunning.com",
+     "birkenstock.com"
+    ],
+    "excerpt": "If you dive into fashion, running, and lifestyle subreddits like r/malefashionadvice, r/sneakers, r/running, and r/BuyItForLife, certain shoe brands come up over and over again as community favorites. Reddit users generally prioritize durability, comfort, versatility, and value for money. \n\nHere are the shoe brands Reddit recommends the most, categorized by style:\n\n### 1. Everyday Casual & Sneakers\n*   **Adidas (Specifically the Stan Smith, Samba, and Ultraboost):** Sambas and Stan Smiths are heavily recommended in fashion subreddits as timeless, affordable, everyday casual shoes. Meanwhile, t"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q22",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Adidas",
+     "Stan Smith",
+     "Samba",
+     "New Balance",
+     "990 series",
+     "Veja",
+     "Red Wing Heritage",
+     "Iron Ranger",
+     "Moc Toe",
+     "Thursday Boot Co",
+     "Allbirds",
+     "Hoka & On Running",
+     "Bondi",
+     "Clifton",
+     "Adidas Official Store",
+     "Nordstrom",
+     "Red Wing Shoes",
+     "Thursday Boot Company",
+     "REI"
+    ],
+    "domains": [
+     "adidas.com",
+     "newbalance.com",
+     "nordstrom.com",
+     "redwingshoes.com",
+     "thursdayboots.com",
+     "allbirds.com",
+     "rei.com"
+    ],
+    "excerpt": "Based on popular sneaker and fashion communities like Reddit (such as r/malefashionadvice, r/femalefashionadvice, r/sneakers, and r/buyitforlife), certain shoe brands consistently rise to the top for their quality, comfort, durability, and style. \n\nHere are the brands Reddit users recommend the most, categorized by what they do best:\n\n### 1. Everyday Casual & Sneaker Classics\n*   **Adidas:** Reddit loves Adidas for timeless, versatile retro styles. The **Stan Smith** and **Samba** are heavily recommended for everyday casual wear because they go with almost any outfit. You can shop the latest s"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q23",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "\"Sale\" or \"Clearance\"",
+     "Famous Footwear",
+     "Vans Official Store",
+     "Zappos",
+     "Skechers Official Site",
+     "DSW",
+     "Levi's",
+     "Amazon",
+     "Crocs Official Store",
+     "Adidas Official Website",
+     "Foot Locker"
+    ],
+    "domains": [
+     "vans.com",
+     "zappos.com",
+     "skechers.com",
+     "dsw.com",
+     "levi.com",
+     "amazon.com",
+     "crocs.com",
+     "adidas.com",
+     "footlocker.com",
+     "famousfootwear.com"
+    ],
+    "excerpt": "Finding affordable shoes that don't fall apart after a few months can be tough, but there are several fantastic brands known for hitting that sweet spot between budget-friendly pricing and solid construction. \n\nHere are some of the best affordable shoe brands and where to buy them:\n\n### 1. **Vans** (Best for Casual/Sneakers)\n* **Price Range:** $55 – $75\n* **Why buy:** Vans are a staple for a reason. Their classic canvas sneakers are surprisingly durable, have thick rubber soles that hold up to daily wear, and they never go out of style. Plus, they are easy to clean and look even better as they"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q23",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Vans",
+     "Reebok",
+     "Thursday Boot Co",
+     "Clark's",
+     "Skechers",
+     "Nordstrom Rack",
+     "6pm.com",
+     "Vans Official Store",
+     "Veja Store",
+     "Thursday Boots",
+     "Clarks USA",
+     "DSW",
+     "6pm"
+    ],
+    "domains": [
+     "vans.com",
+     "reebok.com",
+     "veja-store.com",
+     "thursdayboots.com",
+     "clarksusa.com",
+     "skechers.com",
+     "dsw.com",
+     "nordstromrack.com",
+     "6pm.com"
+    ],
+    "excerpt": "Finding shoes that strike the right balance between affordability and good quality can be tough, but there are several fantastic brands out there that won't break the bank and will actually last more than a few months. \n\nHere are some of the best affordable shoe brands, categorized by style:\n\n### 1. For Everyday Casual & Sneakers\n*   **Vans:** If you love a classic skate shoe or a comfortable canvas slip-on, Vans are hard to beat. They typically range from $50 to $70, and the canvas and rubber construction holds up surprisingly well to daily wear and tear. You can shop them directly at [Vans O"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q23",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "Vans",
+     "Converse",
+     "New Balance",
+     "Skechers",
+     "ASOS Design",
+     "New Balance website",
+     "ASOS",
+     "Target's",
+     "Nordstrom Rack"
+    ],
+    "domains": [
+     "vans.com",
+     "converse.com",
+     "newbalance.com",
+     "skechers.com",
+     "asos.com",
+     "target.com",
+     "dsw.com",
+     "nordstromrack.com"
+    ],
+    "excerpt": "Finding affordable shoes that don't fall apart after a few months can be tough, but there are several fantastic brands that hit that sweet spot between budget-friendly pricing and durable construction. \n\nHere are some of the best affordable shoe brands known for good quality, categorized by style:\n\n### **Everyday Sneakers & Casual Shoes**\n*   **Vans:** If you love a classic skate shoe, [Vans](https://www.vans.com) are hard to beat for the price. Most classic styles range from $50 to $70, and the canvas and rubber construction holds up surprisingly well to daily wear and tear. \n*   **Converse:*"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q24",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Zappos",
+     "REI",
+     "Allbirds",
+     "On Running",
+     "Nordstrom",
+     "Brooks Running",
+     "Hoka"
+    ],
+    "domains": [
+     "allbirds.com",
+     "on.com",
+     "nordstrom.com",
+     "brooksrunning.com",
+     "hoka.com",
+     "zappos.com",
+     "rei.com"
+    ],
+    "excerpt": "Welcome to the world of shoe shopping! As a first-time buyer, the best shoe for you depends a bit on what you plan to do in them (run, walk, or just wear casually), but the golden rule for a first pair is **comfort, versatility, and support.** \n\nHere are some of the best brands and specific shoe models for beginners, broken down by category:\n\n### 1. The Ultimate Everyday Sneaker (Casual & Walking)\nIf you want a shoe that goes with everything, feels like a cloud, and requires zero break-in time, start here:\n*   **Allbirds (The Tree Runner):** Made from eucalyptus tree fiber, these are famously "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q24",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Nordstrom",
+     "Zappos",
+     "Check out Allbirds",
+     "Browse Vans",
+     "Shop Veja",
+     "Explore Rothy's",
+     "Find Clarks",
+     "Shop Hoka",
+     "Discover Brooks"
+    ],
+    "domains": [
+     "allbirds.com",
+     "vans.com",
+     "veja-store.com",
+     "rothys.com",
+     "clarks.com",
+     "hoka.com",
+     "brooksrunning.com",
+     "nordstrom.com",
+     "zappos.com"
+    ],
+    "excerpt": "Welcome to the world of shoe buying! For a first-time buyer, the best approach is to start with something versatile, comfortable, and classic—shoes that you can wear with almost anything while keeping your feet happy. \n\nDepending on your personal style, here are the top categories and specific brands I recommend for a great first-time experience:\n\n### 1. The Everyday Casual Sneaker\nIf you want something comfortable for walking, running errands, or casual hangouts, you can't go wrong with a classic, clean sneaker.\n*   **Allbirds (Tree Runners):** Famous for being incredibly lightweight, breatha"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q24",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Shop Allbirds Wool Runners",
+     "Shop Veja Sneakers",
+     "Shop New Balance"
+    ],
+    "domains": [
+     "allbirds.com",
+     "veja-store.com",
+     "newbalance.com"
+    ],
+    "excerpt": "Welcome to the world of shoe shopping! As a first-time buyer, your absolute best bet is to start with a versatile, high-comfort, everyday sneaker that goes with almost everything and won't hurt your feet. \n\nHere are three fantastic brands and models that are universally loved by beginners and sneaker veterans alike:\n\n1. **Allbirds (The Wool Runner)**\n   * **Why they’re great:** If comfort is your absolute top priority, start here. They are made from merino wool, which means they are ridiculously soft, breathable, and—best of all—you can wear them without socks, and they are machine washable. \n"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q25",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Rothy’s",
+     "Thursday Boot Co",
+     "VIVAIA",
+     "Cariuma",
+     "Allbirds Website",
+     "Rothy's Website",
+     "Thursday Boot Co. Website",
+     "VIVAIA Website",
+     "Cariuma Website"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "thursdayboots.com",
+     "vivaia.com",
+     "cariuma.com"
+    ],
+    "excerpt": "Buying directly from independent shoe brands online is a fantastic way to support smaller creators, often get better customer service, and avoid the counterfeit issues that sometimes plague marketplaces like Amazon. \n\nHere are some popular, independent shoe brands that sell exclusively or primarily through their own websites, along with a bit about why people love them:\n\n*   **Allbirds** – Famous for their super-comfortable, eco-friendly sneakers made from merino wool and eucalyptus tree fiber. They sell almost entirely through their own stores and the [Allbirds Website](https://www.allbirds.c"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q25",
+    "sample": 1,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Rothy’s",
+     "Birdies",
+     "Thursday Boot Co",
+     "VIVAIA",
+     "Rothy's",
+     "Thursday Boots",
+     "Cariuma"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "birdies.com",
+     "thursdayboots.com",
+     "cariuma.com",
+     "vivaia.com"
+    ],
+    "excerpt": "Many fantastic independent shoe brands choose to sell directly to consumers through their own websites rather than through Amazon. This allows them to maintain control over their pricing, customer service, sustainability messaging, and brand experience. \n\nHere are some top independent shoe brands you can buy directly online, along with why we love them:\n\n*   **Allbirds** – Famous for their incredibly comfortable, lightweight shoes made from sustainable materials like merino wool and eucalyptus fiber. They focus heavily on a low carbon footprint and offer a sleek, minimalist aesthetic. Shop dir"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q25",
+    "sample": 2,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "Rothy’s",
+     "Thursday Boot Co",
+     "Veja",
+     "Birdies",
+     "Oliver Cabell",
+     "Rothy's",
+     "Thursday Boot Company"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "thursdayboots.com",
+     "veja-store.com",
+     "birdies.com",
+     "olivercabell.com"
+    ],
+    "excerpt": "Many fantastic independent shoe brands choose to sell exclusively through their own websites (Direct-to-Consumer, or DTC) rather than through Amazon. This allows them to maintain control over their pricing, provide better customer service, and build a direct relationship with their shoppers. \n\nHere are some top independent shoe brands that you can buy directly online, along with a few reasons why people love them:\n\n*   **Allbirds:** Known for their incredibly comfortable, washable everyday sneakers made from sustainable materials like merino wool and eucalyptus tree fiber. You can shop their c"
+   }
+  ]
+ },
+ "llm_cost_usd": 0.0,
+ "llm_calls": 80,
+ "simulated": false,
+ "engines": [
+  {
+   "name": "gemini",
+   "engine": "Gemini",
+   "simulated": false,
+   "model": "gemini-3.5-flash-lite ×75",
+   "note": "model knowledge only (no live web search: not available on this API tier)"
+  }
+ ],
+ "engine_info": {
+  "mode": "gemini-only",
+  "spec": "gemini",
+  "notes": []
+ },
+ "site_unreachable": false,
+ "score": {
+  "total": 80,
+  "max": 100,
+  "parts": {
+   "crawler_access": {
+    "score": 30,
+    "max": 30
+   },
+   "robots_txt": {
+    "score": 15,
+    "max": 15
+   },
+   "structured_data": {
+    "score": 21,
+    "max": 35
+   },
+   "llms_txt": {
+    "score": 4,
+    "max": 10
+   },
+   "sitemap": {
+    "score": 10,
+    "max": 10
+   }
+  },
+  "grade": "B"
+ },
+ "findings": [
+  {
+   "severity": "high",
+   "key": "jsonld_parse",
+   "zh": "/products/mens-cruiser-slip-on-natural-black：JSON-LD 代码块缺少 schema.org 的 @context，其中的 AggregateRating, Product 不会被校验工具和 AI 爬虫识别",
+   "en": "/products/mens-cruiser-slip-on-natural-black: JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers",
+   "fix": "jsonld/",
+   "count": 3
+  },
+  {
+   "severity": "high",
+   "key": "req:Product",
+   "zh": "/products/womens-wool-runner-mizzles-natural-black-1 的 Product 缺少必填字段：name",
+   "en": "/products/womens-wool-runner-mizzles-natural-black-1: Product is missing required fields: name",
+   "fix": "jsonld/",
+   "count": 1
+  },
+  {
+   "severity": "medium",
+   "key": "missing:Organization",
+   "zh": "/ 缺少 Organization 结构化数据",
+   "en": "/ has no Organization structured data",
+   "fix": "jsonld/organization.jsonld",
+   "count": 1
+  },
+  {
+   "severity": "medium",
+   "key": "no_rating",
+   "zh": "/products/mens-cruiser-slip-on-natural-black 没有 AggregateRating（评分），AI 购物推荐常引用评分",
+   "en": "/products/mens-cruiser-slip-on-natural-black has no AggregateRating; AI shopping answers often cite ratings",
+   "fix": "shopify/aiv-product-jsonld.liquid",
+   "count": 3
+  },
+  {
+   "severity": "low",
+   "key": "rec:Product",
+   "zh": "/products/mens-cruiser-slip-on-natural-black 的 Product 建议补充：aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "en": "/products/mens-cruiser-slip-on-natural-black: Product could add aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "fix": "jsonld/",
+   "count": 3
+  },
+  {
+   "severity": "low",
+   "key": "llms_txt_default",
+   "zh": "/llms.txt 是 Shopify 自动生成的通用“代理购物说明”，没有你店铺自己的介绍、主推商品和政策链接",
+   "en": "/llms.txt is Shopify's auto-generated generic agent-shopping file, with no store-specific summary, key products or policy links",
+   "fix": "llms.txt",
+   "count": 1
+  },
+  {
+   "severity": "low",
+   "key": "rate_limited:ChatGPT-User",
+   "zh": "ChatGPT-User 在 1 个页面上被限流（HTTP 429，重试后仍是），不算拦截，但频繁 429 会让 AI 爬虫少抓页面",
+   "en": "ChatGPT-User was rate-limited (HTTP 429 after a retry) on 1 pages: not a block, but frequent 429s reduce AI crawl coverage",
+   "fix": null,
+   "count": 1
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 142,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products.json?limit=30",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 159,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 125,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 123,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 113,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 128,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 121,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 115,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 284,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 121,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 119,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 116,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 130,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 116,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 150,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 129,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "ChatGPT-User",
+   "status": 429,
+   "ms": 49,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "ChatGPT-User (retry)",
+   "status": 429,
+   "ms": 45,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 120,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "ClaudeBot",
+   "status": 429,
+   "ms": 53,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "ClaudeBot (retry)",
+   "status": 200,
+   "ms": 130,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 135,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 324,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 129,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 135,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 120,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 106,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/robots.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 81,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/llms.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 86,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/llms-full.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 86,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/sitemap.xml",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 76,
+   "error": null
+  }
+ ],
+ "request_count": 31,
+ "fixpack": {
+  "dir": "samples/gemini-real/full/allbirds.com/fixpack",
+  "zip": "samples/gemini-real/full/allbirds.com/fixpack.zip",
+  "files": {
+   "robots.txt.snippet": 921,
+   "shopify/robots.txt.liquid": 1258,
+   "jsonld/organization.jsonld": 853,
+   "jsonld/product-mens-cruiser-slip-on-natural-black.jsonld": 1336,
+   "jsonld/product-mens-tree-runners.jsonld": 1280,
+   "jsonld/product-womens-wool-runner-mizzles-natural-black-1.jsonld": 1449,
+   "jsonld/product-womens-wool-piper-go-natural-black.jsonld": 1245,
+   "jsonld/product-womens-allbirds-flip-flop-dusty-pink.jsonld": 1263,
+   "jsonld/product-mens-canvas-runner-nz.jsonld": 1095,
+   "jsonld/product-womens-canvas-runner-nz.jsonld": 1138,
+   "jsonld/product-mens-cruiser-terry.jsonld": 1105,
+   "jsonld/product-mens-cruiser-canvas-burnt-olive.jsonld": 1343,
+   "jsonld/product-womens-cruiser-canvas-burnt-olive.jsonld": 1386,
+   "shopify/aiv-product-jsonld.liquid": 2361,
+   "shopify/aiv-organization-jsonld.liquid": 916,
+   "llms.txt": 3578,
+   "content/01-faq.md": 1790,
+   "content/02-comparison.md": 2411,
+   "content/03-buying-guide.md": 3526,
+   "content/04-best-for.md": 1459,
+   "content/05-about-trust.md": 2219,
+   "cloudflare_allow_ai_crawlers.md": 2213,
+   "README.md": 1547
+  }
+ },
+ "total_seconds": 513.3,
+ "outputs": {
+  "html_zh": "samples/gemini-real/full/allbirds.com/report.zh.html",
+  "html_en": "samples/gemini-real/full/allbirds.com/report.en.html",
+  "markdown": "samples/gemini-real/full/allbirds.com/report.md",
+  "pdf_zh": "samples/gemini-real/full/allbirds.com/report.zh.pdf",
+  "pdf_en": "samples/gemini-real/full/allbirds.com/report.en.pdf"
+ }
+}

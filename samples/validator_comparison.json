@@ -1,0 +1,288 @@
+{
+ "checked_at": "2026-10-22 10:24:11 CST",
+ "pages": [
+  {
+   "url": "https://www.allbirds.com/",
+   "ours_raw_html": [],
+   "ours_js_rendered_extra": [],
+   "ours": [],
+   "validator": [],
+   "validator_implied_ignored": [],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ours_raw_html": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "ours_js_rendered_extra": [],
+   "ours": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "validator": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "validator_implied_ignored": [],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://www.deathwishcoffee.com/",
+   "ours_raw_html": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "ours_js_rendered_extra": [],
+   "ours": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "validator": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "validator_implied_ignored": [
+    "EntryPoint",
+    "PropertyValueSpecification"
+   ],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://www.deathwishcoffee.com/products/dark-spirits-chocolate-rumball",
+   "ours_raw_html": [
+    "Brand",
+    "BreadcrumbList",
+    "ListItem",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "ours_js_rendered_extra": [],
+   "ours": [
+    "Brand",
+    "BreadcrumbList",
+    "ListItem",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "validator": [
+    "Brand",
+    "BreadcrumbList",
+    "ListItem",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "validator_implied_ignored": [
+    "Thing"
+   ],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://colourpop.com/",
+   "ours_raw_html": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "ours_js_rendered_extra": [],
+   "ours": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "validator": [
+    "Organization",
+    "SearchAction",
+    "WebSite"
+   ],
+   "validator_implied_ignored": [
+    "EntryPoint",
+    "PropertyValueSpecification"
+   ],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://colourpop.com/products/magical-skies-shadow-palette-and-brush-set",
+   "ours_raw_html": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "ours_js_rendered_extra": [],
+   "ours": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "validator": [
+    "Brand",
+    "Offer",
+    "Organization",
+    "Product"
+   ],
+   "validator_implied_ignored": [],
+   "match": true,
+   "only_ours": [],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://www.brooklinen.com/products/essential-sheet-set",
+   "ours_raw_html": [
+    "BreadcrumbList",
+    "ListItem"
+   ],
+   "ours_js_rendered_extra": [
+    "Brand",
+    "DefinedRegion",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime"
+   ],
+   "ours": [
+    "Brand",
+    "BreadcrumbList",
+    "DefinedRegion",
+    "ListItem",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime"
+   ],
+   "validator": [
+    "BreadcrumbList",
+    "ListItem"
+   ],
+   "validator_implied_ignored": [
+    "Thing"
+   ],
+   "match": false,
+   "only_ours": [
+    "Brand",
+    "DefinedRegion",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime"
+   ],
+   "only_validator": [],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  },
+  {
+   "url": "https://www.brooklinen.com/products/super-fluff-throw-blanket",
+   "ours_raw_html": [
+    "BreadcrumbList",
+    "ListItem"
+   ],
+   "ours_js_rendered_extra": [
+    "Brand",
+    "DefinedRegion",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime",
+    "UnitPriceSpecification"
+   ],
+   "ours": [
+    "Brand",
+    "BreadcrumbList",
+    "DefinedRegion",
+    "ListItem",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime",
+    "UnitPriceSpecification"
+   ],
+   "validator": [
+    "Brand",
+    "BreadcrumbList",
+    "Country",
+    "DefinedRegion",
+    "ListItem",
+    "MerchantReturnPolicy",
+    "MonetaryAmount",
+    "Offer",
+    "OfferShippingDetails",
+    "Product",
+    "QuantitativeValue",
+    "ShippingDeliveryTime",
+    "UnitPriceSpecification"
+   ],
+   "validator_implied_ignored": [
+    "Thing"
+   ],
+   "match": false,
+   "only_ours": [],
+   "only_validator": [
+    "Country"
+   ],
+   "our_parse_errors": [],
+   "validator_errors": 0,
+   "validator_fetch_error": null
+  }
+ ],
+ "agreement": "6/8"
+}

@@ -1,0 +1,1641 @@
+{
+ "audit_id": "20261022-111531-b877fe",
+ "mode": "quick",
+ "version": "0.1.0",
+ "url": "https://www.allbirds.com",
+ "root": "https://www.allbirds.com/",
+ "created_at": "2026-10-22 11:15 (UTC+0800)",
+ "profile": {
+  "base_url": "https://www.allbirds.com/",
+  "final_url": "https://www.allbirds.com/",
+  "platform": "shopify",
+  "name": "Allbirds",
+  "description": "Allbirds: The world’s most comfortable shoes, flats, and clothing made with natural materials like merino wool and eucalyptus. FREE shipping & returns.",
+  "currency": "USD",
+  "language": "en-US",
+  "logo": "http://www.allbirds.com/cdn/shop/files/logo-seo.jpg?v=1753720776",
+  "social": [
+   "http://pinterest.com/weareallbirds",
+   "https://twitter.com/allbirds",
+   "https://www.facebook.com/weareallbirds",
+   "https://www.instagram.com/allbirds",
+   "https://www.tiktok.com/@weareallbirds",
+   "https://www.youtube.com/channel/UCnGErLCau5qNJ0Xwe6uEyTw"
+  ],
+  "product_types": [
+   "Shoes"
+  ],
+  "collections": [
+   "https://www.allbirds.com/collections/new-arrivals-26",
+   "https://www.allbirds.com/collections/shop-all-26",
+   "https://www.allbirds.com/collections/mens-new-arrivals",
+   "https://www.allbirds.com/collections/mens-bestsellers",
+   "https://www.allbirds.com/collections/mens-terralux-cl",
+   "https://www.allbirds.com/collections/mens",
+   "https://www.allbirds.com/collections/mens-sneakers",
+   "https://www.allbirds.com/collections/mens-loungers",
+   "https://www.allbirds.com/collections/mens-sandals",
+   "https://www.allbirds.com/collections/mens-active-shoes",
+   "https://www.allbirds.com/collections/mens-mizzles",
+   "https://www.allbirds.com/collections/mens-socks",
+   "https://www.allbirds.com/collections/mens-apparel",
+   "https://www.allbirds.com/collections/womens-new-arrivals",
+   "https://www.allbirds.com/collections/womens-bestsellers"
+  ],
+  "policy_pages": [
+   "https://www.allbirds.com/pages/returns-exchanges"
+  ],
+  "products": [
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+    "title": "Men's Cruiser Slip On - Natural Black (Blizzard Sole)",
+    "handle": "mens-cruiser-slip-on-natural-black",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-f15c8f7993c846b8f954c3ac60e2cf58",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => mens",
+     "allbirds::hue => black",
+     "allbirds::master => mens-cruiser-slip-on",
+     "allbirds::material => tree",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => lounger"
+    ],
+    "description": "Slip-on ease meets everyday style. Cruiser Slip On pairs a clean, minimalist look with a breathable tree knit upper for comfort you'll notice right away. Easy to wear, easy to style, and comfortable enough for pretty much anywhere the day takes you.",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12642M080",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12649_26Q1_Cruiser-Slip-On-Natural-Black-Blizzard-Sole_PDP_LEFT.png?v=1768947275",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-tree-runners",
+    "title": "Men's Tree Runner - Jet Black (White Sole)",
+    "handle": "mens-tree-runners",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => 4.52",
+     "allbirds::cfId => color-mens-tree-runners-jet-black-white",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => mens",
+     "allbirds::hue => black",
+     "allbirds::master => mens-tree-runners",
+     "allbirds::material => tree",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "The Allbirds Tree Runner is a breathable and lightweight sneaker made with responsibly sourced eucalyptus tree fiber that feels silky smooth and cool on your skin. These shoes are perfect for everyday casual wear, walking, and warmer weather.",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "TR3MJBW080",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/TR3MJBW080_SHOE_LEFT_GLOBAL_MENS_TREE_RUNNER_JET_BLACK_WHITE.png?v=1751165486",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+    "title": "Women's Wool Runner Mizzles - Natural Black (Natural Black Sole)",
+    "handle": "womens-wool-runner-mizzles-natural-black-1",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::cfId => color-womens-wool-runner-mizzles-natural-black-rugged-khaki",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => womens",
+     "allbirds::hue => black",
+     "allbirds::master => womens-wool-runner-mizzles",
+     "allbirds::material => wool",
+     "allbirds::price-tier => tier-1",
+     "allbirds::silhouette => runner",
+     "collection:apr26"
+    ],
+    "description": "The Wool Runner Mizzle is our rain-ready sneaker that keeps your feet warm, cozy, and dry in unpredictable weather. Cozy ZQ Merino Wool is combined with our bio-based water repellent shield so you can walk comfortably in the rain. These shoes are great everyday shoes, with all condition traction to grip slippery surfaces.",
+    "price": "99.00",
+    "compare_at_price": "125.00",
+    "sku": "AB006ZW050",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/AB006YM_SHOE_ANGLE_GLOBAL_MENS_WOOL_RUNNER_MIZZLE2_NATURAL_BLACK_RUGGED_KHAKI.png?v=1776206836",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-wool-piper-go-natural-black",
+    "title": "Women's Wool Piper Go - Natural Black (Natural White Sole)",
+    "handle": "womens-wool-piper-go-natural-black",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => 6.98",
+     "allbirds::cfId => color-womens-wool-piper-go-ntrl-blck-ntrl-wht",
+     "allbirds::complete => true",
+     "allbirds::edition => classic",
+     "allbirds::gender => womens",
+     "allbirds::hue => black",
+     "allbirds::master => womens-wool-piper-go",
+     "allbirds::material => wool",
+     "allbirds::price-tier => tier-4",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "A classic style elevated with refined details and cushy support to be the comfiest finishing touch to any fit.",
+    "price": "60.00",
+    "compare_at_price": "120.00",
+    "sku": "A10981W050",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A10976_24Q3_Wool_Piper_2_Natural_Black_Natural_White_PDP_LEFT-2000x2000_ac210616-f73b-458e-a9be-36fbba346e71.png?v=1776209058",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-allbirds-flip-flop-dusty-pink",
+    "title": "Women's Allbirds Flip Flop - Dusty Pink",
+    "handle": "womens-allbirds-flip-flop-dusty-pink",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-a4d5d0f6620dc304306f503bf67bc5f9",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => pink",
+     "allbirds::master => womens-allbirds-flip-flop",
+     "allbirds::material => sugar",
+     "allbirds::price-tier => tier-3",
+     "allbirds::silhouette => zeffer"
+    ],
+    "description": "Sun on your feet. Comfort underneath. Light, easy, and made for warm weather, these flip flops bring everyday comfort to sunny days, beach walks, and everything in between. Just slip them on and go.",
+    "price": "25.00",
+    "compare_at_price": "50.00",
+    "sku": "A12513W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12513_26Q2_Allbirds-Flip-Flop-Dusty-Pink_PDP_LEFT.png?v=1774646345",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-canvas-runner-nz",
+    "title": "Men's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)",
+    "handle": "mens-canvas-runner-nz",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-1cef6be0d20d9c20d604095208afc4c8",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => blue",
+     "allbirds::hue => white",
+     "allbirds::master => mens-canvas-runner-nz",
+     "allbirds::material => cotton",
+     "allbirds::price-tier => msrp"
+    ],
+    "description": "",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12498M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12500_26Q1_Runner-NZ-Canvas-Stripes-Deep-Navy-Blizzard-Sole_PDP_LEFT.png?v=1774550585",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-canvas-runner-nz",
+    "title": "Women's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)",
+    "handle": "womens-canvas-runner-nz",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-d7abb4d45ba4287f808f45adf8aff699",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => blue",
+     "allbirds::hue => white",
+     "allbirds::master => womens-canvas-runner-nz",
+     "allbirds::material => cotton",
+     "allbirds::price-tier => msrp"
+    ],
+    "description": "",
+    "price": "100.00",
+    "compare_at_price": "",
+    "sku": "A12500W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12500_26Q1_Runner-NZ-Canvas-Stripes-Deep-Navy-Blizzard-Sole_PDP_LEFT_bda73f01-c2a8-43d5-b680-0a4e86b8926f.png?v=1774550676",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-terry",
+    "title": "Men's Cruiser Terry - Warm White (Warm White Sole)",
+    "handle": "mens-cruiser-terry",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-c0caa82b89acc82dffb6692bb6e73286",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => white",
+     "allbirds::master => mens-cruiser-terry",
+     "allbirds::material => tree-fiber-blend",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "",
+    "price": "115.00",
+    "compare_at_price": "",
+    "sku": "A12374M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12370_26Q1_Cruiser-Terry-Warm-White-Warm-White_PDP_LEFT_f79ee143-f5b7-419a-8cfe-68557b63b868.png?v=1774566144",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/mens-cruiser-canvas-burnt-olive",
+    "title": "Men's Canvas Cruiser - Burnt Olive (Natural White Sole)",
+    "handle": "mens-cruiser-canvas-burnt-olive",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-fe9c7c3e73ebdd08ed3b0babd388543d",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => mens",
+     "allbirds::hue => green",
+     "allbirds::master => mens-cruiser-canvas",
+     "allbirds::material => canvas",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that feels light, breathable, and ready to wear on repeat. Comfortable enough for all day. Simple enough to go with everything.",
+    "price": "75.00",
+    "compare_at_price": "",
+    "sku": "A12486M080",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12483_26Q1_Cruiser-Canvas-Burnt-Olive-Natural-White_PDP_LEFT.png?v=1768946185",
+    "gtin": ""
+   },
+   {
+    "url": "https://www.allbirds.com/products/womens-cruiser-canvas-burnt-olive",
+    "title": "Women's Cruiser Canvas - Burnt Olive (Natural White Sole)",
+    "handle": "womens-cruiser-canvas-burnt-olive",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "tags": [
+     "allbirds::carbon-score => undefined",
+     "allbirds::cfId => color-e0dfb4c1216d346a77eb7997af56a4d4",
+     "allbirds::complete => true",
+     "allbirds::edition => limited",
+     "allbirds::gender => womens",
+     "allbirds::hue => green",
+     "allbirds::master => womens-cruiser-canvas",
+     "allbirds::material => canvas",
+     "allbirds::price-tier => msrp",
+     "allbirds::silhouette => runner"
+    ],
+    "description": "Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that feels light, breathable, and ready to wear on repeat. Comfortable enough for all day. Simple enough to go with everything.",
+    "price": "75.00",
+    "compare_at_price": "",
+    "sku": "A12483W050",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/1104/4168/files/A12483_26Q1_Cruiser-Canvas-Burnt-Olive-Natural-White_PDP_LEFT_7e736263-b2a2-486c-badd-47c2b38eb728.png?v=1768946365",
+    "gtin": ""
+   }
+  ],
+  "homepage_status": 200,
+  "notes": [],
+  "domain": "allbirds.com"
+ },
+ "bot_access": {
+  "bots": {
+   "GPTBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "OAI-SearchBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ChatGPT-User": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "ClaudeBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   },
+   "PerplexityBot": {
+    "pages": [
+     {
+      "url": "https://www.allbirds.com/",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/mens-tree-runners",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     },
+     {
+      "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+      "status": 200,
+      "error": null,
+      "challenge": false,
+      "rate_limited": false,
+      "blocked": false,
+      "cdn": "cloudflare",
+      "content_parity": true,
+      "baseline_status": 200
+     }
+    ],
+    "blocked_pages": 0,
+    "rate_limited_pages": 0,
+    "total_pages": 4,
+    "verdict": "ok"
+   }
+  },
+  "baseline_blocked": false,
+  "cdn": [
+   "cloudflare"
+  ]
+ },
+ "robots": {
+  "exists": true,
+  "status": 200,
+  "tokens": {
+   "GPTBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "OAI-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ChatGPT-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "ClaudeBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-SearchBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Claude-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "PerplexityBot": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Perplexity-User": {
+    "allowed": true,
+    "answer_time": true,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Google-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Applebot-Extended": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "CCBot": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   },
+   "Bytespider": {
+    "allowed": true,
+    "answer_time": false,
+    "explicit_group": false,
+    "detail": {
+     "/": "no matching rule (group: *)",
+     "/products/mens-cruiser-slip-on-natural-black": "no matching rule (group: *)",
+     "/products/mens-tree-runners": "no matching rule (group: *)",
+     "/products/womens-wool-runner-mizzles-natural-black-1": "no matching rule (group: *)",
+     "/collections/all": "no matching rule (group: *)"
+    },
+    "blocked_paths": []
+   }
+  },
+  "sitemaps": [
+   "https://www.allbirds.com/sitemap.xml"
+  ],
+  "raw": "\nUser-agent: *\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /recommendations/products\nDisallow: /*/recommendations/products\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteDisallow: /collections/*-loop\n    Disallow: /a/click*\n    Disallow: /q/*\n    Disallow: /e/encryptedUnsubscribe*\nSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: adsbot-google\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /carts\nDisallow: /orders\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /cdn/wpm/*.js\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /services/login_with_shop\nUser-agent: Nutch\nDisallow: /\nUser-agent: AhrefsBot\nCrawl-delay: 10\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: AhrefsSiteAudit\nCrawl-delay: 10\nDisallow: /a/downloads/-/*\nDisallow: /admin\nDisallow: /cart\nDisallow: /orders\nDisallow: /checkouts/\nDisallow: /checkout\nDisallow: /11044168/checkouts\nDisallow: /11044168/orders\nDisallow: /carts\nDisallow: /account\nDisallow: /collections/*sort_by*\nDisallow: /*/collections/*sort_by*\nDisallow: /collections/*+*\nDisallow: /collections/*%2B*\nDisallow: /collections/*%2b*\nDisallow: /*/collections/*+*\nDisallow: /*/collections/*%2B*\nDisallow: /*/collections/*%2b*\nDisallow: */collections/*filter*&*filter*\nDisallow: /blogs/*+*\nDisallow: /blogs/*%2B*\nDisallow: /blogs/*%2b*\nDisallow: /*/blogs/*+*\nDisallow: /*/blogs/*%2B*\nDisallow: /*/blogs/*%2b*\nDisallow: /*?*oseid=*\nDisallow: /*preview_theme_id*\nDisallow: /*preview_script_id*\nDisallow: /policies/\nDisallow: /*/policies/\nDisallow: /*/*?*ls=*&ls=*\nDisallow: /*/*?*ls%3D*%3Fls%3D*\nDisallow: /*/*?*ls%3d*%3fls%3d*\nDisallow: /search\nDisallow: /apple-app-site-association\nDisallow: /.well-known/shopify/monorail\nDisallow: /cdn/wpm/*.js\nDisallow: /services/login_with_shop\nDisallow: /products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote\nDisallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remoteSitemap: https://www.allbirds.com/sitemap.xml\n\nUser-agent: MJ12bot\nCrawl-delay: 10\nUser-agent: Pinterest\nCrawl-delay: 1\n"
+ },
+ "schema": [
+  {
+   "url": "https://www.allbirds.com/",
+   "kind": "home",
+   "jsonld_blocks": 0,
+   "jsonld_types": [],
+   "microdata_types": [],
+   "parse_errors": [],
+   "items": [],
+   "entity_count": 0,
+   "missing_types": [
+    "Organization"
+   ],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "description",
+      "brand",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 13
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "itemCondition",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 13
+    }
+   ],
+   "entity_count": 28,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "Product",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Product",
+     "declared_types": [
+      "Product"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "description",
+      "brand",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 7
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "itemCondition",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 7
+    }
+   ],
+   "entity_count": 16,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "kind": "product",
+   "jsonld_blocks": 2,
+   "jsonld_types": [
+    "Brand",
+    "Offer",
+    "ProductGroup"
+   ],
+   "microdata_types": [],
+   "parse_errors": [
+    "JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers"
+   ],
+   "items": [
+    {
+     "type": "Product",
+     "declared_types": [
+      "ProductGroup"
+     ],
+     "missing_required": [
+      "name"
+     ],
+     "missing_recommended": [
+      "sku",
+      "aggregateRating|review",
+      "gtin|gtin8|gtin12|gtin13|gtin14|mpn"
+     ],
+     "source": "json-ld",
+     "count": 1
+    },
+    {
+     "type": "Offer",
+     "declared_types": [
+      "Offer"
+     ],
+     "missing_required": [],
+     "missing_recommended": [
+      "priceValidUntil",
+      "shippingDetails",
+      "hasMerchantReturnPolicy"
+     ],
+     "source": "json-ld",
+     "count": 1
+    }
+   ],
+   "entity_count": 2,
+   "missing_types": [],
+   "has_aggregate_rating": false
+  }
+ ],
+ "llms_txt": {
+  "llms.txt": {
+   "exists": true,
+   "status": 200,
+   "final_url": "https://www.allbirds.com/llms.txt",
+   "bytes": 5767,
+   "has_h1": true,
+   "links": 8,
+   "platform_default": true
+  },
+  "llms-full.txt": {
+   "exists": true,
+   "status": 200,
+   "final_url": "https://www.allbirds.com/llms-full.txt",
+   "bytes": 5772,
+   "has_h1": true,
+   "links": 8,
+   "platform_default": true
+  }
+ },
+ "sitemap": {
+  "url": "https://www.allbirds.com/sitemap.xml",
+  "status": 200,
+  "exists": true,
+  "listed_in_robots": true
+ },
+ "crawl_seconds": 36.1,
+ "visibility": {
+  "questions": [
+   {
+    "id": "q1",
+    "kind": "category",
+    "text": "What are the best shoes brands to buy online right now?"
+   },
+   {
+    "id": "q2",
+    "kind": "category",
+    "text": "Where can I buy high-quality shoes online with international shipping?"
+   },
+   {
+    "id": "q3",
+    "kind": "brand",
+    "text": "Is Allbirds a legit and good store? What do customers say?"
+   },
+   {
+    "id": "q4",
+    "kind": "competitor",
+    "text": "What are some good alternatives to Allbirds?"
+   },
+   {
+    "id": "q5",
+    "kind": "budget",
+    "text": "Best shoes under 140 USD — which brands would you recommend?"
+   }
+  ],
+  "engines": [
+   "Gemini"
+  ],
+  "samples_per_question": {
+   "Gemini": 1
+  },
+  "simulated": false,
+  "estimated_cost_usd": 0.0,
+  "per_engine": {
+   "Gemini": {
+    "answered": 5,
+    "mentioned": 4,
+    "rate": 0.8,
+    "errors": 0,
+    "simulated": false
+   }
+  },
+  "per_question": {
+   "q1": {
+    "Gemini": "1/1"
+   },
+   "q2": {
+    "Gemini": "1/1"
+   },
+   "q3": {
+    "Gemini": "1/1"
+   },
+   "q4": {
+    "Gemini": "1/1"
+   },
+   "q5": {
+    "Gemini": "0/1"
+   }
+  },
+  "overall_mention_rate": 0.8,
+  "share_of_voice": 0.07017543859649122,
+  "top_competitors": [
+   [
+    "Veja",
+    4
+   ],
+   [
+    "HOKA",
+    2
+   ],
+   [
+    "Nordstrom",
+    2
+   ],
+   [
+    "Rothy's",
+    2
+   ],
+   [
+    "Thursday Boots",
+    1
+   ],
+   [
+    "Zappos",
+    1
+   ],
+   [
+    "Net-a-Porter",
+    1
+   ],
+   [
+    "Mr Porter",
+    1
+   ],
+   [
+    "Farfetch",
+    1
+   ],
+   [
+    "Meermin Mallorca",
+    1
+   ],
+   [
+    "Crockett & Jones",
+    1
+   ],
+   [
+    "Exceptional Comfort",
+    1
+   ]
+  ],
+  "top_cited_domains": [
+   [
+    "veja-store.com",
+    4
+   ],
+   [
+    "allbirds.com",
+    3
+   ],
+   [
+    "hoka.com",
+    2
+   ],
+   [
+    "thursdayboots.com",
+    2
+   ],
+   [
+    "nordstrom.com",
+    2
+   ],
+   [
+    "rothys.com",
+    2
+   ],
+   [
+    "zappos.com",
+    1
+   ],
+   [
+    "net-a-porter.com",
+    1
+   ],
+   [
+    "mrporter.com",
+    1
+   ],
+   [
+    "farfetch.com",
+    1
+   ],
+   [
+    "meermin.com",
+    1
+   ],
+   [
+    "crockettandjones.com",
+    1
+   ],
+   [
+    "cariuma.com",
+    1
+   ],
+   [
+    "vessi.com",
+    1
+   ],
+   [
+    "giesswein.com",
+    1
+   ]
+  ],
+  "store_cited": true,
+  "rows": [
+   {
+    "engine": "Gemini",
+    "q": "q1",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Allbirds",
+     "HOKA",
+     "Veja",
+     "Thursday Boots",
+     "Zappos"
+    ],
+    "domains": [
+     "allbirds.com",
+     "hoka.com",
+     "veja-store.com",
+     "thursdayboots.com",
+     "zappos.com"
+    ],
+    "excerpt": "Here are some of the best shoe brands and online retailers to shop right now, broken down by what they do best:\n\n### **1. Best Overall & Comfort: Allbirds**\n* **Why buy:** Known for their eco-friendly materials (like merino wool and eucalyptus tree fiber), [Allbirds](https://www.allbirds.com) makes some of the most comfortable, washable, and versatile everyday sneakers on the market.\n* **Great for:** Everyday walking, travel, and casual wear.\n\n### **2. Best for Running & Walking: HOKA**\n* **Why buy:** [HOKA](https://www.hOKA.com) has taken over the running and walking world thanks to its signa"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q2",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Net-a-Porter",
+     "Mr Porter",
+     "Farfetch",
+     "Meermin Mallorca",
+     "Crockett & Jones",
+     "Allbirds",
+     "VEJA",
+     "Nordstrom"
+    ],
+    "domains": [
+     "net-a-porter.com",
+     "mrporter.com",
+     "farfetch.com",
+     "meermin.com",
+     "crockettandjones.com",
+     "allbirds.com",
+     "veja-store.com",
+     "nordstrom.com"
+    ],
+    "excerpt": "Here are some of the best online retailers for high-quality shoes that offer reliable international shipping, depending on what style you are looking for:\n\n### **1. Designer & Luxury Footwear**\n*   **[Net-a-Porter](https://www.net-a-porter.com)** / **[Mr Porter](https://www.mrporter.com)** \n    *   **Why:** They are the gold standard for luxury shopping online (women's and men's, respectively). You'll find top-tier brands like Gucci, Saint Laurent, Prada, and Balenciaga.\n    *   **Shipping:** Express international shipping via DHL to over 170 countries, with taxes and duties usually calculated"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q3",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Exceptional Comfort",
+     "Machine Washable",
+     "Eco-Friendly Philosophy",
+     "Sockless Wear",
+     "Durability Issues",
+     "Rothy’s",
+     "Cariuma",
+     "Vessi",
+     "Wool Runners",
+     "Tree Runners",
+     "Tree Dashers",
+     "Allbirds Official Website"
+    ],
+    "domains": [
+     "allbirds.com",
+     "rothys.com",
+     "cariuma.com",
+     "vessi.com"
+    ],
+    "excerpt": "Yes, **Allbirds is a 100% legitimate, reputable, and publicly traded company** (NASDAQ: BIRD). Founded in 2016, the brand gained massive popularity by pioneering sustainable footwear made from natural materials like ZQ Merino wool, Eucalyptus tree fiber, and sugarcane-based foam. \n\nHere is a breakdown of what customers say, what the brand does well, and where it falls short.\n\n---\n\n### What Customers Love (The Pros)\n\n* **Exceptional Comfort:** The most common praise for Allbirds is their out-of-the-box comfort. Models like the [Wool Runners](https://www.allbirds.com/products/mens-wool-runners) "
+   },
+   {
+    "engine": "Gemini",
+    "q": "q4",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": true,
+    "brands": [
+     "Giesswein",
+     "Vionic",
+     "Veja",
+     "Tropicfeel",
+     "Skechers",
+     "Rothy's"
+    ],
+    "domains": [
+     "giesswein.com",
+     "vionicshoes.com",
+     "veja-store.com",
+     "shop.tropicfeel.com",
+     "skechers.com",
+     "rothys.com"
+    ],
+    "excerpt": "If you love the comfort, sustainability, or sleek look of Allbirds but want to explore other options, several great brands offer similar wool, knit, or eco-friendly everyday sneakers. \n\nHere are the best alternatives to Allbirds, depending on what feature you care about most:\n\n### 1. Best Overall Alternative: [Giesswein](https://www.giesswein.com)\nIf you specifically love Allbirds' **merino wool** sneakers, Austrian brand Giesswein is arguably an upgrade in quality. They specialize in wool footwear, offering models like the Wool CrossX and Merino Runners.\n* **Why it’s a good alternative:** The"
+   },
+   {
+    "engine": "Gemini",
+    "q": "q5",
+    "sample": 0,
+    "error": null,
+    "simulated": false,
+    "mentioned": false,
+    "brands": [
+     "574",
+     "Fresh Foam",
+     "Nike Pegasus",
+     "Adidas Stan Smith",
+     "Brooks Ghost",
+     "HOKA",
+     "New Balance",
+     "Thursday Boot Co",
+     "Veja",
+     "New Balance 574",
+     "New Balance 9060",
+     "NewBalance.com",
+     "Nordstrom",
+     "Brooks Ghost 15",
+     "HOKA.com",
+     "BrooksRunning.com",
+     "REI",
+     "Nike Air Max 90",
+     "Nike Pegasus 40",
+     "Adidas Ultraboost Light",
+     "Nike.com",
+     "Adidas.com",
+     "Veja Campo or Esplar",
+     "ThursdayBoots.com",
+     "Veja-Store.com"
+    ],
+    "domains": [
+     "newbalance.com",
+     "nordstrom.com",
+     "hoka.com",
+     "brooksrunning.com",
+     "rei.com",
+     "nike.com",
+     "adidas.com",
+     "thursdayboots.com",
+     "veja-store.com"
+    ],
+    "excerpt": "At the **$100 to $140 price point**, you hit the \"sweet spot\" for footwear. You are above budget-tier fast fashion, meaning you get real comfort technology, high-quality cushioning, durable rubber outsoles, and better materials. \n\nHere are the best brands and specific models under $140, categorized by how you plan to use them:\n\n---\n\n### 1. Best for Everyday Comfort & Walking: **New Balance**\nNew Balance currently dominates the lifestyle space because their retro-runner aesthetics double as incredible all-day walking shoes.\n* **Top Pick:** [New Balance 574](https://www.newbalance.com) (~$90) or"
+   }
+  ]
+ },
+ "llm_cost_usd": 0.0,
+ "llm_calls": 5,
+ "simulated": false,
+ "engines": [
+  {
+   "name": "gemini",
+   "engine": "Gemini",
+   "simulated": false,
+   "model": "gemini-3.5-flash ×3, gemini-3.6-flash ×2",
+   "note": "model knowledge only (no live web search: not available on this API tier)"
+  }
+ ],
+ "engine_info": {
+  "mode": "gemini-only",
+  "spec": "gemini",
+  "notes": []
+ },
+ "site_unreachable": false,
+ "score": {
+  "total": 80,
+  "max": 100,
+  "parts": {
+   "crawler_access": {
+    "score": 30,
+    "max": 30
+   },
+   "robots_txt": {
+    "score": 15,
+    "max": 15
+   },
+   "structured_data": {
+    "score": 21,
+    "max": 35
+   },
+   "llms_txt": {
+    "score": 4,
+    "max": 10
+   },
+   "sitemap": {
+    "score": 10,
+    "max": 10
+   }
+  },
+  "grade": "B"
+ },
+ "findings": [
+  {
+   "severity": "high",
+   "key": "jsonld_parse",
+   "zh": "/products/mens-cruiser-slip-on-natural-black：JSON-LD 代码块缺少 schema.org 的 @context，其中的 AggregateRating, Product 不会被校验工具和 AI 爬虫识别",
+   "en": "/products/mens-cruiser-slip-on-natural-black: JSON-LD block without a schema.org @context: types AggregateRating, Product are not recognised by validators or AI crawlers",
+   "fix": "jsonld/",
+   "count": 3
+  },
+  {
+   "severity": "high",
+   "key": "req:Product",
+   "zh": "/products/womens-wool-runner-mizzles-natural-black-1 的 Product 缺少必填字段：name",
+   "en": "/products/womens-wool-runner-mizzles-natural-black-1: Product is missing required fields: name",
+   "fix": "jsonld/",
+   "count": 1
+  },
+  {
+   "severity": "medium",
+   "key": "missing:Organization",
+   "zh": "/ 缺少 Organization 结构化数据",
+   "en": "/ has no Organization structured data",
+   "fix": "jsonld/organization.jsonld",
+   "count": 1
+  },
+  {
+   "severity": "medium",
+   "key": "no_rating",
+   "zh": "/products/mens-cruiser-slip-on-natural-black 没有 AggregateRating（评分），AI 购物推荐常引用评分",
+   "en": "/products/mens-cruiser-slip-on-natural-black has no AggregateRating; AI shopping answers often cite ratings",
+   "fix": "shopify/aiv-product-jsonld.liquid",
+   "count": 3
+  },
+  {
+   "severity": "low",
+   "key": "rec:Product",
+   "zh": "/products/mens-cruiser-slip-on-natural-black 的 Product 建议补充：aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "en": "/products/mens-cruiser-slip-on-natural-black: Product could add aggregateRating|review, gtin|gtin8|gtin12|gtin13|gtin14|mpn",
+   "fix": "jsonld/",
+   "count": 3
+  },
+  {
+   "severity": "low",
+   "key": "llms_txt_default",
+   "zh": "/llms.txt 是 Shopify 自动生成的通用“代理购物说明”，没有你店铺自己的介绍、主推商品和政策链接",
+   "en": "/llms.txt is Shopify's auto-generated generic agent-shopping file, with no store-specific summary, key products or policy links",
+   "fix": "llms.txt",
+   "count": 1
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 206,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products.json?limit=30",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 159,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 387,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 129,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "baseline",
+   "status": 200,
+   "ms": 436,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 652,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 486,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "GPTBot",
+   "status": 429,
+   "ms": 49,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "GPTBot (retry)",
+   "status": 200,
+   "ms": 379,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "GPTBot",
+   "status": 200,
+   "ms": 287,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 113,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 390,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 479,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "OAI-SearchBot",
+   "status": 200,
+   "ms": 306,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 519,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 445,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 141,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "ChatGPT-User",
+   "status": 200,
+   "ms": 316,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 413,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 487,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 132,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "ClaudeBot",
+   "status": 200,
+   "ms": 433,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 126,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 146,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/mens-tree-runners",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 463,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+   "ua": "PerplexityBot",
+   "status": 200,
+   "ms": 122,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/robots.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 91,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/llms.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 94,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/llms-full.txt",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 103,
+   "error": null
+  },
+  {
+   "url": "https://www.allbirds.com/sitemap.xml",
+   "ua": "discovery",
+   "status": 200,
+   "ms": 81,
+   "error": null
+  }
+ ],
+ "request_count": 30,
+ "total_seconds": 82.0,
+ "outputs": {
+  "html_zh": "samples/gemini-real/quick/allbirds.com/report.zh.html",
+  "html_en": "samples/gemini-real/quick/allbirds.com/report.en.html",
+  "markdown": "samples/gemini-real/quick/allbirds.com/report.md"
+ }
+}

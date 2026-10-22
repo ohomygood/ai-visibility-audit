@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Men's Cruiser Slip On - Natural Black (Blizzard Sole)",
+  "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/A12649_26Q1_Cruiser-Slip-On-Natural-Black-Blizzard-Sole_PDP_LEFT.png?v=1768947275"
+  ],
+  "description": "Slip-on ease meets everyday style. Cruiser Slip On pairs a clean, minimalist look with a breathable tree knit upper for comfort you'll notice right away. Easy to wear, easy to style, and comfortable enough for pretty much anywhere the day takes you.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "A12642M080",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black",
+    "price": "100.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{%- comment -%}
+  AI Visibility Audit — Product JSON-LD for Shopify.
+  Install: Online Store → Themes → Edit code → Snippets → Add "aiv-product-jsonld",
+  paste this file, then in sections/main-product.liquid (or product.liquid) add:
+      {% render 'aiv-product-jsonld', product: product %}
+  If your theme already outputs Product JSON-LD, remove the old block to avoid duplicates.
+  Rating fields read the standard Shopify review metafields (reviews.rating / reviews.rating_count)
+  that Judge.me, Loox, Okendo, Yotpo and Shopify Product Reviews can populate.
+{%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ request.origin | append: product.url | json }},
+  {%- if product.featured_image %}
+  "image": [{{ product.featured_image | image_url: width: 1200 | prepend: 'https:' | json }}],
+  {%- endif %}
+  "description": {{ product.description | strip_html | strip_newlines | truncate: 500 | json }},
+  "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+  {%- if v.sku != blank %}"sku": {{ v.sku | json }},{% endif %}
+  {%- if v.barcode != blank %}"gtin": {{ v.barcode | json }},{% endif %}
+  {%- if product.metafields.reviews.rating.value != blank %}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ product.metafields.reviews.rating.value.rating | json }},
+    "bestRating": {{ product.metafields.reviews.rating.value.scale_max | json }},
+    "reviewCount": {{ product.metafields.reviews.rating_count.value | json }}
+  },
+  {%- endif %}
+  "offers": [
+    {%- for variant in product.variants limit: 30 %}
+    {
+      "@type": "Offer",
+      "url": {{ request.origin | append: variant.url | json }},
+      {%- if variant.sku != blank %}"sku": {{ variant.sku | json }},{% endif %}
+      "price": {{ variant.price | divided_by: 100.0 | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      "seller": { "@type": "Organization", "name": {{ shop.name | json }} }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

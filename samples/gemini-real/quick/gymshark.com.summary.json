@@ -1,0 +1,20 @@
+{
+ "audit_id": "20261022-113307-829a30",
+ "domain": "gymshark.com",
+ "platform": "shopify",
+ "score": 83,
+ "grade": "B",
+ "mention_rate": 1.0,
+ "simulated": false,
+ "findings": 3,
+ "crawl_seconds": 28.2,
+ "total_seconds": 65.6,
+ "requests": 29,
+ "llm_calls": 5,
+ "llm_cost_usd": 0.0,
+ "outputs": {
+  "html_zh": "samples/gemini-real/quick/gymshark.com/report.zh.html",
+  "html_en": "samples/gemini-real/quick/gymshark.com/report.en.html",
+  "markdown": "samples/gemini-real/quick/gymshark.com/report.md"
+ }
+}

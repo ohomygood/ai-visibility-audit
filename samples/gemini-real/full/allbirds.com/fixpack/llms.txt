@@ -1,0 +1,44 @@
+# Allbirds
+
+> Allbirds: The world’s most comfortable shoes, flats, and clothing made with natural materials like merino wool and eucalyptus. FREE shipping & returns.
+
+- Website: https://www.allbirds.com/
+- Main categories: Shoes
+- Prices shown in USD
+- Ships to: __COUNTRIES__
+- Returns: __RETURN_POLICY_SUMMARY__
+- Support: __SUPPORT_EMAIL__
+
+## Products
+
+- [Men's Cruiser Slip On - Natural Black (Blizzard Sole)](https://www.allbirds.com/products/mens-cruiser-slip-on-natural-black) — 100.00 USD: Slip-on ease meets everyday style. Cruiser Slip On pairs a clean, minimalist look with a breathable tree knit upper for comfort you'll notic
+- [Men's Tree Runner - Jet Black (White Sole)](https://www.allbirds.com/products/mens-tree-runners) — 100.00 USD: The Allbirds Tree Runner is a breathable and lightweight sneaker made with responsibly sourced eucalyptus tree fiber that feels silky smooth
+- [Women's Wool Runner Mizzles - Natural Black (Natural Black Sole)](https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1) — 99.00 USD: The Wool Runner Mizzle is our rain-ready sneaker that keeps your feet warm, cozy, and dry in unpredictable weather. Cozy ZQ Merino Wool is c
+- [Women's Wool Piper Go - Natural Black (Natural White Sole)](https://www.allbirds.com/products/womens-wool-piper-go-natural-black) — 60.00 USD: A classic style elevated with refined details and cushy support to be the comfiest finishing touch to any fit.
+- [Women's Allbirds Flip Flop - Dusty Pink](https://www.allbirds.com/products/womens-allbirds-flip-flop-dusty-pink) — 25.00 USD: Sun on your feet. Comfort underneath. Light, easy, and made for warm weather, these flip flops bring everyday comfort to sunny days, beach w
+- [Men's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)](https://www.allbirds.com/products/mens-canvas-runner-nz) — 100.00 USD
+- [Women's Canvas Runner NZ - Deep Navy Stripes (Blizzard Sole)](https://www.allbirds.com/products/womens-canvas-runner-nz) — 100.00 USD
+- [Men's Cruiser Terry - Warm White (Warm White Sole)](https://www.allbirds.com/products/mens-cruiser-terry) — 115.00 USD
+- [Men's Canvas Cruiser - Burnt Olive (Natural White Sole)](https://www.allbirds.com/products/mens-cruiser-canvas-burnt-olive) — 75.00 USD: Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that f
+- [Women's Cruiser Canvas - Burnt Olive (Natural White Sole)](https://www.allbirds.com/products/womens-cruiser-canvas-burnt-olive) — 75.00 USD: Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that f
+
+## Collections
+
+- [New Arrivals 26](https://www.allbirds.com/collections/new-arrivals-26)
+- [Shop All 26](https://www.allbirds.com/collections/shop-all-26)
+- [Mens New Arrivals](https://www.allbirds.com/collections/mens-new-arrivals)
+- [Mens Bestsellers](https://www.allbirds.com/collections/mens-bestsellers)
+- [Mens Terralux Cl](https://www.allbirds.com/collections/mens-terralux-cl)
+- [Mens](https://www.allbirds.com/collections/mens)
+- [Mens Sneakers](https://www.allbirds.com/collections/mens-sneakers)
+- [Mens Loungers](https://www.allbirds.com/collections/mens-loungers)
+- [Mens Sandals](https://www.allbirds.com/collections/mens-sandals)
+- [Mens Active Shoes](https://www.allbirds.com/collections/mens-active-shoes)
+
+## Policies
+
+- [Returns Exchanges](https://www.allbirds.com/pages/returns-exchanges)
+
+## Optional
+
+- [Sitemap](https://www.allbirds.com/sitemap.xml)

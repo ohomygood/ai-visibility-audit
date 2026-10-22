@@ -1,0 +1,20 @@
+{
+ "audit_id": "20261022-113231-98de44",
+ "domain": "colourpop.com",
+ "platform": "shopify",
+ "score": 88,
+ "grade": "A",
+ "mention_rate": 0.4,
+ "simulated": false,
+ "findings": 3,
+ "crawl_seconds": 36.2,
+ "total_seconds": 36.2,
+ "requests": 30,
+ "llm_calls": 5,
+ "llm_cost_usd": 0.0,
+ "outputs": {
+  "html_zh": "samples/gemini-real/quick/colourpop.com/report.zh.html",
+  "html_en": "samples/gemini-real/quick/colourpop.com/report.en.html",
+  "markdown": "samples/gemini-real/quick/colourpop.com/report.md"
+ }
+}

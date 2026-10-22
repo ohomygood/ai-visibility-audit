@@ -1,0 +1,23 @@
+# NOT ACTIVE. Copy to .github/workflows/pages.yml in a GitHub repo ONLY after approval (see docs/deploy.md:
+# GitHub's Pages terms disallow using Pages as free hosting for an online business / commercial SaaS).
+name: Deploy landing to GitHub Pages
+on:
+  workflow_dispatch: {}
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/build_static.sh
+        env:
+          AIV_SITE_URL: ${{ vars.AIV_SITE_URL }}
+          AIV_API_BASE: ${{ vars.AIV_API_BASE }}
+          AIV_STRIPE_PAYMENT_LINK: ${{ vars.AIV_STRIPE_PAYMENT_LINK }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: d
+        uses: actions/deploy-pages@v4

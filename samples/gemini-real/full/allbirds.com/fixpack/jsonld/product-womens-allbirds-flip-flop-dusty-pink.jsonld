@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Women's Allbirds Flip Flop - Dusty Pink",
+  "url": "https://www.allbirds.com/products/womens-allbirds-flip-flop-dusty-pink",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/A12513_26Q2_Allbirds-Flip-Flop-Dusty-Pink_PDP_LEFT.png?v=1774646345"
+  ],
+  "description": "Sun on your feet. Comfort underneath. Light, easy, and made for warm weather, these flip flops bring everyday comfort to sunny days, beach walks, and everything in between. Just slip them on and go.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "A12513W050",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/womens-allbirds-flip-flop-dusty-pink",
+    "price": "25.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/OutOfStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}

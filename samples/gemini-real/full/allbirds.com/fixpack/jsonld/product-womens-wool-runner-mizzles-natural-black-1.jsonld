@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Women's Wool Runner Mizzles - Natural Black (Natural Black Sole)",
+  "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/AB006YM_SHOE_ANGLE_GLOBAL_MENS_WOOL_RUNNER_MIZZLE2_NATURAL_BLACK_RUGGED_KHAKI.png?v=1776206836"
+  ],
+  "description": "The Wool Runner Mizzle is our rain-ready sneaker that keeps your feet warm, cozy, and dry in unpredictable weather. Cozy ZQ Merino Wool is combined with our bio-based water repellent shield so you can walk comfortably in the rain. These shoes are great everyday shoes, with all condition traction to grip slippery surfaces.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "AB006ZW050",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/womens-wool-runner-mizzles-natural-black-1",
+    "price": "99.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}

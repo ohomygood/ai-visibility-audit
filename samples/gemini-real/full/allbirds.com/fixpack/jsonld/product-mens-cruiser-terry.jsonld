@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Men's Cruiser Terry - Warm White (Warm White Sole)",
+  "url": "https://www.allbirds.com/products/mens-cruiser-terry",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/A12370_26Q1_Cruiser-Terry-Warm-White-Warm-White_PDP_LEFT_f79ee143-f5b7-419a-8cfe-68557b63b868.png?v=1774566144"
+  ],
+  "description": "__SHORT_DESCRIPTION__",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "A12374M080",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/mens-cruiser-terry",
+    "price": "115.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/OutOfStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}

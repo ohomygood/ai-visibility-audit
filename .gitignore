@@ -1,0 +1,9 @@
+data/
+logs/
+__pycache__/
+*.pyc
+config/production.env
+site/
+landing/wechat_pay_qr.jpg
+exports/
+config/dev.env

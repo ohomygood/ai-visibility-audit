@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Women's Wool Piper Go - Natural Black (Natural White Sole)",
+  "url": "https://www.allbirds.com/products/womens-wool-piper-go-natural-black",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/A10976_24Q3_Wool_Piper_2_Natural_Black_Natural_White_PDP_LEFT-2000x2000_ac210616-f73b-458e-a9be-36fbba346e71.png?v=1776209058"
+  ],
+  "description": "A classic style elevated with refined details and cushy support to be the comfiest finishing touch to any fit.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "A10981W050",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/womens-wool-piper-go-natural-black",
+    "price": "60.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}

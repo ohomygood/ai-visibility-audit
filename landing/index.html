@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 可见度体检 · AI 能读懂并推荐你的店吗？| AI Visibility Audit for Shopify stores</title>
+<meta name="description" content="约 2 分钟检查 ChatGPT、Claude、Perplexity 的爬虫能否读取你的 Shopify / 独立站，并实测 Gemini 是否推荐你。$19 一次性完整报告（可用人民币支付） + 可直接粘贴的修复文件。Free 2-minute AI visibility check for Shopify and DTC stores.">
+<link rel="canonical" href="https://__AIV_DOMAIN__/">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script><script src="i18n.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"AI Visibility Audit — full report + fix pack","description":"One-off AI visibility audit for Shopify and independent stores with ready-to-use fix files.","brand":{"@type":"Brand","name":"AI Visibility Audit"},
+ "offers":[{"@type":"Offer","price":"19.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://__AIV_DOMAIN__/#pricing"}]}
+</script>
+</head>
+<body class="lang-zh">
+<div class="wrap">
+<header>
+  <div class="logo"><b>AI</b> <span class="zh">可见度体检</span><span class="en">Visibility Audit</span></div>
+  <nav><a href="#what"><span class="zh">检查什么</span><span class="en">What we check</span></a><a href="#pricing"><span class="zh">价格</span><span class="en">Pricing</span></a><a href="#refund"><span class="zh">退款</span><span class="en">Refunds</span></a><a href="privacy.html"><span class="zh">隐私</span><span class="en">Privacy</span></a>
+  <a href="#" onclick="setLang('zh');return false">中文</a><a href="#" onclick="setLang('en');return false">EN</a></nav>
+</header>
+
+<div class="hero">
+  <h1><span class="zh">AI 能读懂并推荐你的店吗？</span><span class="en">Can AI read and recommend your store?</span></h1>
+  <p><span class="zh">输入店铺网址，约 2 分钟告诉你：AI 爬虫能不能读到你的店、商品数据是否完整、AI 回答里推荐的是你还是竞品。付费后拿到可直接粘贴的修复文件。</span>
+     <span class="en">Enter your store URL. In about 2 minutes see whether AI crawlers can read your store, whether your product data is complete, and whether AI answers recommend you or your competitors. Pay once to get paste-ready fix files.</span></p>
+  <form class="check" id="checkForm">
+    <input id="url" type="text" required placeholder="yourstore.com" aria-label="Store URL">
+    <button class="btn" type="submit"><span class="zh">免费体检</span><span class="en">Free check</span></button>
+  </form>
+  <p class="small"><span class="zh">无需注册 · 只读检测 · 每个 IP 每小时 3 次 · 数据 7 天后删除</span><span class="en">No sign-up · read-only · 3 checks per hour per IP · data deleted after 7 days</span></p>
+  <div id="result"></div>
+</div>
+
+<section id="what">
+  <h2><span class="zh">我们检查什么</span><span class="en">What we check</span></h2>
+  <div class="grid">
+    <div class="card"><h3><span class="zh">AI 爬虫能否访问</span><span class="en">AI crawler access</span></h3><span class="zh">用 GPTBot、OAI-SearchBot、ChatGPT-User、ClaudeBot、PerplexityBot 的官方 UA 访问首页和商品页，找出 403 / Cloudflare 拦截。</span><span class="en">We request your homepage and product pages as GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot and PerplexityBot and flag 403s and Cloudflare blocks.</span></div>
+    <div class="card"><h3>robots.txt</h3><span class="zh">逐个判断 12 种 AI 爬虫是否被禁止，区分“训练用”和“回答时引用”。</span><span class="en">Checks 12 AI user-agents and separates training crawlers from answer-time crawlers.</span></div>
+    <div class="card"><h3><span class="zh">商品结构化数据</span><span class="en">Product structured data</span></h3><span class="zh">Product、Offer、AggregateRating、Organization 是否齐全、能否被识别（与 validator.schema.org 对照）。</span><span class="en">Product, Offer, AggregateRating and Organization: present, complete and recognised (cross-checked with validator.schema.org).</span></div>
+    <div class="card"><h3>llms.txt</h3><span class="zh">有没有一份给 AI 助手看的店铺简介。</span><span class="en">Whether AI assistants get a concise, curated summary of your store.</span></div>
+    <div class="card"><h3><span class="zh">AI 推荐测试</span><span class="en">AI recommendation test</span></h3><span class="zh">用真实买家问题询问 AI 引擎（只用官方 API），统计你被提到的比例和被推荐的竞品。</span><span class="en">We ask AI engines real buyer questions (official APIs only) and measure how often you're mentioned and who gets recommended instead.</span></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2><span class="zh">价格</span><span class="en">Pricing</span></h2>
+  <div class="price">
+    <div class="card"><h3><span class="zh">免费简检</span><span class="en">Free quick check</span></h3><div class="amount">$0</div>
+      <ul class="ticks"><li><span class="zh">AI 爬虫访问 + robots.txt</span><span class="en">AI crawler access + robots.txt</span></li><li><span class="zh">结构化数据 + llms.txt</span><span class="en">Structured data + llms.txt</span></li><li><span class="zh">5 个买家问题 × 2 个 AI 引擎</span><span class="en">5 buyer questions × 2 AI engines</span></li><li><span class="zh">前 6 个问题</span><span class="en">Top 6 findings</span></li></ul></div>
+    <div class="card hl"><h3><span class="zh">完整报告 + 修复包</span><span class="en">Full report + fix pack</span></h3>
+      <div class="amount">$19 <small><span class="zh">银行卡 · 或微信支付 <span class="wxPriceTxt">¥129</span> · 一次性</span><span class="en">one-off</span></small></div>
+      <p class="small"><span class="zh">支持人民币等本地货币支付（Stripe 按实时汇率换算，金额以结账页为准）。</span><span class="en">Pay in your local currency, including CNY (converted by Stripe at checkout).</span></p>
+      <ul class="ticks"><li><span class="zh">25 个买家问题在 Gemini 上实测（每题 3 次）；ChatGPT / Perplexity 测试启用后自动加入，报告会写明用了哪些引擎</span><span class="en">25 buyer questions tested on Gemini (3 samples each); ChatGPT / Perplexity are added once enabled, and every report lists the engines used</span></li><li><span class="zh">竞品份额与 AI 引用来源缺口</span><span class="en">Competitor share of voice and cited-source gaps</span></li><li><span class="zh">robots.txt、JSON-LD（含 Shopify Liquid 片段）、llms.txt</span><span class="en">robots.txt, JSON-LD (incl. Shopify Liquid snippets), llms.txt</span></li><li><span class="zh">5 篇 FAQ / 对比 / 选购指南草稿</span><span class="en">5 FAQ / comparison / buying-guide drafts</span></li><li><span class="zh">Cloudflare 放行 AI 爬虫步骤</span><span class="en">Cloudflare steps to allow AI crawlers</span></li><li><span class="zh">PDF + ZIP 下载，不订阅</span><span class="en">PDF + ZIP download, no subscription</span></li></ul>
+      <a class="btn" id="buyBtn" href="#check"><span class="zh">先免费体检，再用银行卡解锁 $19</span><span class="en">Run the free check, then unlock for $19</span></a>
+      <div class="zh" id="wechatPay" style="display:none;margin-top:14px">
+        <h4>或微信支付 <span id="wxPrice">¥129</span></h4>
+        <img id="wxQr" alt="微信收款码" width="200" style="display:block;margin:8px 0" onerror="this.style.display='none'">
+        <ol>
+          <li>先做上方的免费体检，拿到 audit id<span id="wxAid"></span>。</li>
+          <li>用微信扫码支付 <span class="wxPriceTxt">¥129</span>。</li>
+          <li>付款后把付款截图 + audit id 发到 <b><span id="wxContact"></span></b>，24 小时内开通。</li>
+        </ol>
+      </div>
+      <p class="small"><span class="zh">先做免费简检，再从报告页解锁，报告会自动关联。</span><span class="en">Run the free check first, then unlock from the report page so your purchase is linked to it.</span></p></div>
+  </div>
+</section>
+
+<section id="refund">
+  <h2><span class="zh">7 天退款政策</span><span class="en">7-day refund policy</span></h2>
+  <div class="card" style="max-width:760px;margin:0 auto">
+    <p class="zh">购买后 7 天内，如果你对完整报告不满意，发邮件到 <span data-text="CONTACT_EMAIL"></span>，附上报告 ID，我们全额退款，不问原因。报告生成失败或无法访问你的网站时，我们会主动退款。退款原路退回，银行处理通常需 5–10 个工作日。</p>
+    <p class="en">Within 7 days of purchase, if you're not happy with the full report, email <span data-text="CONTACT_EMAIL"></span> with your report ID and we'll refund you in full, no questions asked. If report generation fails or we can't reach your site, we refund automatically. Refunds go back to the original payment method; banks usually take 5–10 business days.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <div style="max-width:760px;margin:0 auto">
+    <details><summary><span class="zh">你们会抓取 ChatGPT 网页吗？</span><span class="en">Do you scrape ChatGPT's website?</span></summary><p><span class="zh">不会。AI 推荐测试只调用各家官方 API。</span><span class="en">No. The AI test uses official APIs only.</span></p></details>
+    <details><summary><span class="zh">会影响我的网站吗？</span><span class="en">Will this affect my site?</span></summary><p><span class="zh">只读 GET 请求，每秒最多 1 个，一次体检约 30 个请求。</span><span class="en">Read-only GET requests, at most one per second, about 30 per check.</span></p></details>
+    <details><summary><span class="zh">AI 的回答每次都不一样，结果准吗？</span><span class="en">AI answers vary. Are results reliable?</span></summary><p><span class="zh">所以完整报告对每个问题在每个引擎上采样 2–3 次，看的是比例而不是单次结果。</span><span class="en">That's why the full report samples each question 2–3 times per engine and reports rates, not single answers.</span></p></details>
+    <details><summary><span class="zh">只支持 Shopify 吗？</span><span class="en">Shopify only?</span></summary><p><span class="zh">Shopify 支持最好（含 Liquid 修复片段），其他独立站平台也能检测。</span><span class="en">Shopify gets the deepest support (incl. Liquid snippets); other platforms work too.</span></p></details>
+  </div>
+</section>
+
+<footer>
+  <span class="zh">AI 可见度体检</span><span class="en">AI Visibility Audit</span> · <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a> · <a href="#refund"><span class="zh">退款政策</span><span class="en">Refunds</span></a> · <span data-text="CONTACT_EMAIL"></span>
+</footer>
+</div>
+
+<script>
+(function(){
+  var w = (window.AIV_CONFIG || {}).WECHAT_PAY;
+  if(!w || !w.ENABLED) return;
+  var price = "¥" + (w.EARLYBIRD ? w.EARLYBIRD_PRICE_CNY : w.PRICE_CNY);
+  var label = w.EARLYBIRD ? price + "（早鸟价，原价 ¥" + w.PRICE_CNY + "）" : price;
+  document.getElementById("wxPrice").textContent = label;
+  document.querySelectorAll(".wxPriceTxt").forEach(function(x){ x.textContent = price; });
+  document.getElementById("wxQr").src = w.QR_URL;
+  document.getElementById("wxContact").textContent = w.CONTACT;
+  document.getElementById("wechatPay").style.display = "";
+  window.AIV_setWechatAudit = function(aid){ document.getElementById("wxAid").textContent = "：" + aid; };
+})();
+document.getElementById("checkForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var zh = document.body.className === "lang-zh";
+  var box = document.getElementById("result"); box.style.display = "block";
+  box.innerHTML = '<div class="card">' + (zh ? "正在体检，约 1–2 分钟…" : "Checking, about 1–2 minutes…") + "</div>";
+  fetch((window.AIV_CONFIG.API_BASE || "") + "/api/check", {method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({url: document.getElementById("url").value})})
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(x){
+      if(!x.ok){ box.innerHTML = '<div class="card">' + (x.j.error || "error") + "</div>"; return; }
+      var j = x.j, url = (window.AIV_CONFIG.API_BASE || "") + (zh ? j.report_url : j.report_url_en),
+          pay = window.AIV_payUrl(j.audit_id);   // payment link + ?client_reference_id=<audit_id>
+      box.innerHTML = '<div class="card"><div class="amount">' + (j.score === null ? "–" : j.score) + '<small>/100 · ' + j.grade + '</small></div>' +
+        (zh ? "发现 " + j.findings + " 个问题，用时 " + j.seconds + " 秒。" : j.findings + " findings in " + j.seconds + "s.") +
+        '<p><a class="btn" href="' + url + '" target="_blank">' + (zh ? "查看报告" : "Open report") + "</a>" +
+        (pay ? ' <a class="btn alt" href="' + pay + '">' + (zh ? "解锁完整报告 $19" : "Unlock full report $19") + "</a>" : "") + "</p></div>";
+      if(window.AIV_setWechatAudit) window.AIV_setWechatAudit(j.audit_id);
+      if(pay){ var b = document.getElementById("buyBtn"); b.href = pay;
+        b.innerHTML = '<span class="zh">银行卡解锁这份报告 $19</span><span class="en">Unlock this report for $19</span>'; }
+    })
+    .catch(function(){ box.innerHTML = '<div class="card">' + (zh ? "网络错误，请稍后重试" : "Network error, try again") + "</div>"; });
+});
+</script>
+</body>
+</html>

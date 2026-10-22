@@ -1,0 +1,15 @@
+{%- comment -%}
+  AI Visibility Audit — Organization JSON-LD. Add to layout/theme.liquid inside <head>
+  (only on the home page):  {% if template.name == 'index' %}{% render 'aiv-organization-jsonld' %}{% endif %}
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ shop.name | json }},
+  "url": {{ request.origin | json }},
+  {%- if settings.logo %}"logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},{% endif %}
+  "sameAs": ["http://pinterest.com/weareallbirds", "https://twitter.com/allbirds", "https://www.facebook.com/weareallbirds", "https://www.instagram.com/allbirds", "https://www.tiktok.com/@weareallbirds", "https://www.youtube.com/channel/UCnGErLCau5qNJ0Xwe6uEyTw"],
+  "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": {{ shop.email | json }} }
+}
+</script>

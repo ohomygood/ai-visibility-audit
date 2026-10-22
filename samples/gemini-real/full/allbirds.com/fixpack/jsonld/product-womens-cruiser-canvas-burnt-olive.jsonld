@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Women's Cruiser Canvas - Burnt Olive (Natural White Sole)",
+  "url": "https://www.allbirds.com/products/womens-cruiser-canvas-burnt-olive",
+  "image": [
+    "https://cdn.shopify.com/s/files/1/1104/4168/files/A12483_26Q1_Cruiser-Canvas-Burnt-Olive-Natural-White_PDP_LEFT_7e736263-b2a2-486c-badd-47c2b38eb728.png?v=1768946365"
+  ],
+  "description": "Classic court style, relaxed for warmer days. Cruiser Canvas pairs a familiar silhouette with a subtly textured hemp-and-cotton upper that feels light, breathable, and ready to wear on repeat. Comfortable enough for all day. Simple enough to go with everything.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Allbirds"
+  },
+  "sku": "A12483W050",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.allbirds.com/products/womens-cruiser-canvas-burnt-olive",
+    "price": "75.00",
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/OutOfStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Allbirds"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "__COUNTRY_CODE__",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": "__RETURN_DAYS__"
+    }
+  }
+}
