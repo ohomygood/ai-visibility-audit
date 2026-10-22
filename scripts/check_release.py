@@ -3,7 +3,8 @@
 
   python3 scripts/check_release.py site/
 
-Rules: the static site ships no images at all; no file is named like a QR / WeChat asset; no file is
+Rules: the only images are byte-identical copies of the AI Seen Lab brand files in brand/ (under brand/ or as
+/favicon.ico); no file is named like a QR / WeChat asset; no file is
 byte-identical to the owner's real QR (if present on this machine, path in AIV_REAL_QR_PATH); no text file
 mentions 微信 / WeChat / ¥ prices / a QR image. Exit 1 with the offending paths.
 """
@@ -18,12 +19,14 @@ from pathlib import Path
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".bmp", ".ico"}
 NAME_RE = re.compile(r"qr|wechat|weixin|wxpay", re.I)
 TEXT_RE = re.compile(r"微信|wechat|weixin|收款码|¥\s?\d|[\w/.-]*qr[\w-]*\.(?:jpe?g|png|webp|gif)", re.I)
+BRAND_DIR = Path(__file__).resolve().parents[1] / "brand"
 REAL_QR = Path(os.environ.get("AIV_REAL_QR_PATH", "/workspace/payment/wechat_pay_qr.jpg"))
 
 
 def problems(root: Path) -> list[str]:
     real = hashlib.sha256(REAL_QR.read_bytes()).hexdigest() if REAL_QR.is_file() else None
     out = []
+    brand = {hashlib.sha256(b.read_bytes()).hexdigest() for b in BRAND_DIR.glob("*") if b.is_file()} if BRAND_DIR.is_dir() else set()
     for p in sorted(root.rglob("*")):
         if not p.is_file():
             continue
@@ -34,7 +37,8 @@ def problems(root: Path) -> list[str]:
         if NAME_RE.search(p.name):
             out.append(f"{rel}: QR/WeChat-like file name")
         if p.suffix.lower() in IMAGE_EXT:
-            out.append(f"{rel}: image in the static site (none expected)")
+            if not ((rel.startswith("brand/") or rel == "favicon.ico") and hashlib.sha256(data).hexdigest() in brand):
+                out.append(f"{rel}: image in the static site that isn't a brand/ file")
         if p.suffix.lower() in (".html", ".js", ".css", ".txt", ".json", ".md") or p.name == "_headers":
             m = TEXT_RE.search(data.decode("utf-8", "replace"))
             if m:

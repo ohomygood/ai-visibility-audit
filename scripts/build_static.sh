@@ -6,6 +6,8 @@ cd "$(dirname "$0")/.."
 : "${AIV_SITE_URL:=https://__AIV_DOMAIN__}" "${AIV_API_BASE:=}" "${AIV_STRIPE_PAYMENT_LINK:=https://buy.stripe.com/__PENDING_USD_19__}"
 rm -rf site && mkdir -p site && cp landing/*.html landing/*.js landing/*.css site/   # text assets only, never images
 cp deploy/cloudflare-pages/_headers site/_headers
+# AI Seen Lab brand (favicon + footer mark): byte-for-byte copies of brand/; check_release.py allows nothing else
+mkdir -p site/brand && cp brand/aiseenlab_icon.svg brand/aiseenlab_icon.png brand/favicon-16.png brand/favicon-32.png brand/apple-touch-icon.png brand/favicon.ico site/brand/ && cp brand/favicon.ico site/favicon.ico
 # pages.dev -> custom domain redirect, only when the site URL is a custom domain (no self-redirect loop)
 case "$AIV_SITE_URL" in *.pages.dev*|*__AIV_DOMAIN__*) ;; *) cp deploy/cloudflare-pages/_worker.js site/_worker.js ;; esac
 python3 - "$AIV_SITE_URL" "$AIV_API_BASE" "$AIV_STRIPE_PAYMENT_LINK" <<'PY'
@@ -23,7 +25,7 @@ PY
 touch site/.nojekyll
 # Stripe only: no payment QR, no WeChat copy may ever ship in the site (fails the build).
 python3 scripts/check_release.py site
-left=$(grep -l "__AIV_DOMAIN__\|__PENDING" site/* || true)
+left=$(grep -rlI "__AIV_DOMAIN__\|__PENDING" site || true)
 if [ -n "$left" ] && [ "${ALLOW_PLACEHOLDERS:-0}" != "1" ]; then
   echo "placeholders still present in: $left (set AIV_SITE_URL / AIV_API_BASE / AIV_STRIPE_PAYMENT_LINK, or ALLOW_PLACEHOLDERS=1 for a preview)"; exit 2
 fi
