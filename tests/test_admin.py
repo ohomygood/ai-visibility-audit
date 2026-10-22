@@ -2,6 +2,7 @@
 import io
 import json
 import os
+import sys
 import tempfile
 import threading
 import time
@@ -38,6 +39,10 @@ class Base(unittest.TestCase):
         for p in (mock.patch("aiv.server.DATA_DIR", self.data), mock.patch("aiv.audit.DATA_DIR", self.data)):
             p.start()
             self.addCleanup(p.stop)
+        _cp = mock.patch("aiv.capacity.CAP", __import__("aiv.capacity", fromlist=["Capacity"]).Capacity())
+        _cp.start()
+        self.addCleanup(_cp.stop)
+        __import__("aiv.server", fromlist=["_running"])._running.clear()
         self.runs = []
         p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: fake_full(self.runs, url, out_dir))
         p.start()
@@ -210,7 +215,7 @@ class TestCLI(Base):
         return code, "\n".join(lines), err.getvalue()
 
     def test_cli_unlock_runs_report_and_logs(self):
-        args = [AID, "--by", "the owner", "--reason", "WeChat ¥129", "--amount", "129", "--ref", "wx-note-001"]
+        args = [AID, "--by", "the owner", "--reason", "WeChat ¥129", "--channel", "wechat", "--amount", "129", "--ref", "wx-note-001"]
         code, out, _ = self.run_cli(*args)
         self.assertEqual(code, 0)
         self.assertEqual(json.loads(out)["result"], "unlocked")
@@ -222,7 +227,7 @@ class TestCLI(Base):
                          [("cli", "unlocked", "CNY"), ("cli", "already_unlocked", "CNY")])
 
     def test_cli_requires_ref_for_wechat(self):
-        code, _, err = self.run_cli(AID, "--by", "the owner", "--reason", "x")
+        code, _, err = self.run_cli(AID, "--by", "the owner", "--reason", "x", "--channel", "wechat")
         self.assertEqual(code, 1)
         self.assertIn("ref", err)
         self.assertFalse((self.d / "paid.json").exists())
@@ -244,30 +249,74 @@ class TestCLI(Base):
         self.assertNotIn(TOKEN, out)
 
 
-class TestWechatCopy(unittest.TestCase):
-    def test_report_shows_wechat_zh_and_earlybird_toggle(self):
-        from aiv.report import _wechat_block
-        b = _wechat_block(AID)
-        self.assertIn("微信支付 ¥129", b)
-        self.assertIn(AID, b)
-        self.assertIn("付款后把付款截图 + audit id 发到 <b>go_with_prob@mail.grokbot.com</b>，24 小时内开通", b)
-        self.assertIn('class="zh wechat"', b)
-        self.assertNotIn("99", b.replace(AID, ""))
-        with mock.patch.dict(os.environ, {"AIV_WECHAT_EARLYBIRD": "1"}):
-            self.assertIn("¥99（早鸟价，原价 ¥129）", _wechat_block(AID))
-        with mock.patch.dict(os.environ, {"AIV_WECHAT_ENABLED": "0"}):
-            self.assertEqual(_wechat_block(AID), "")
+class TestStripeOnlyCopy(unittest.TestCase):
+    """Stripe only: no WeChat price, QR or screenshot instructions on any buyer-facing page."""
+    BAD = ("微信", "¥129", "¥99", "¥29", "wechat", "收款码", "qr", "付款截图", "人民币", "无理由", "不问原因", "no questions asked",
+           "2 个 ai 引擎", "2 ai engines", "可用本地货币付款", "早鸟", "coupon", "优惠码")
+    CONTACT = "go_with_prob@mail.grokbot.com"
 
-    def test_landing_config(self):
+    def assert_clean(self, text, where):
+        low = text.lower()
+        for b in self.BAD:
+            self.assertNotIn(b.lower(), low, f"{b!r} in {where}")
+
+    def test_landing_and_config(self):
         root = Path(__file__).resolve().parents[1]
-        cfg = (root / "landing" / "config.js").read_text()
-        self.assertIn("EARLYBIRD: false", cfg)
-        self.assertIn('CONTACT: "go_with_prob@mail.grokbot.com"', cfg)
-        html = (root / "landing" / "index.html").read_text()
-        self.assertIn("微信支付", html)
-        self.assertIn('class="zh" id="wechatPay"', html)
-        self.assertIn("付款后把付款截图 + audit id 发到", html)
-        self.assertNotIn("__WECHAT_CONTACT__", cfg + html)
+        for f in ("index.html", "config.js", "privacy.html", "terms.html", "i18n.js"):
+            self.assert_clean((root / "landing" / f).read_text(), f)
+        idx = (root / "landing" / "index.html").read_text()
+        self.assertIn("按美元（USD）收费", idx)
+        self.assertIn("checkout may show the price in your local currency", idx)
+        for f in ("index.html", "privacy.html", "terms.html"):
+            t = (root / "landing" / f).read_text()
+            self.assertIn(f"mailto:{self.CONTACT}", t, f)
+            self.assertNotIn('data-text="CONTACT_EMAIL"', t, f)
+        for f in ("index.html", "terms.html"):     # refund policy: 7 days, not delivered in 24h or not useful, once per customer
+            t = (root / "landing" / f).read_text()
+            for must in ("24 小时内交付", "没有帮助", "每位客户限退款一次", "within 24 hours", "not useful", "One refund per customer"):
+                self.assertIn(must, t, f"{must!r} missing in {f}")
+        # engines: only what production calls (Gemini), the others as coming soon
+        self.assertIn("5 个买家问题 × Gemini", idx)
+        self.assertIn("ChatGPT 和 Perplexity 即将支持", idx)
+        self.assertIn("coming soon", idx)
+
+    def test_report_paywall(self):
+        from aiv.report import write_reports
+        import tempfile
+        res = json.loads((Path(__file__).resolve().parents[1] / "samples" / "gemini-real" / "quick" / "allbirds.com" / "audit.json").read_text())
+        with tempfile.TemporaryDirectory() as d:
+            write_reports(res, Path(d))
+            for f in ("report.zh.html", "report.en.html"):
+                html = (Path(d) / f).read_text()
+                self.assert_clean(html.replace(res["audit_id"], ""), f)
+            zh = (Path(d) / "report.zh.html").read_text()
+            self.assertIn("$19 美元", zh)
+            self.assertIn("ChatGPT 和 Perplexity 即将支持", zh)
+            self.assertIn(self.CONTACT, zh)
+
+    def test_order_pages(self):
+        from aiv import server
+        for args in (("Locked", "<p>x</p>"),):
+            self.assert_clean(server.page(*args).decode(), "order page")
+        self.assert_clean(json.dumps(server.PAY_ERRORS, ensure_ascii=False), "payment messages")
+        self.assertIn(self.CONTACT, server.CONTACT_HTML)
+
+    def test_static_build_rejects_qr(self):
+        import shutil
+        import subprocess
+        import tempfile
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as d:
+            site = Path(d) / "site"
+            shutil.copytree(root / "landing", site, ignore=shutil.ignore_patterns("*.jpg", "*.png"))
+            chk = [sys.executable, str(root / "scripts" / "check_release.py"), str(site)]
+            self.assertEqual(subprocess.run(chk, capture_output=True).returncode, 0)
+            (site / "wechat_pay_qr.jpg").write_bytes(b"\xff\xd8fake")
+            self.assertEqual(subprocess.run(chk, capture_output=True).returncode, 1)
+            (site / "wechat_pay_qr.jpg").unlink()
+            (site / "pay.html").write_text("<p>微信支付 ¥129</p>")
+            self.assertEqual(subprocess.run(chk, capture_output=True).returncode, 1)
+
 
 
 if __name__ == "__main__":

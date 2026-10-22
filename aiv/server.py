@@ -30,6 +30,7 @@ import mimetypes
 import os
 import re
 import socket
+import shutil
 import threading
 import time
 from collections import defaultdict, deque
@@ -42,9 +43,11 @@ from .audit import DATA_DIR, run_audit
 from .crawl import normalize_url
 from .http import is_public_host
 from .llm import is_production
-from . import admin, orders, payments
+from . import admin, capacity, orders, payments
 
 ROOT = Path(__file__).resolve().parents[1]
+CONTACT = "go_with_prob@mail.grokbot.com"
+CONTACT_HTML = f"<p>联系我们 / Contact: <a href='mailto:{CONTACT}'>{CONTACT}</a></p>"
 LANDING = ROOT / "landing"
 FREE_PER_HOUR = int(os.environ.get("AIV_FREE_PER_HOUR", "3"))
 _hits: dict[str, deque] = defaultdict(deque)
@@ -104,8 +107,34 @@ def store_domain(meta: dict | None) -> str | None:
     return urlparse((meta or {}).get("root") or (meta or {}).get("url") or "").hostname if meta else None
 
 
+def _quota_failed(res) -> bool:
+    """True when Gemini ran out of daily quota during the run (too many unanswered questions to deliver)."""
+    rows = ((res or {}).get("visibility") or {}).get("rows") or [] if isinstance(res, dict) else []
+    bad = sum(1 for r in rows if "quota" in str(r.get("error") or "").lower() or "429" in str(r.get("error") or ""))
+    return bool(rows) and bad > 0.2 * len(rows)
+
+
+def _full_job(audit_id: str, url: str, d: Path):
+    """Generate into full.tmp and publish it as full/ only when it is real and complete. Returns done|defer."""
+    tmp = d / "full.tmp"
+    shutil.rmtree(tmp, ignore_errors=True)
+    try:
+        res = run_audit(url, mode="full", out_dir=tmp)
+        if is_production() and isinstance(res, dict) and res.get("simulated"):
+            raise RuntimeError("simulated engine output refused in production")
+        if _quota_failed(res):
+            shutil.rmtree(tmp, ignore_errors=True)
+            return "defer"                       # retried first thing after the quota reset
+        shutil.rmtree(d / "full", ignore_errors=True)
+        tmp.rename(d / "full")
+    except Exception as e:  # noqa: BLE001
+        shutil.rmtree(tmp, ignore_errors=True)
+        (d / "full_error.txt").write_text(str(e))
+    return "done"
+
+
 def start_full(audit_id: str, wait: bool = False) -> bool:
-    """Run the paid full audit at most once at a time, and only while there is no result yet."""
+    """Queue the paid full audit (one at a time, paid orders first), only while there is no result yet."""
     d = report_dir(audit_id)
     with _run_lock:
         if (audit_id in _running or not (d / "paid.json").exists() or (d / "full" / "report.zh.html").exists()
@@ -117,18 +146,61 @@ def start_full(audit_id: str, wait: bool = False) -> bool:
         _running.add(audit_id)
 
     def job():
+        out = "done"
         try:
-            run_audit(meta["url"], mode="full", out_dir=d / "full")
-        except Exception as e:  # noqa: BLE001
-            (d / "full_error.txt").write_text(str(e))
+            out = _full_job(audit_id, meta["url"], d)
+            return out
         finally:
-            with _run_lock:
-                _running.discard(audit_id)
+            if out != "defer" or wait:           # a deferred job stays queued (and in _running)
+                with _run_lock:
+                    _running.discard(audit_id)
     if wait:
         job()
     else:
-        threading.Thread(target=job, daemon=True).start()
+        capacity.CAP.enqueue(audit_id, job)
     return True
+
+
+def requeue_pending() -> int:
+    """At startup: paid orders without a report go back in the queue (oldest payment first)."""
+    base = DATA_DIR / "reports"
+    if not base.is_dir():
+        return 0
+    todo = sorted((p.stat().st_mtime, p.parent.name) for p in base.glob("*/paid.json"))
+    return sum(1 for _, aid in todo if ID_RE.match(aid) and start_full(aid))
+
+
+def start_purge_thread() -> None:
+    """Retention without cron (Render free has none): scripts/purge_old.py at startup and then every 24 hours."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("purge_old", ROOT / "scripts" / "purge_old.py")
+    if not spec or not spec.loader or not (ROOT / "scripts" / "purge_old.py").exists():
+        return
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+
+    def loop():
+        while True:
+            try:
+                mod.purge(float(os.environ.get("AIV_RETENTION_DAYS", "7")))
+            except Exception as e:  # noqa: BLE001
+                print("purge failed:", type(e).__name__)
+            time.sleep(86400)
+    threading.Thread(target=loop, name="purge", daemon=True).start()
+
+
+def production_guard() -> None:
+    """Refuse to start a production server that could sell simulated (stub/mock) reports."""
+    if not is_production():
+        return
+    from .llm import select_engines
+    if os.environ.get("AIV_DEV_UNLOCK") == "1":
+        raise SystemExit("AIV_ENV=production: AIV_DEV_UNLOCK=1 is not allowed")
+    if "stub" in (os.environ.get("AIV_ENGINES", "") + os.environ.get("AIV_ENGINE_MODE", "")).lower():
+        raise SystemExit("AIV_ENV=production: stub/mock engines are not allowed")
+    engines, _ = select_engines(None, None, purpose="full")      # raises ProductionStubError on any simulated engine
+    if not engines or any(e.simulated for e in engines):
+        raise SystemExit("AIV_ENV=production: no real engine configured")
 
 
 def ensure_paid(audit_id: str, domain: str | None, source: str, wait: bool = False, extra: dict | None = None) -> bool:
@@ -240,7 +312,7 @@ class Handler(BaseHTTPRequestHandler):
     def _pay_error(self, e: "payments.PaymentError", sid: str = ""):
         zh, en = PAY_ERRORS.get(e.reason, ("验证付款时出错，请稍后刷新重试。", "Something went wrong verifying the payment. Refresh to retry in a moment."))
         ref = f"<p class='muted'>Ref: <code>{escape(e.reason)}</code>{' · ' + escape(sid) if payments.SESSION_RE.match(sid) else ''}</p>"
-        return self._html(e.http, page("Payment", f"<h1>付款验证 / Payment check</h1><p>{zh}</p><p>{en}</p>{ref}"))
+        return self._html(e.http, page("Payment", f"<h1>付款验证 / Payment check</h1><p>{zh}</p><p>{en}</p>{ref}{CONTACT_HTML}"))
 
     def _paid(self, query: str):
         sid = (parse_qs(query).get("session_id") or [""])[0]
@@ -302,10 +374,21 @@ class Handler(BaseHTTPRequestHandler):
                     f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 7 天后自动删除，请及时下载。/ Deleted after 7 days, please download it.</p>")
             return self._html(200, page("Report ready", body))
         if (d / "full_error.txt").exists():
-            return self._html(200, page("Error", f"<p>生成失败，我们会自动全额退款或重新生成。/ Generation failed; we'll refund in full or re-run it.</p><p class='muted'>Report ID: <code>{aid}</code></p>"))
-        return self._html(200, page("Generating", "<h1>付款成功，正在生成完整报告 / Payment received, generating your full report</h1>"
-                                   "<p>通常需要几分钟，本页每 10 秒自动刷新。/ This usually takes a few minutes; this page refreshes every 10 seconds.</p>"
-                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 请收藏本页链接，随时可回来查看。/ Bookmark this page to come back any time.</p>", refresh=10))
+            return self._html(200, page("Error", f"<p>生成失败，我们会自动全额退款或重新生成。/ Generation failed; we'll refund in full or re-run it.</p><p class='muted'>Report ID: <code>{aid}</code></p>{CONTACT_HTML}"))
+        eta = capacity.CAP.eta(aid)
+        if eta["queue_ahead"] == 0 and eta["eta_hours"] < 1:
+            when = ("<p>报告正在生成，通常需要 10 分钟左右，本页每 30 秒自动刷新。</p>"
+                    "<p>Your report is being generated. This usually takes about 10 minutes; this page refreshes every 30 seconds.</p>")
+        else:
+            when = (f"<p>你的订单已进入队列（前面还有 {eta['queue_ahead']} 份）。预计交付时间：北京时间 {eta['eta_cn']} 前后"
+                    f"（约 {eta['eta_hours']} 小时）。</p><p>Your order is in the queue ({eta['queue_ahead']} ahead). "
+                    f"Expected delivery: around {eta['eta_cn']} Beijing time (about {eta['eta_hours']} hours).</p>")
+        if not eta["within_24h"]:
+            when += (f"<p>超过 24 小时未交付可申请全额退款：<a href='mailto:{CONTACT}'>{CONTACT}</a></p>"
+                     f"<p>If it isn't delivered within 24 hours you can ask for a full refund: {CONTACT}</p>")
+        return self._html(200, page("Generating", "<h1>付款成功 / Payment received</h1>" + when +
+                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 请收藏本页链接，随时可回来查看；"
+                                   "关闭页面不影响生成。/ Bookmark this page to come back any time.</p>", refresh=30))
 
     def do_GET(self):
         u = urlparse(self.path)
@@ -320,6 +403,8 @@ class Handler(BaseHTTPRequestHandler):
                                     "payments_configured": payments.configured(), "admin_enabled": admin.enabled(),
                                     "order_links": orders.enabled(),
                                     "dev_unlock": os.environ.get("AIV_DEV_UNLOCK") == "1" and not is_production()})
+        if path == "/api/capacity":
+            return self._json(200, capacity.CAP.status())
         if path == "/paid":
             return self._paid(u.query)
         if path.startswith("/order/"):
@@ -394,8 +479,14 @@ class Handler(BaseHTTPRequestHandler):
             if not is_public_host(url):
                 return self._json(400, {"error": "url must be a public website"})
             if not rate_ok(ip):
-                return self._json(429, {"error": f"free checks are limited to {FREE_PER_HOUR} per hour"})
+                return self._json(429, {"error": f"free checks are limited to {FREE_PER_HOUR} per hour",
+                                        "message_zh": f"每小时最多 {FREE_PER_HOUR} 次免费检测，请稍后再试。"})
+            ok, why = capacity.CAP.take_free()
+            if not ok:
+                return self._json(429, capacity.free_blocked_message(why))
             res = run_audit(url, mode="quick", out_dir=None)
+            if _quota_failed(res):
+                return self._json(429, capacity.free_blocked_message("quota"))
             return self._json(200, {"audit_id": res["audit_id"], "score": res["score"]["total"],
                                     "grade": res["score"]["grade"], "findings": len(res["findings"]),
                                     "seconds": res["total_seconds"],
@@ -434,7 +525,12 @@ def make_server(host="127.0.0.1", port=8787) -> ThreadingHTTPServer:
 
 def serve(host="127.0.0.1", port=8787):
     os.environ.setdefault("AIV_BLOCK_PRIVATE", "0" if os.environ.get("AIV_ALLOW_PRIVATE") == "1" else "1")
+    production_guard()
+    start_purge_thread()
     srv = make_server(host, port)
+    n = requeue_pending()
+    if n:
+        print(f"re-queued {n} paid report(s)")
     print(f"AI Visibility Audit dev server on http://{host}:{port}  (Ctrl+C to stop)")
     try:
         srv.serve_forever()

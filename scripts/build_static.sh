@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 : "${AIV_SITE_URL:=https://__AIV_DOMAIN__}" "${AIV_API_BASE:=}" "${AIV_STRIPE_PAYMENT_LINK:=https://buy.stripe.com/__PENDING_USD_19__}"
-rm -rf site && mkdir -p site && cp landing/*.html landing/*.js landing/*.css site/   # never the local QR copy
+rm -rf site && mkdir -p site && cp landing/*.html landing/*.js landing/*.css site/   # text assets only, never images
 cp deploy/cloudflare-pages/_headers site/_headers
 python3 - "$AIV_SITE_URL" "$AIV_API_BASE" "$AIV_STRIPE_PAYMENT_LINK" <<'PY'
 import sys, pathlib, re
@@ -18,9 +18,9 @@ for p in pathlib.Path("site").glob("*"):
             t = re.sub(r'https://buy\.stripe\.com/__PENDING_USD_19__', pay, t)
         p.write_text(t, encoding="utf-8")
 PY
-# WeChat block: off unless AIV_WECHAT_ENABLED=1 AND the QR is uploaded next to the site (never from git).
-if [ "${AIV_WECHAT_ENABLED:-0}" != "1" ]; then sed -i 's/ENABLED: true,/ENABLED: false,/' site/config.js; fi
 touch site/.nojekyll
+# Stripe only: no payment QR, no WeChat copy may ever ship in the site (fails the build).
+python3 scripts/check_release.py site
 left=$(grep -l "__AIV_DOMAIN__\|__PENDING" site/* || true)
 if [ -n "$left" ] && [ "${ALLOW_PLACEHOLDERS:-0}" != "1" ]; then
   echo "placeholders still present in: $left (set AIV_SITE_URL / AIV_API_BASE / AIV_STRIPE_PAYMENT_LINK, or ALLOW_PLACEHOLDERS=1 for a preview)"; exit 2

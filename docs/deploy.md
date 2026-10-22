@@ -13,7 +13,7 @@ State (updated 2026-10-22 13:25 UTC+8): **payments live**.
   `AIV_ORDER_LINK_SECRET` is set for signed admin order links.
 - Payment Link (verified read-only via the API): active, 1900 USD × 1, promo codes off, after-completion redirect to the `/paid` URL below.
 - Key permissions (verified): Read on Payment Links, Checkout Sessions, Charges, Balance transactions and PaymentIntents. Customers is denied.
-- The WeChat block is off (`AIV_WECHAT_ENABLED=0` on Render; `ENABLED: false` in the deployed `config.js`). The QR is not uploaded anywhere.
+- **Stripe only.** WeChat Pay was removed from every page (2026-10-22 13:40 UTC+8). There's no QR, no ¥ price and no screenshot instructions. `scripts/check_release.py` fails the site build if a QR or WeChat copy appears.
 
 ## Stripe settings (done; for reference)
 
@@ -24,12 +24,6 @@ State (updated 2026-10-22 13:25 UTC+8): **payments live**.
 - Restricted key: **Checkout Sessions: Read** at minimum. Charges: Read and Balance transactions: Read are optional, for the cashier; the server ignores them. `sk_` keys are refused.
 - Render env vars to set (names only): `STRIPE_RESTRICTED_KEY`, `AIV_STRIPE_PAYMENT_LINK_ID` (the `plink_…` id), and optionally `STRIPE_WEBHOOK_SECRET`.
   Then redeploy (Render → Manual Deploy) and check that `/healthz` shows `"payments_configured": true`.
-
-## Turning on WeChat Pay (manual)
-
-1. Upload `wechat_pay_qr.jpg` next to the landing page. Keep the local copy out of git:
-   `scripts/install_wechat_qr.sh`, then rebuild with `AIV_WECHAT_ENABLED=1 ./scripts/build_static.sh` and `wrangler pages deploy site`.
-2. On Render set `AIV_WECHAT_ENABLED=1` and `AIV_WECHAT_QR_URL=https://ai-visibility-audit-bvb.pages.dev/wechat_pay_qr.jpg`, then redeploy.
 
 ## Rebuild and redeploy
 

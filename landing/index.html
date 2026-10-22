@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI 可见度体检 · AI 能读懂并推荐你的店吗？| AI Visibility Audit for Shopify stores</title>
-<meta name="description" content="约 2 分钟检查 ChatGPT、Claude、Perplexity 的爬虫能否读取你的 Shopify / 独立站，并实测 Gemini 是否推荐你。$19 一次性完整报告（可用人民币支付） + 可直接粘贴的修复文件。Free 2-minute AI visibility check for Shopify and DTC stores.">
+<meta name="description" content="约 2 分钟检查 GPTBot、ClaudeBot、PerplexityBot 等 AI 爬虫能否读取你的 Shopify / 独立站，并用 Gemini 实测 AI 是否推荐你。完整报告 + 可直接粘贴的修复文件 $19 美元一次性。Free 2-minute AI visibility check for Shopify and DTC stores.">
 <link rel="canonical" href="https://__AIV_DOMAIN__/">
 <link rel="stylesheet" href="style.css">
 <script src="config.js"></script><script src="i18n.js"></script>
@@ -39,7 +39,7 @@
     <div class="card"><h3>robots.txt</h3><span class="zh">逐个判断 12 种 AI 爬虫是否被禁止，区分“训练用”和“回答时引用”。</span><span class="en">Checks 12 AI user-agents and separates training crawlers from answer-time crawlers.</span></div>
     <div class="card"><h3><span class="zh">商品结构化数据</span><span class="en">Product structured data</span></h3><span class="zh">Product、Offer、AggregateRating、Organization 是否齐全、能否被识别（与 validator.schema.org 对照）。</span><span class="en">Product, Offer, AggregateRating and Organization: present, complete and recognised (cross-checked with validator.schema.org).</span></div>
     <div class="card"><h3>llms.txt</h3><span class="zh">有没有一份给 AI 助手看的店铺简介。</span><span class="en">Whether AI assistants get a concise, curated summary of your store.</span></div>
-    <div class="card"><h3><span class="zh">AI 推荐测试</span><span class="en">AI recommendation test</span></h3><span class="zh">用真实买家问题询问 AI 引擎（只用官方 API），统计你被提到的比例和被推荐的竞品。</span><span class="en">We ask AI engines real buyer questions (official APIs only) and measure how often you're mentioned and who gets recommended instead.</span></div>
+    <div class="card"><h3><span class="zh">AI 推荐测试</span><span class="en">AI recommendation test</span></h3><span class="zh">用真实买家问题询问 Google Gemini（官方 API），统计你被提到的比例和被推荐的竞品。ChatGPT 和 Perplexity 即将支持。</span><span class="en">We ask Google Gemini real buyer questions (official API) and measure how often you're mentioned and who gets recommended instead. ChatGPT and Perplexity are coming soon.</span></div>
   </div>
 </section>
 
@@ -47,61 +47,45 @@
   <h2><span class="zh">价格</span><span class="en">Pricing</span></h2>
   <div class="price">
     <div class="card"><h3><span class="zh">免费简检</span><span class="en">Free quick check</span></h3><div class="amount">$0</div>
-      <ul class="ticks"><li><span class="zh">AI 爬虫访问 + robots.txt</span><span class="en">AI crawler access + robots.txt</span></li><li><span class="zh">结构化数据 + llms.txt</span><span class="en">Structured data + llms.txt</span></li><li><span class="zh">5 个买家问题 × 2 个 AI 引擎</span><span class="en">5 buyer questions × 2 AI engines</span></li><li><span class="zh">前 6 个问题</span><span class="en">Top 6 findings</span></li></ul></div>
+      <ul class="ticks"><li><span class="zh">AI 爬虫访问 + robots.txt</span><span class="en">AI crawler access + robots.txt</span></li><li><span class="zh">结构化数据 + llms.txt</span><span class="en">Structured data + llms.txt</span></li><li><span class="zh">5 个买家问题 × Gemini</span><span class="en">5 buyer questions × Gemini</span></li><li><span class="zh">前 6 个问题</span><span class="en">Top 6 findings</span></li></ul>
+      <p class="small"><span class="zh">免费检测每天有总名额，用完后请第二天再试。</span><span class="en">Free checks have a daily total; when they run out, try again the next day.</span></p></div>
     <div class="card hl"><h3><span class="zh">完整报告 + 修复包</span><span class="en">Full report + fix pack</span></h3>
-      <div class="amount">$19 <small><span class="zh">银行卡 · 或微信支付 <span class="wxPriceTxt">¥129</span> · 一次性</span><span class="en">one-off</span></small></div>
-      <p class="small"><span class="zh">支持人民币等本地货币支付（Stripe 按实时汇率换算，金额以结账页为准）。</span><span class="en">Pay in your local currency, including CNY (converted by Stripe at checkout).</span></p>
-      <ul class="ticks"><li><span class="zh">25 个买家问题在 Gemini 上实测（每题 3 次）；ChatGPT / Perplexity 测试启用后自动加入，报告会写明用了哪些引擎</span><span class="en">25 buyer questions tested on Gemini (3 samples each); ChatGPT / Perplexity are added once enabled, and every report lists the engines used</span></li><li><span class="zh">竞品份额与 AI 引用来源缺口</span><span class="en">Competitor share of voice and cited-source gaps</span></li><li><span class="zh">robots.txt、JSON-LD（含 Shopify Liquid 片段）、llms.txt</span><span class="en">robots.txt, JSON-LD (incl. Shopify Liquid snippets), llms.txt</span></li><li><span class="zh">5 篇 FAQ / 对比 / 选购指南草稿</span><span class="en">5 FAQ / comparison / buying-guide drafts</span></li><li><span class="zh">Cloudflare 放行 AI 爬虫步骤</span><span class="en">Cloudflare steps to allow AI crawlers</span></li><li><span class="zh">PDF + ZIP 下载，不订阅</span><span class="en">PDF + ZIP download, no subscription</span></li></ul>
+      <div class="amount">$19 <small><span class="zh">美元 · 一次性 · 银行卡（Stripe）</span><span class="en">USD · one-off · card via Stripe</span></small></div>
+      <p class="small"><span class="zh">按美元（USD）收费。Stripe 结账页可能按你所在地显示本地货币金额（由 Stripe 换算）；你也可以直接用美元支付，由发卡行换算，最终金额以银行账单为准。</span><span class="en">Charged in USD. Stripe checkout may show the price in your local currency (converted by Stripe); you can also pay in USD and let your bank convert it.</span></p>
+      <p class="small"><span class="zh">付款后进入生成队列，24 小时内交付（通常约 10 分钟）。</span><span class="en">After payment your report joins the queue and is delivered within 24 hours (usually about 10 minutes).</span></p>
+      <p class="small" id="etaNote" style="display:none"></p>
+      <ul class="ticks"><li><span class="zh">25 个买家问题在 Google Gemini 上实测（每题 3 次）；ChatGPT 和 Perplexity 即将支持。报告会写明实际使用的引擎和模型</span><span class="en">25 buyer questions tested on Google Gemini (3 samples each); ChatGPT and Perplexity are coming soon. Every report lists the engine and models actually used</span></li><li><span class="zh">竞品份额，以及 AI 回答里链接到的网站</span><span class="en">Competitor share of voice and the websites AI answers link to</span></li><li><span class="zh">robots.txt、JSON-LD（含 Shopify Liquid 片段）、llms.txt</span><span class="en">robots.txt, JSON-LD (incl. Shopify Liquid snippets), llms.txt</span></li><li><span class="zh">5 篇 FAQ / 对比 / 选购指南草稿</span><span class="en">5 FAQ / comparison / buying-guide drafts</span></li><li><span class="zh">Cloudflare 放行 AI 爬虫步骤</span><span class="en">Cloudflare steps to allow AI crawlers</span></li><li><span class="zh">PDF + ZIP 下载，不订阅</span><span class="en">PDF + ZIP download, no subscription</span></li></ul>
       <a class="btn" id="buyBtn" href="#check"><span class="zh">先免费体检，再用银行卡解锁 $19</span><span class="en">Run the free check, then unlock for $19</span></a>
-      <div class="zh" id="wechatPay" style="display:none;margin-top:14px">
-        <h4>或微信支付 <span id="wxPrice">¥129</span></h4>
-        <img id="wxQr" alt="微信收款码" width="200" style="display:block;margin:8px 0" onerror="this.style.display='none'">
-        <ol>
-          <li>先做上方的免费体检，拿到 audit id<span id="wxAid"></span>。</li>
-          <li>用微信扫码支付 <span class="wxPriceTxt">¥129</span>。</li>
-          <li>付款后把付款截图 + audit id 发到 <b><span id="wxContact"></span></b>，24 小时内开通。</li>
-        </ol>
-      </div>
       <p class="small"><span class="zh">先做免费简检，再从报告页解锁，报告会自动关联。</span><span class="en">Run the free check first, then unlock from the report page so your purchase is linked to it.</span></p></div>
   </div>
 </section>
 
 <section id="refund">
-  <h2><span class="zh">7 天退款政策</span><span class="en">7-day refund policy</span></h2>
+  <h2><span class="zh">退款政策</span><span class="en">Refund policy</span></h2>
   <div class="card" style="max-width:760px;margin:0 auto">
-    <p class="zh">购买后 7 天内，如果你对完整报告不满意，发邮件到 <span data-text="CONTACT_EMAIL"></span>，附上报告 ID，我们全额退款，不问原因。报告生成失败或无法访问你的网站时，我们会主动退款。退款原路退回，银行处理通常需 5–10 个工作日。</p>
-    <p class="en">Within 7 days of purchase, if you're not happy with the full report, email <span data-text="CONTACT_EMAIL"></span> with your report ID and we'll refund you in full, no questions asked. If report generation fails or we can't reach your site, we refund automatically. Refunds go back to the original payment method; banks usually take 5–10 business days.</p>
+    <p class="zh">购买后 7 天内，满足以下任一条件即可全额退回 $19：报告没有在付款后 24 小时内交付；或者你认为报告对你没有帮助。发邮件到 <a href="mailto:go_with_prob@mail.grokbot.com">go_with_prob@mail.grokbot.com</a>，附上报告 ID 即可。每位客户限退款一次。报告生成失败或无法访问你的网站时，我们会主动退款。退款原路退回银行卡，银行处理通常需 5–10 个工作日。</p>
+    <p class="en">Within 7 days of purchase you get a full $19 refund if the report wasn't delivered within 24 hours of payment, or if you found it not useful. Email <a href="mailto:go_with_prob@mail.grokbot.com">go_with_prob@mail.grokbot.com</a> with your report ID. One refund per customer. If report generation fails or we can't reach your site, we refund you proactively. Refunds go back to your card; banks usually take 5–10 business days.</p>
   </div>
 </section>
 
 <section id="faq">
   <h2>FAQ</h2>
   <div style="max-width:760px;margin:0 auto">
-    <details><summary><span class="zh">你们会抓取 ChatGPT 网页吗？</span><span class="en">Do you scrape ChatGPT's website?</span></summary><p><span class="zh">不会。AI 推荐测试只调用各家官方 API。</span><span class="en">No. The AI test uses official APIs only.</span></p></details>
+    <details><summary><span class="zh">你们会抓取 ChatGPT 网页吗？</span><span class="en">Do you scrape ChatGPT's website?</span></summary><p><span class="zh">不会。AI 推荐测试目前只调用 Google Gemini 官方 API，不抓取任何 AI 网页端。</span><span class="en">No. The AI test currently calls only the official Google Gemini API and never scrapes any AI web app.</span></p></details>
     <details><summary><span class="zh">会影响我的网站吗？</span><span class="en">Will this affect my site?</span></summary><p><span class="zh">只读 GET 请求，每秒最多 1 个，一次体检约 30 个请求。</span><span class="en">Read-only GET requests, at most one per second, about 30 per check.</span></p></details>
-    <details><summary><span class="zh">AI 的回答每次都不一样，结果准吗？</span><span class="en">AI answers vary. Are results reliable?</span></summary><p><span class="zh">所以完整报告对每个问题在每个引擎上采样 2–3 次，看的是比例而不是单次结果。</span><span class="en">That's why the full report samples each question 2–3 times per engine and reports rates, not single answers.</span></p></details>
+    <details><summary><span class="zh">AI 的回答每次都不一样，结果准吗？</span><span class="en">AI answers vary. Are results reliable?</span></summary><p><span class="zh">所以完整报告对每个问题在 Gemini 上采样 3 次，看的是比例而不是单次结果。</span><span class="en">That's why the full report samples each question 3 times on Gemini and reports rates, not single answers.</span></p></details>
+    <details><summary><span class="zh">用的是哪些 AI 引擎？</span><span class="en">Which AI engines do you test?</span></summary><p><span class="zh">目前只用 Google Gemini（免费层级，不联网搜索，回答基于模型自身知识，报告里会写明）。ChatGPT 和 Perplexity 即将支持，上线前不会在报告里出现。</span><span class="en">Currently only Google Gemini (free tier, without live web search, so answers reflect the model's own knowledge; the report says so). ChatGPT and Perplexity are coming soon and won't appear in reports until they're live.</span></p></details>
+    <details><summary><span class="zh">多久能拿到报告？</span><span class="en">How soon do I get the report?</span></summary><p><span class="zh">付款后进入队列，24 小时内交付，通常约 10 分钟。订单页会显示排队位置和预计交付时间；超过 24 小时未交付可全额退款。</span><span class="en">Paid reports are queued and delivered within 24 hours, usually in about 10 minutes. The order page shows your place in the queue and the expected delivery time; if it takes longer than 24 hours you can get a full refund.</span></p></details>
     <details><summary><span class="zh">只支持 Shopify 吗？</span><span class="en">Shopify only?</span></summary><p><span class="zh">Shopify 支持最好（含 Liquid 修复片段），其他独立站平台也能检测。</span><span class="en">Shopify gets the deepest support (incl. Liquid snippets); other platforms work too.</span></p></details>
   </div>
 </section>
 
 <footer>
-  <span class="zh">AI 可见度体检</span><span class="en">AI Visibility Audit</span> · <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a> · <a href="#refund"><span class="zh">退款政策</span><span class="en">Refunds</span></a> · <span data-text="CONTACT_EMAIL"></span>
+  <span class="zh">AI 可见度体检</span><span class="en">AI Visibility Audit</span> · <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a> · <a href="terms.html"><span class="zh">服务条款与退款</span><span class="en">Terms &amp; refunds</span></a> · <a href="mailto:go_with_prob@mail.grokbot.com">go_with_prob@mail.grokbot.com</a>
 </footer>
 </div>
 
 <script>
-(function(){
-  var w = (window.AIV_CONFIG || {}).WECHAT_PAY;
-  if(!w || !w.ENABLED) return;
-  var price = "¥" + (w.EARLYBIRD ? w.EARLYBIRD_PRICE_CNY : w.PRICE_CNY);
-  var label = w.EARLYBIRD ? price + "（早鸟价，原价 ¥" + w.PRICE_CNY + "）" : price;
-  document.getElementById("wxPrice").textContent = label;
-  document.querySelectorAll(".wxPriceTxt").forEach(function(x){ x.textContent = price; });
-  document.getElementById("wxQr").src = w.QR_URL;
-  document.getElementById("wxContact").textContent = w.CONTACT;
-  document.getElementById("wechatPay").style.display = "";
-  window.AIV_setWechatAudit = function(aid){ document.getElementById("wxAid").textContent = "：" + aid; };
-})();
 document.getElementById("checkForm").addEventListener("submit", function(ev){
   ev.preventDefault();
   var zh = document.body.className === "lang-zh";
@@ -111,7 +95,8 @@ document.getElementById("checkForm").addEventListener("submit", function(ev){
         body: JSON.stringify({url: document.getElementById("url").value})})
     .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
     .then(function(x){
-      if(!x.ok){ box.innerHTML = '<div class="card">' + (x.j.error || "error") + "</div>"; return; }
+      if(!x.ok){ var t = (zh && x.j.message_zh) ? x.j.message_zh : (x.j.message_en || x.j.error || "error");
+        var d = document.createElement("div"); d.className = "card"; d.textContent = t; box.innerHTML = ""; box.appendChild(d); return; }
       var j = x.j, url = (window.AIV_CONFIG.API_BASE || "") + (zh ? j.report_url : j.report_url_en),
           pay = (j.pay_url && j.pay_url.indexOf(window.AIV_CONFIG.STRIPE_PAYMENT_LINK + "?") === 0) ? j.pay_url
                 : window.AIV_payUrl(j.audit_id);   // payment link + ?client_reference_id=<audit_id>_<store domain, base32>
@@ -119,12 +104,20 @@ document.getElementById("checkForm").addEventListener("submit", function(ev){
         (zh ? "发现 " + j.findings + " 个问题，用时 " + j.seconds + " 秒。" : j.findings + " findings in " + j.seconds + "s.") +
         '<p><a class="btn" href="' + url + '" target="_blank">' + (zh ? "查看报告" : "Open report") + "</a>" +
         (pay ? ' <a class="btn alt" href="' + pay + '">' + (zh ? "解锁完整报告 $19" : "Unlock full report $19") + "</a>" : "") + "</p></div>";
-      if(window.AIV_setWechatAudit) window.AIV_setWechatAudit(j.audit_id);
       if(pay){ var b = document.getElementById("buyBtn"); b.href = pay;
         b.innerHTML = '<span class="zh">银行卡解锁这份报告 $19</span><span class="en">Unlock this report for $19</span>'; }
     })
     .catch(function(){ box.innerHTML = '<div class="card">' + (zh ? "网络错误，请稍后重试" : "Network error, try again") + "</div>"; });
 });
+</script>
+<script>
+// Honest delivery time before purchase: shown only when the paid queue is beyond 24 hours.
+fetch((window.AIV_CONFIG.API_BASE || "") + "/api/capacity").then(function(r){ return r.json(); }).then(function(c){
+  var o = c && c.new_order; if(!o || o.within_24h) return;
+  var n = document.getElementById("etaNote"); n.style.display = "block";
+  n.innerHTML = '<span class="zh">当前排队较多：现在下单预计在北京时间 ' + o.eta_cn + ' 前后交付（约 ' + o.eta_hours + ' 小时）。</span>' +
+                '<span class="en">The queue is long right now: an order placed now is expected around ' + o.eta_cn + ' Beijing time (about ' + o.eta_hours + ' hours).</span>';
+}).catch(function(){});
 </script>
 </body>
 </html>

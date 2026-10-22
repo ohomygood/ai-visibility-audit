@@ -20,7 +20,7 @@ Render's free disk is wiped on every restart, redeploy and spin-down. Paid order
   old link whose data is gone shows `audit_not_found`. This also bounds regeneration after the 7-day retention purge.
 - The regenerated report is a fresh full run on the store's home page (`https://<domain>/`). It is not a byte-for-byte copy.
 
-## Manual payments (WeChat / admin): signed link + log replay
+## Manual unlocks (comps / support): signed link + log replay
 
 - `POST /admin/unlock` and the CLI return `order_url` (and an absolute `order_link` on Render):
   `/order/<audit_id>?u=<base32 domain>.<HMAC-SHA256 signature>`. **Send this link to the buyer.**

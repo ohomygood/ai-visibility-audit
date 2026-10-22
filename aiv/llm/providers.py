@@ -47,7 +47,7 @@ class GeminiProvider(Provider):
     _lock = threading.Lock()
     _next_at = 0.0
     grounding_unavailable = False
-    exhausted: set = set()
+    exhausted: dict = {}   # model -> unix time until which it is treated as out of daily quota
     DEFAULT_MODELS = "gemini-3.5-flash,gemini-3.6-flash,gemini-3.5-flash-lite,gemini-flash-lite-latest"
 
     def __init__(self, api_key: str | None = None, model: str | None = None, session=None):
@@ -112,7 +112,7 @@ class GeminiProvider(Provider):
         except Exception:
             return
         now = time.time()
-        cls.exhausted |= {m for m, until in st.get("exhausted", {}).items() if until > now}
+        cls.exhausted.update({m: until for m, until in st.get("exhausted", {}).items() if until > now})
         if st.get("grounding_unavailable_until", 0) > now:
             cls.grounding_unavailable = True
 
@@ -134,12 +134,23 @@ class GeminiProvider(Provider):
         except OSError:
             pass
 
+    @classmethod
+    def quota_left(cls, models: list[str] | None = None) -> bool:
+        """False when every model in the chain is marked out of daily quota (no API call is made)."""
+        if not getattr(cls, "_state_loaded", False):
+            cls._state_loaded = True
+            cls._load_state()
+        chain = models or [m.strip() for m in (os.environ.get("AIV_GEMINI_MODELS") or os.environ.get("AIV_GEMINI_MODEL")
+                                               or cls.DEFAULT_MODELS).split(",") if m.strip()]
+        now = time.time()
+        return any(cls.exhausted.get(m, 0) <= now for m in chain)
+
     def _current_model(self):
         if not getattr(GeminiProvider, "_state_loaded", False):
             GeminiProvider._state_loaded = True
             self._load_state()
         for m in self.models:
-            if m not in GeminiProvider.exhausted:
+            if GeminiProvider.exhausted.get(m, 0) <= time.time():   # expires, so a long-running server recovers after the reset
                 return m
         raise RuntimeError("all Gemini models hit their free-tier daily quota: " + ",".join(self.models))
 
@@ -158,7 +169,7 @@ class GeminiProvider(Provider):
             if r.status_code == 429:
                 qid, delay = self._quota(r)
                 if "PerDay" in qid:
-                    GeminiProvider.exhausted.add(model)   # switch model, don't count as a retry or a pacing slot
+                    GeminiProvider.exhausted[model] = time.time() + max(delay, 600)   # switch model, don't count as a retry or a pacing slot
                     self._save_state(model=model, delay=delay)
                     switched = True
                     continue

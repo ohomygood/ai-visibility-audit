@@ -1,4 +1,4 @@
-"""Signed order links for manual (WeChat / admin) unlocks, so they survive a wiped disk.
+"""Signed order links for manual (admin: comps / support) unlocks, so they survive a wiped disk.
 
 Stripe orders are recoverable from Stripe itself (see payments.py). Manual unlocks are not in Stripe, so
 /admin/unlock returns an order link that carries its own proof:

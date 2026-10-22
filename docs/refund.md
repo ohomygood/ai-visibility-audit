@@ -1,7 +1,9 @@
 # 退款流程 / Refund runbook (7 天 / 7 days)
 
-Policy shown on the landing page: full refund within 7 days of purchase, no questions asked; automatic refund if
-report generation fails or the site can't be reached.
+Policy shown on the landing page and terms.html (2026-10-22): within 7 days of purchase, a full $19 refund if the
+report wasn't delivered within 24 hours of payment, or if the buyer found it not useful. **Once per customer** (check the
+customer's email / card in Stripe for an earlier refund). We refund proactively if generation fails or the site can't be
+reached. Support and refunds: go_with_prob@mail.grokbot.com.
 
 ## Customer-requested refund
 1. Customer emails support with the report ID (format `YYYYMMDD-HHMMSS-xxxxxx`).

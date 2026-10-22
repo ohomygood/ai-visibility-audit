@@ -2,7 +2,25 @@
 
 ## Processes
 - Web/API: `python3 -m aiv serve --host 127.0.0.1 --port 8787` behind a reverse proxy (Cloudflare) — **not deployed**.
-- Retention cron (daily): `17 3 * * * cd /srv/ai-visibility-audit && python3 scripts/purge_old.py >> logs/purge.log 2>&1`
+- Retention: the server runs `scripts/purge_old.py` at startup and every 24 h (Render free has no cron). On a VPS a cron
+  (`17 3 * * * cd /srv/ai-visibility-audit && python3 scripts/purge_old.py`) works too.
+
+## Capacity: free cap + paid queue (`aiv/capacity.py`)
+- Gemini free tier, measured 2026-10-22: gemini-3.5-flash and 3.6-flash 20 requests/day each; gemini-3.5-flash-lite
+  100+/day without a cap (limit undisclosed). Quick check = 5 calls; full report = 80 calls (75 answers + 5 drafts).
+  Planning budget ≈ 240 calls/day. Quota day = midnight US Pacific (15:00 or 16:00 Beijing time).
+- Paid first: `AIV_PAID_REPORTS_PER_DAY=2` (160 calls) is reserved. Free: `AIV_FREE_DAILY_CAP=15` (75 calls). Free checks
+  also pause while paid orders wait beyond today's capacity, or when every Gemini model is out of quota. Users then see
+  "今天的免费检测名额已用完，请明天再试".
+- Paid reports run one at a time from a queue. If Gemini runs out of quota mid-report (>20% unanswered), the partial
+  result is discarded and the report is retried first after the reset. It is never delivered half-empty.
+  The order page shows queue position and ETA; the landing page shows the ETA before purchase when it is over 24 h.
+- Restarts: pending paid orders are re-queued at startup from `data/reports/*/paid.json`; after a disk wipe the buyer's
+  order link (`/order/<id>?s=<session>`) re-verifies with Stripe and re-queues. The free counter resets with a wipe; Gemini's
+  own quota is the backstop.
+- `GET /api/capacity` shows free checks left, queue length and the ETA for a new order.
+- Production guard: with `AIV_ENV=production` the server refuses to start with the stub/mock engine, without a Gemini key,
+  or with `AIV_DEV_UNLOCK=1`. Simulated output is also refused per report.
 - Production env: copy `config/production.env.example` → `config/production.env`; `AIV_ENV=production` refuses the stub engine.
 
 ## Cost dashboard (MVP = log file)
@@ -18,7 +36,7 @@
   Redirects are followed manually and every hop is re-checked (AIV_BLOCK_PRIVATE=1, on by default in `serve` and in production).
 - Free API rate limit: 3 checks / hour / IP (in-memory; use Cloudflare rate limiting in prod).
 
-## Manual unlock (WeChat Pay) / 手动解锁
+## Manual unlock (comps / support) / 手动解锁
 - Cashier runbook: `docs/manual_unlock.md` (curl, or `python3 -m aiv admin-unlock … [--remote <RENDER_URL>]`).
 - `ADMIN_TOKEN` (`openssl rand -hex 32`, at least 32 chars) is stored only as a Render secret. Unset means the endpoint is off (404). Lockout: 5 failures per IP or 20 in total per 15 min.
 - Logs: `data/admin/unlocks.jsonl` (append-only) and `data/admin/security.jsonl` (failed auth, IP only), plus `ADMIN_AUDIT {json}` lines on stdout, which survive in Render logs. Not purged. Optional, unscheduled export: `scripts/export_admin_log.py`.

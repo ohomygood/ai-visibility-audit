@@ -1,6 +1,6 @@
 # AI 可见度体检 / AI Visibility Audit — MVP
 
-Audit a Shopify or independent store for AI-assistant visibility, then sell the **full report + fix pack ($19 / ¥129 one-off, 7-day refund)**.
+Audit a Shopify or independent store for AI-assistant visibility, then sell the **full report + fix pack ($19 USD one-off by card via Stripe; delivered within 24 h; refund within 7 days if not delivered in 24 h or not useful, once per customer)**.
 Plan: `/workspace/projects/product_research/round1.md` (Shotgun, 2026-10-22). Tentative launch: Mon 2026-10-26.
 
 > **Simulated mode.** The default engine in dev is a deterministic **stub**, so no API key or spending is needed.
@@ -22,7 +22,7 @@ Plan: `/workspace/projects/product_research/round1.md` (Shotgun, 2026-10-22). Te
 | LLM providers (pluggable) | `aiv/llm/` | One `Provider` interface. Engines: `stub` (default, offline); `gemini` (free tier, Google Search grounding); `openai_compat` (Groq, OpenRouter free models and similar; no web search); `openai` (Responses API + web_search, paid); `perplexity` (sonar, paid). `CostMeter` logs every call and enforces a per-audit budget of $1.10 by default. |
 | Fix pack | `aiv/fixes.py` | `robots.txt.snippet`, Shopify `robots.txt.liquid`, Product and Organization JSON-LD (per-product static files plus Shopify Liquid snippets, including review metafields), `llms.txt`, 5 content drafts (templates in stub mode, LLM-written with placeholders otherwise), Cloudflare allow-AI steps, README. Zipped. |
 | Report | `aiv/report.py` | Bilingual HTML (zh/en toggle, plus separate zh and en files), Markdown, PDF via headless Chrome. The free report shows the top 6 findings plus an unlock CTA. The full report adds a per-question table, competitors, cited-source gaps and the fix-pack list. |
-| Web (local only) | `aiv/server.py`, `landing/` | Static landing page ($19 by card via the live Stripe Payment Link; zh pages also offer ¥129 by WeChat QR, unlocked by hand; 7-day refund section, FAQ), `privacy.html`, `POST /api/check` (rate limit 3 per hour per IP, SSRF guard), report serving with a paywall (402 on the full report and zip until paid). Unlock routes: `GET /paid` (Stripe session verified via the API, `docs/stripe_setup.md`), optional Stripe webhook, `POST /admin/unlock` plus the `admin-unlock` CLI for WeChat payments (`docs/manual_unlock.md`), and `/dev/unlock` (dev only). |
+| Web (local only) | `aiv/server.py`, `landing/` | Static landing page ($19 USD by card via the live Stripe Payment Link, Stripe only; refund policy, FAQ), `terms.html`, `privacy.html`, `POST /api/check` (rate limit 3 per hour per IP, SSRF guard), report serving with a paywall (402 on the full report and zip until paid). Unlock routes: `GET /paid` (Stripe session verified via the API, `docs/stripe_setup.md`), optional Stripe webhook, `POST /admin/unlock` plus the `admin-unlock` CLI for comps and support cases (`docs/manual_unlock.md`), and `/dev/unlock` (dev only). |
 | Retention | `scripts/purge_old.py` | Deletes `data/reports`, `data/emails`, `data/uploads` and `data/tmp`, plus old cost-log lines, after 7 days (`AIV_RETENTION_DAYS`). Run daily from cron. |
 | Cost dashboard | `scripts/cost_report.py` | Summarises `logs/llm_calls.jsonl` per day, engine and audit, and flags audits over $1. |
 
@@ -71,7 +71,7 @@ Covered: robots parsing, schema validation, providers (mocked HTTP), budget cap,
 | Placeholder | Where | Waiting on |
 |---|---|---|
 | `__AIV_DOMAIN__`, `support@__AIV_DOMAIN__` | `landing/config.js`, `landing/index.html` canonical, `aiv/http.py` contact URL, privacy page | Domain purchase and Cloudflare |
-| `__PENDING_USD_19__`, `__PENDING_CNY_129__` | `landing/config.js` | Stripe HK Payment Links (Alipay and WeChat Pay TBD by cashier) |
+| `__PENDING_USD_19__` | `landing/config.js` | Stripe Payment Link (set at build time) |
 | `STRIPE_RESTRICTED_KEY`, `AIV_STRIPE_PAYMENT_LINK_ID`, optional `STRIPE_WEBHOOK_SECRET` (Payment Link URL is already wired in) | env (`config/production.env.example`), steps in `docs/stripe_setup.md` | Stripe |
 | `OPENAI_API_KEY` / `PERPLEXITY_API_KEY` | env | Paid engines (min prepaid: OpenAI $5, Perplexity $10). `GEMINI_API_KEY` is set on the box (free tier). |
 | `__HOSTING_PROVIDER__` | privacy page | Hosting choice |

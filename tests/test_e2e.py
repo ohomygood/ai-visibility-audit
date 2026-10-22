@@ -116,7 +116,7 @@ class TestE2E(unittest.TestCase):
                     html = urllib.request.urlopen(base + "/").read().decode()
                     self.assertIn("$19", html)
                     self.assertIn("buy.stripe.com/fZu00k2l84Zz9YibSt0Ny02", urllib.request.urlopen(base + "/config.js").read().decode())
-                    self.assertIn("7 天退款", html)
+                    self.assertIn("退款政策", html)
                     self.assertIn("7 天", urllib.request.urlopen(base + "/privacy.html").read().decode())
                     server._hits.clear()
                     with mock.patch("aiv.server.run_audit", wraps=lambda u, mode, out_dir: __import__("aiv.audit").audit.run_audit(

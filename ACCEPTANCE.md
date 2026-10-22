@@ -13,7 +13,7 @@ Criteria from Shotgun's plan (Page "产品机会调研 · 第一轮", section �
 | 7 | Deliver repo, deploy URL, ops notes and cost dashboard | **PARTIAL** | Repo: this folder, as a local git repo. Ops: `docs/ops.md`. Cost dashboard: `scripts/cost_report.py`. Deploy URL: **not deployed** (domain, Cloudflare and hosting pending; no public deploy by instruction). |
 | S1 | Stub is clearly labelled and off in production; local samples are not public | **PASS** | Simulated output is labelled in the HTML title, top and bottom banners, Markdown header, `audit.json` `simulated:true`, and `fixpack/SIMULATED.txt`. `AIV_ENV=production` refuses stub and has no default engine (`test_production_refuses_stub`). Samples live in `samples/local-simulated/`, whose README says they are internal and not public. |
 | S2 | Privacy page plus 7-day retention job covering crawls, reports and emails | **PASS (job written; cron not installed)** | `landing/privacy.html`, and `scripts/purge_old.py` for `data/reports`, `data/emails`, `data/uploads`, `data/tmp` and old cost-log lines (`test_purge`). The cron line is in `docs/ops.md` and gets installed at deploy time. |
-| S3 | Landing page shows $19 / ¥129 one-off and a 7-day refund section | **PASS** | `landing/index.html` (#pricing, #refund), checked in `test_server_flow`. |
+| S3 | Landing page shows $19 USD one-off (Stripe checkout may show local currency) and the refund policy (7 days: not delivered in 24 h or not useful, once per customer) | **PASS** | `landing/index.html` (#pricing, #refund), checked in `test_server_flow`. |
 | S4 | Engine mode switch: `gemini-only` default/fallback, `full` adds ChatGPT/Perplexity when keys exist; report labels engines used | **PASS** | `aiv/llm/__init__.py` `resolve_mode`/`select_engines`, CLI `--engine-mode`, env `AIV_ENGINE_MODE`; free check pinned to gemini-only; production with no engine list uses gemini-only. Report "Engines used" line lists engine, models, live-search or not, and skipped engines (`test_engine_modes`). |
 | S5 | Free static deploy prepared, not published | **PREPARED** | `docs/deploy.md` (GitHub Pages vs Cloudflare Pages; GitHub's terms bar Pages as free hosting for commercial SaaS), `scripts/build_static.sh`, `deploy/` (Pages workflow, Cloudflare headers, Dockerfile, Render blueprint), CORS allow-list `AIV_CORS_ORIGINS`. |
 
@@ -42,3 +42,7 @@ Criteria from Shotgun's plan (Page "产品机会调研 · 第一轮", section �
 | Append-only `data/admin/unlocks.jsonl` with all fields; idempotent (no-op logged); same `paid.json` + report trigger as `/paid` | PASS |
 | zh copy: $19 by card plus ¥129 WeChat (¥99 early-bird toggle, off by default); QR is a gitignored local copy; contact is a placeholder | PASS; contact go_with_prob@mail.grokbot.com |
 | `rk_` key with extra read-only permissions works; `sk_`/`pk_` refused | PASS |
+
+## Stripe only (2026-10-22 13:40 UTC+8)
+
+WeChat Pay UI removed from the landing page, report paywall and order pages. The admin unlock path is kept for comps and support. `tests/test_admin.py::TestStripeOnlyCopy` and `scripts/check_release.py` (run by `build_static.sh`) fail on WeChat copy or any QR image.

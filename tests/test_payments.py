@@ -131,6 +131,10 @@ class TestServerPaid(unittest.TestCase):
         for p in (mock.patch("aiv.server.DATA_DIR", data), mock.patch("aiv.audit.DATA_DIR", data)):
             p.start()
             self.addCleanup(p.stop)
+        _cp = mock.patch("aiv.capacity.CAP", __import__("aiv.capacity", fromlist=["Capacity"]).Capacity())
+        _cp.start()
+        self.addCleanup(_cp.stop)
+        __import__("aiv.server", fromlist=["_running"])._running.clear()
         self.runs = []
         p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: fake_full(self.runs, url, out_dir))
         p.start()

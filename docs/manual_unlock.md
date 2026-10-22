@@ -1,10 +1,8 @@
-# 手动解锁 / Manual unlock (WeChat Pay and other off-Stripe payments)
+# 手动解锁 / Manual unlock (comps and support)
 
-For the cashier. Chinese buyers pay the owner's personal WeChat QR, ¥129, or ¥99 when the early-bird toggle is on.
-They then send the **报告 ID / audit id** (e.g. `20261022-121500-abc123`) plus a payment screenshot or transaction number to the contact.
-The contact is **go_with_prob@mail.grokbot.com**, set in `landing/config.js` → `WECHAT_PAY.CONTACT` and env `AIV_WECHAT_CONTACT`. Never publish a personal WeChat ID.
-Buyer copy (zh): "付款后把付款截图 + audit id 发到 go_with_prob@mail.grokbot.com，24 小时内开通". **Unlock within 24 h.**
-**No WeChat API is ever called**: the cashier checks the payment in WeChat by hand.
+Stripe is the only payment method. WeChat Pay was removed from all pages on 2026-10-22, and no QR or ¥ price is shown.
+This path is for the owner only: free comps, goodwill re-runs, and support cases (e.g. a Stripe payment that
+couldn't be linked to an audit). It never takes money itself. Every unlock is logged.
 
 ## 1. One-time setup: ADMIN_TOKEN
 
@@ -21,7 +19,7 @@ openssl rand -hex 32        # 64 hex chars; the server requires at least 32
 
 ## 2. Unlock a paid audit
 
-1. Confirm the money arrived in WeChat (amount and note).
+1. Confirm why the unlock is justified (comp, or the Stripe payment in the dashboard).
 2. Run one of:
 
 **curl (production, from your laptop):**
@@ -29,19 +27,19 @@ openssl rand -hex 32        # 64 hex chars; the server requires at least 32
 read -rs ADMIN_TOKEN    # paste the token; nothing is echoed and it isn't saved to shell history
 curl -sS -X POST "<RENDER_URL>/admin/unlock" \
   -H "Authorization: Bearer $ADMIN_TOKEN" -H "Content-Type: application/json" \
-  -d '{"audit_id":"20261022-121500-abc123","by":"owner","reason":"WeChat Pay confirmed",
-       "channel":"wechat","amount":129,"currency":"CNY","ref":"4200001234202610220000"}'
+  -d '{"audit_id":"20261022-121500-abc123","by":"owner","reason":"comp for launch partner",
+       "channel":"comp","ref":"comp-2026-001"}'
 ```
 
 **CLI, remote (same endpoint, reads `$ADMIN_TOKEN` from env):**
 ```bash
-python3 -m aiv admin-unlock 20261022-121500-abc123 --by owner --reason "WeChat Pay confirmed" \
-  --channel wechat --amount 129 --currency CNY --ref 4200001234202610220000 --remote <RENDER_URL>
+python3 -m aiv admin-unlock 20261022-121500-abc123 --by owner --reason "comp for launch partner" \
+  --channel comp --ref comp-2026-001 --remote <RENDER_URL>
 ```
 
 **CLI, local (on the machine that holds `data/`; no token needed, since shell access is the authorization):**
 ```bash
-python3 -m aiv admin-unlock 20261022-121500-abc123 --by owner --reason "WeChat Pay confirmed" \
+python3 -m aiv admin-unlock 20261022-121500-abc123 --by owner --reason "comp for launch partner" \
   --amount 129 --ref 4200001234202610220000
 ```
 The local CLI generates the full report before it exits, which can take a few minutes.
@@ -49,7 +47,7 @@ Render's free plan has no shell, so use curl or `--remote` in production.
 
 Field rules:
 - `by` and `reason` are required (one line, at most 200 chars).
-- `channel` is one of `wechat|alipay|bank|stripe|comp|other` (CLI default `wechat`).
+- `channel` is one of `wechat|alipay|bank|stripe|comp|other` (CLI default `comp`).
 - `currency` defaults to CNY for wechat/alipay.
 - `ref` (transaction id, or the note if there is no id) is **required** for wechat/alipay/bank.
 
@@ -59,7 +57,7 @@ Field rules:
    - `404 audit not found`: wrong id, or the audit has expired (7 days). Refund, or have the buyer run a new free check and unlock that one.
 
 This uses the same unlocked state (`paid.json`) and the same full-report trigger as Stripe's `/paid`.
-An audit that is paid twice, by WeChat and by card, still generates once. Refund the duplicate.
+An audit unlocked twice (e.g. a comp and a card payment) still generates once. Refund the duplicate.
 
 ### Send the buyer the signed order link
 
@@ -90,9 +88,6 @@ Optional: `python3 scripts/export_admin_log.py --out <dir>` copies the log files
 
 ## 5. The buyer's view
 
-- **Chinese report paywall:** "银行卡支付 $19（Stripe）" plus a WeChat block: the QR, ¥129, the audit id, and "付款后把付款截图 + audit id 发到 go_with_prob@mail.grokbot.com，24 小时内开通".
-- **Chinese landing page:** the same block. It fills in the audit id after the free check.
-- **Early-bird:** set `WECHAT_PAY.EARLYBIRD: true` (landing) and `AIV_WECHAT_EARLYBIRD=1` (reports) to show ¥99 (原价 ¥129). It is off by default.
-- **QR image:** `landing/wechat_pay_qr.jpg` is a **local, gitignored copy**. Create it with `scripts/install_wechat_qr.sh`, which copies `/workspace/payment/wechat_pay_qr.jpg`.
-  It is referenced by `WECHAT_PAY.QR_URL` and `AIV_WECHAT_QR_URL` (default `/wechat_pay_qr.jpg`).
-  It is not in git. Upload it next to the landing page by hand when deploying. If it's missing, the image simply hides.
+- Pages show only the Stripe price: "$19（银行卡支付，可用本地货币付款）". There is no WeChat block, QR, ¥ price or screenshot instruction.
+- After a manual unlock, send the buyer the signed `order_link` from the response (docs/recovery.md).
+- **Guard:** `scripts/check_release.py` runs in `scripts/build_static.sh` and fails the build if the site contains any image, a QR/WeChat file name, the owner's real QR (hash), or WeChat/¥ payment copy. `tests/test_admin.py::TestStripeOnlyCopy` checks the landing page, report paywall and order pages.

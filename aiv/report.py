@@ -22,24 +22,6 @@ e = html.escape
 
 
 
-def _wx() -> dict:
-    from .wechat import config
-    return config()
-
-
-def _wechat_block(audit_id: str) -> str:
-    """Chinese-only manual WeChat Pay instructions (shown in the zh view only)."""
-    w = _wx()
-    if not w["enabled"]:
-        return ""
-    price = f"¥{w['price']}" + (f"（早鸟价，原价 ¥{w['regular']}）" if w["earlybird"] else "")
-    return (f'<div class="zh wechat" style="margin-top:14px"><h4>微信支付 {e(price)}</h4>'
-            f'<img src="{e(w["qr_url"])}" alt="微信收款码" width="200" style="display:block;margin:8px 0" '
-            f'onerror="this.style.display=\'none\'">'
-            f'<ol><li>用微信扫码支付 {e(price)}（付款备注可填 audit id：<code>{e(audit_id)}</code>）。</li>'
-            f'<li>付款后把付款截图 + audit id 发到 <b>{e(w["contact"])}</b>，24 小时内开通。</li></ol></div>')
-
-
 def _pay_url(audit_id: str, root: str | None = None) -> str:
     from urllib.parse import urlparse
     from .payments import payment_url
@@ -194,13 +176,13 @@ def render_html(res: dict, lang: str = "zh") -> str:
         out.append(f'<h2>{bi("修复包", "Fix pack")}</h2><p>{bi("下载", "Download")}: <a href="fixpack.zip">fixpack.zip</a></p><ul>' +
                    "".join(f"<li><code>{e(k)}</code> <span class='muted'>{v} B</span></li>" for k, v in sorted(fpk.get("files", {}).items())) + "</ul>")
     else:
-        out.append(f'<div class="lock"><h3>{bi(f"解锁完整报告 + 修复包（银行卡 $19 或微信支付 ¥{_wx()['price']}，一次性；7 天内可退款）" if _wx()["enabled"] else "解锁完整报告 + 修复包（$19 一次性，可用人民币等本地货币支付，金额以 Stripe 结账页为准；7 天内可退款）", "Unlock the full report + fix pack ($19 one-off, shown in your local currency at Stripe's rate; 7-day refund)")}</h3>'
-                   f'<p>{bi("25 个买家问题 × AI 引擎（Gemini 每题采样 3 次；ChatGPT / Perplexity 启用后各 2 次）、竞品份额、AI 引用来源缺口，以及可直接粘贴的 robots.txt、JSON-LD、llms.txt、5 篇内容草稿和 Cloudflare 放行步骤。", "25 buyer questions × AI engines (Gemini 3 samples each; ChatGPT / Perplexity 2 each once enabled), competitor share of voice, cited-source gaps, plus paste-ready robots.txt, JSON-LD, llms.txt, 5 content drafts and Cloudflare steps.")}</p>'
-                   f'<a class="btn" href="{e(_pay_url(res["audit_id"], res.get("root")))}">{bi("银行卡支付 $19（Stripe）", "Unlock for $19 (pay in your local currency)")}</a>'
-                   f'{_wechat_block(res["audit_id"])}</div>')
+        out.append(f'<div class="lock"><h3>{bi("解锁完整报告 + 修复包：$19 美元，一次性；24 小时内交付", "Unlock the full report + fix pack: $19 USD one-off, delivered within 24 hours")}</h3>'
+                   f'<p>{bi("25 个买家问题在 Google Gemini 上各采样 3 次（ChatGPT 和 Perplexity 即将支持）、竞品份额、AI 回答里链接到的网站，以及可直接粘贴的 robots.txt、JSON-LD、llms.txt、5 篇内容草稿和 Cloudflare 放行步骤。", "25 buyer questions sampled 3 times each on Google Gemini (ChatGPT and Perplexity coming soon), competitor share of voice, the websites AI answers link to, plus paste-ready robots.txt, JSON-LD, llms.txt, 5 content drafts and Cloudflare steps.")}</p>'
+                   f'<p class="muted">{bi("按美元收费，Stripe 结账页可能显示本地货币金额；也可直接用美元支付，由发卡行换算。7 天内：未在 24 小时内交付或你认为报告没有帮助，可全额退款（每位客户限一次）。", "Charged in USD; Stripe checkout may show your local currency, or pay in USD and let your bank convert. Within 7 days: full refund if not delivered within 24 hours or if you found it not useful (once per customer).")} <a href="mailto:go_with_prob@mail.grokbot.com">go_with_prob@mail.grokbot.com</a></p>'
+                   f'<a class="btn" href="{e(_pay_url(res["audit_id"], res.get("root")))}">{bi("银行卡解锁 $19 美元", "Unlock for $19 USD by card")}</a></div>')
     out.append(f'<h2>{bi("方法与隐私", "Method & privacy")}</h2><p class="muted">' + bi(
-        f"只读检测：共 {res['request_count']} 个 GET 请求，每个域名每秒最多 1 个。AI 推荐测试只调用官方 API，不抓取 chatgpt.com 等网页端。原始数据 7 天后自动删除。爬取耗时 {res['crawl_seconds']} 秒，总耗时 {res['total_seconds']} 秒，AI 调用 {res['llm_calls']} 次，成本 ${res['llm_cost_usd']:.4f}。",
-        f"Read-only: {res['request_count']} GET requests, at most 1 per second per domain. The AI test uses official APIs only; we never scrape chatgpt.com or other web UIs. Raw data is deleted after 7 days. Crawl {res['crawl_seconds']}s, total {res['total_seconds']}s, {res['llm_calls']} AI calls, cost ${res['llm_cost_usd']:.4f}.") + "</p>")
+        f"只读检测：共 {res['request_count']} 个 GET 请求，每个域名每秒最多 1 个。AI 推荐测试只调用 Google Gemini 官方 API，不抓取任何 AI 网页端。原始数据 7 天后自动删除。爬取耗时 {res['crawl_seconds']} 秒，总耗时 {res['total_seconds']} 秒，AI 调用 {res['llm_calls']} 次，成本 ${res['llm_cost_usd']:.4f}。",
+        f"Read-only: {res['request_count']} GET requests, at most 1 per second per domain. The AI test calls only the official Google Gemini API; we never scrape any AI web app. Raw data is deleted after 7 days. Crawl {res['crawl_seconds']}s, total {res['total_seconds']}s, {res['llm_calls']} AI calls, cost ${res['llm_cost_usd']:.4f}.") + "</p>")
     if vis.get("simulated"):
         out.append('<div class="banner">' + bi("本报告含模拟 AI 数据，仅供内部测试，不可作为公开样例。",
                                               "This report contains simulated AI data: internal test only, not a public sample.") + "</div>")

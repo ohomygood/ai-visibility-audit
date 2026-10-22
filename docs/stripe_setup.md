@@ -1,6 +1,6 @@
 # Stripe setup for AI 可见度体检 (for the owner)
 
-Chinese buyers can also pay by WeChat QR and get unlocked by hand: see `docs/manual_unlock.md`.
+Stripe is the only payment method. Comps and support cases can be unlocked by hand: see `docs/manual_unlock.md`.
 
 What's already wired in the code: the live Payment Link
 `https://buy.stripe.com/fZu00k2l84Zz9YibSt0Ny02` ($19 one-off, Adaptive Pricing on).
@@ -102,7 +102,8 @@ So whichever route arrives first, redirect or webhook, unlocks the audit, and th
   `currency_conversion.source_currency` / `.amount_total`.
   The server handles both shapes, preferring `currency_conversion` when it is present.
   Source: <https://docs.stripe.com/changelog/clover/2025-09-30/remove-checkout-session-currency-conversion-field>
-- The CNY price the buyer sees is Stripe's converted amount at checkout, guaranteed for 24 h. It **won't be exactly ¥129**.
-  That's why the landing page and report now say "$19, payable in your local currency", not "$19 / ¥129".
+- Adaptive Pricing is always on for Payment Links (Stripe docs). Whether a buyer is offered a local-currency price depends on their
+  location; the buyer pays Stripe's 2–4% conversion fee, or can choose USD and let their bank convert. So the copy says
+  "charged in USD; Stripe checkout may show your local currency" and never promises a fixed local price.
 - Refunds and the FX cost of Adaptive Pricing: Stripe builds its conversion cost into the buyer's local price, and refunds go back to the buyer's payment method.
-  Confirm the current terms under **Settings → Payments → Adaptive Pricing** before launch; we haven't verified them against your account.
+  No live session exists yet (checked read-only 2026-10-22), so the first real order is the first observed conversion.

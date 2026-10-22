@@ -1,4 +1,4 @@
-"""Manual (cashier) unlock for WeChat Pay and other off-Stripe payments.
+"""Manual (owner) unlock for comps and support cases (Stripe is the only payment method).
 
 Two entry points, one code path (unlock_audit):
   HTTP  POST /admin/unlock   Authorization: Bearer $ADMIN_TOKEN, JSON body (see validate())

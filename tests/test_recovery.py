@@ -87,6 +87,10 @@ class WipeBase(unittest.TestCase):
         for p in patches:
             p.start()
             self.addCleanup(p.stop)
+        _cp = mock.patch("aiv.capacity.CAP", __import__("aiv.capacity", fromlist=["Capacity"]).Capacity())
+        _cp.start()
+        self.addCleanup(_cp.stop)
+        __import__("aiv.server", fromlist=["_running"])._running.clear()
         self.runs = []
 
         def fake_full(url, mode, out_dir):
