@@ -46,6 +46,7 @@ REF_RE = re.compile(r"^([0-9]{8}-[0-9]{6}-[0-9a-f]{6})(?:_([a-z2-7]{1,176}))?$")
 HOST_RE = re.compile(r"^(?=.{1,110}$)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z][a-z0-9-]{0,61}[a-z0-9]$")
 API = "https://api.stripe.com/v1/checkout/sessions/"
 _ledger_lock = threading.Lock()
+ON_VERIFIED = None     # hook(session_dict, audit_id, domain): set by the server to book the order's day slot
 
 
 def payment_link_url() -> str:
@@ -203,6 +204,11 @@ def redeem(session_id: str, source: str, ensure, expect_audit_id: str | None = N
     aid, domain = verify_session_ref(s, session_id)
     if expect_audit_id and aid != expect_audit_id:
         raise PaymentError("session_mismatch", 400, "session belongs to another order")
+    if ON_VERIFIED:
+        try:
+            ON_VERIFIED(s, aid, domain)
+        except Exception:  # noqa: BLE001  slot booking must never block an unlock
+            pass
     # rebuilding a wiped/purged order is allowed for AIV_RECOVERY_DAYS (default 30) after purchase, so an old
     # bookmarked link can't regenerate a report forever; existing orders are re-opened regardless
     max_age = float(os.environ.get("AIV_RECOVERY_DAYS", "30")) * 86400

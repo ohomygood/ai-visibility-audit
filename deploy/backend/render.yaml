@@ -16,6 +16,9 @@ services:
       - { key: AIV_CORS_ORIGINS, value: "https://ai-visibility-audit-bvb.pages.dev,https://audit.aiseenlab.com,https://xeng.aiseenlab.com,https://aiseenlab.com" }
       - { key: AIV_CONTACT_URL, value: "https://audit.aiseenlab.com" }
       - { key: AIV_RETENTION_DAYS, value: "7" }
+      # Daily Gemini budget (docs/capacity.md): 1 paid report (80 calls) + 6 free checks (30) per quota day
+      - { key: AIV_PAID_REPORTS_PER_DAY, value: "1" }
+      - { key: AIV_FREE_DAILY_CAP, value: "6" }
       - { key: GEMINI_API_KEY, sync: false }        # free-tier key
       - { key: ADMIN_TOKEN, sync: false }           # openssl rand -hex 32
       # Set later, when Stripe is ready (paywall stays locked until then):

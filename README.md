@@ -8,7 +8,7 @@ Plan: `/workspace/projects/product_research/round1.md` (Shotgun, 2026-10-22). Te
 > With `AIV_ENV=production` the app **refuses** the stub engine. Samples in `samples/local-simulated/` are internal tests only, **not public samples**.
 > Public sample audits must be regenerated with real engines once the API budget is approved.
 
-> Public source, all rights reserved (see `LICENSE`). Live: https://audit.aiseenlab.com (site; old https://ai-visibility-audit-bvb.pages.dev redirects there once the domain is active) · backend on Render (see `docs/deploy.md`).
+> Public source, all rights reserved (see `LICENSE`). Live: https://audit.aiseenlab.com (site; the old https://ai-visibility-audit-bvb.pages.dev 301-redirects there) · backend on Render (see `docs/deploy.md`).
 
 ## What it does
 | Part | Module | Notes |

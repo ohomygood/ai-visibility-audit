@@ -54,6 +54,7 @@
       <p class="small"><span class="zh">按美元（USD）收费。Stripe 结账页可能按你所在地显示本地货币金额（由 Stripe 换算）；你也可以直接用美元支付，由发卡行换算，最终金额以银行账单为准。</span><span class="en">Charged in USD. Stripe checkout may show the price in your local currency (converted by Stripe); you can also pay in USD and let your bank convert it.</span></p>
       <p class="small"><span class="zh">付款后进入生成队列，24 小时内交付（通常约 10 分钟）。</span><span class="en">After payment your report joins the queue and is delivered within 24 hours (usually about 10 minutes).</span></p>
       <p class="small" id="etaNote" style="display:none"></p>
+      <p class="soldout" id="soldOut" style="display:none"><span class="zh">今日名额已售罄，明天开放下一个名额</span><span class="en">Today's slots are sold out, next slot opens tomorrow</span><span id="soldOutWhen"></span></p>
       <ul class="ticks"><li><span class="zh">25 个买家问题在 Google Gemini 上实测（每题 3 次）；ChatGPT 和 Perplexity 即将支持。报告会写明实际使用的引擎和模型</span><span class="en">25 buyer questions tested on Google Gemini (3 samples each); ChatGPT and Perplexity are coming soon. Every report lists the engine and models actually used</span></li><li><span class="zh">竞品份额，以及 AI 回答里链接到的网站</span><span class="en">Competitor share of voice and the websites AI answers link to</span></li><li><span class="zh">robots.txt、JSON-LD（含 Shopify Liquid 片段）、llms.txt</span><span class="en">robots.txt, JSON-LD (incl. Shopify Liquid snippets), llms.txt</span></li><li><span class="zh">5 篇 FAQ / 对比 / 选购指南草稿</span><span class="en">5 FAQ / comparison / buying-guide drafts</span></li><li><span class="zh">Cloudflare 放行 AI 爬虫步骤</span><span class="en">Cloudflare steps to allow AI crawlers</span></li><li><span class="zh">PDF + ZIP 下载，不订阅</span><span class="en">PDF + ZIP download, no subscription</span></li></ul>
       <a class="btn" id="buyBtn" href="#check"><span class="zh">先免费体检，再用银行卡解锁 $19</span><span class="en">Run the free check, then unlock for $19</span></a>
       <p class="small"><span class="zh">先做免费简检，再从报告页解锁，报告会自动关联。</span><span class="en">Run the free check first, then unlock from the report page so your purchase is linked to it.</span></p></div>
@@ -103,16 +104,29 @@ document.getElementById("checkForm").addEventListener("submit", function(ev){
       box.innerHTML = '<div class="card"><div class="amount">' + (j.score === null ? "–" : j.score) + '<small>/100 · ' + j.grade + '</small></div>' +
         (zh ? "发现 " + j.findings + " 个问题，用时 " + j.seconds + " 秒。" : j.findings + " findings in " + j.seconds + "s.") +
         '<p><a class="btn" href="' + url + '" target="_blank">' + (zh ? "查看报告" : "Open report") + "</a>" +
-        (pay ? ' <a class="btn alt" href="' + pay + '">' + (zh ? "解锁完整报告 $19" : "Unlock full report $19") + "</a>" : "") + "</p></div>";
+        (pay ? ' <a class="btn alt payBtn" href="' + pay + '">' + (zh ? "解锁完整报告 $19" : "Unlock full report $19") + "</a>" : "") + "</p></div>";
       if(pay){ var b = document.getElementById("buyBtn"); b.href = pay;
         b.innerHTML = '<span class="zh">银行卡解锁这份报告 $19</span><span class="en">Unlock this report for $19</span>'; }
+      if(window.AIV_SOLD_OUT) window.AIV_applySoldOut(window.AIV_SOLD_OUT);
     })
     .catch(function(){ box.innerHTML = '<div class="card">' + (zh ? "网络错误，请稍后重试" : "Network error, try again") + "</div>"; });
 });
 </script>
 <script>
+// Sold out: today's paid report slots are all booked -> no buy buttons, honest bilingual note (and when the next one opens).
+window.AIV_applySoldOut = function(c){
+  window.AIV_SOLD_OUT = c;
+  var b = document.getElementById("buyBtn"); if(b){ b.style.display = "none"; b.setAttribute("aria-hidden", "true"); }
+  var els = document.querySelectorAll(".payBtn");
+  for(var i = 0; i < els.length; i++){ var s = document.createElement("span"); s.className = "btn disabled";
+    s.innerHTML = '<span class="zh">今日名额已售罄</span><span class="en">Sold out today</span>'; els[i].parentNode.replaceChild(s, els[i]); }
+  var n = document.getElementById("soldOut"); n.style.display = "block";
+  if(c.next_slot_cn) document.getElementById("soldOutWhen").innerHTML =
+    '<br><span class="zh">下一个名额：北京时间 ' + c.next_slot_cn + ' 起</span><span class="en">Next slot: from ' + c.next_slot_cn + ' Beijing time</span>';
+};
 // Honest delivery time before purchase: shown only when the paid queue is beyond 24 hours.
 fetch((window.AIV_CONFIG.API_BASE || "") + "/api/capacity").then(function(r){ return r.json(); }).then(function(c){
+  if(c && c.sold_out){ window.AIV_applySoldOut(c); return; }
   var o = c && c.new_order; if(!o || o.within_24h) return;
   var n = document.getElementById("etaNote"); n.style.display = "block";
   n.innerHTML = '<span class="zh">当前排队较多：现在下单预计在北京时间 ' + o.eta_cn + ' 前后交付（约 ' + o.eta_hours + ' 小时）。</span>' +

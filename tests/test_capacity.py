@@ -111,12 +111,13 @@ class TestDeferAndGuard(unittest.TestCase):
 class TestQueueRuns(CapBase):
     def test_worker_runs_in_order(self):
         done = []
-        for a in ("a", "b"):
-            self.cap.enqueue(a, lambda a=a: done.append(a) or "done")
-        for _ in range(100):
-            if len(done) == 2:
-                break
-            time.sleep(0.02)
+        with mock.patch.dict(os.environ, {"AIV_PAID_REPORTS_PER_DAY": "2"}):
+            for a in ("a", "b"):
+                self.cap.enqueue(a, lambda a=a: done.append(a) or "done")
+            for _ in range(100):
+                if len(done) == 2:
+                    break
+                time.sleep(0.02)
         self.assertEqual(done, ["a", "b"])
 
 
