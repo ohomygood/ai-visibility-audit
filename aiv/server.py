@@ -387,8 +387,8 @@ class Handler(BaseHTTPRequestHandler):
             when += (f"<p>超过 24 小时未交付可申请全额退款：<a href='mailto:{CONTACT}'>{CONTACT}</a></p>"
                      f"<p>If it isn't delivered within 24 hours you can ask for a full refund: {CONTACT}</p>")
         return self._html(200, page("Generating", "<h1>付款成功 / Payment received</h1>" + when +
-                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 请收藏本页链接，随时可回来查看；"
-                                   "关闭页面不影响生成。/ Bookmark this page to come back any time.</p>", refresh=30))
+                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 请收藏本页链接，随时可回来查看（重新打开本链接也会确保报告继续生成）。"
+                                   "/ Bookmark this page and come back any time; reopening it also makes sure generation continues.</p>", refresh=30))
 
     def do_GET(self):
         u = urlparse(self.path)
