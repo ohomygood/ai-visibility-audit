@@ -36,11 +36,18 @@ def main(argv=None):
     au.add_argument("--amount", default=None)
     au.add_argument("--currency", default=None, help="default CNY for wechat/alipay")
     au.add_argument("--ref", default=None, help="payment transaction id / note (required for wechat/alipay/bank)")
+    au.add_argument("--url", default=None, help="store URL/domain: needed only if the audit's files were wiped")
     au.add_argument("--remote", default=None, metavar="URL",
                     help="call <URL>/admin/unlock with $ADMIN_TOKEN instead of writing the local data dir")
+    ra = sub.add_parser("admin-reapply", help="re-apply manual unlocks from an exported ADMIN_AUDIT log after a wipe")
+    ra.add_argument("log", help="file with `ADMIN_AUDIT {json}` lines (Render logs) or data/admin/unlocks.jsonl")
+    ra.add_argument("--by", required=True)
+    ra.add_argument("--remote", default=None, metavar="URL", help="apply via <URL>/admin/unlock with $ADMIN_TOKEN")
     a = ap.parse_args(argv)
     if a.cmd == "admin-unlock":
         return _admin_unlock(a)
+    if a.cmd == "admin-reapply":
+        return _admin_reapply(a)
     if a.cmd == "rerender":
         from pathlib import Path
         from .audit import findings, score
@@ -76,7 +83,7 @@ def main(argv=None):
 def _admin_unlock(a) -> int:
     from . import admin
     fields = {"audit_id": a.audit_id, "by": a.by, "reason": a.reason, "channel": a.channel,
-              "amount": a.amount, "currency": a.currency, "ref": a.ref}
+              "amount": a.amount, "currency": a.currency, "ref": a.ref, "url": a.url}
     if a.remote:
         import requests
         tok = os.environ.get("ADMIN_TOKEN", "")
@@ -98,3 +105,36 @@ def _admin_unlock(a) -> int:
         return 1
     print(json.dumps(res, ensure_ascii=False))
     return 0
+
+
+def _remote_unlock(base: str, fields: dict) -> dict:
+    import requests
+    from . import admin
+    tok = os.environ.get("ADMIN_TOKEN", "")
+    if len(tok) < admin.MIN_TOKEN_LEN:
+        raise admin.AdminError("ADMIN_TOKEN env var missing or shorter than 32 chars")
+    try:
+        r = requests.post(base.rstrip("/") + "/admin/unlock", json=fields, timeout=60,
+                          headers={"Authorization": f"Bearer {tok}"})
+    except requests.RequestException as e:
+        raise admin.AdminError(f"request failed: {type(e).__name__}") from None
+    try:
+        j = r.json()
+    except ValueError:
+        j = {"error": f"HTTP {r.status_code}"}
+    if r.status_code != 200:
+        raise admin.AdminError(str(j.get("error") or r.status_code))
+    return j
+
+
+def _admin_reapply(a) -> int:
+    from . import admin
+    with open(a.log, encoding="utf-8") as f:
+        lines = f.readlines()
+    if a.remote:
+        apply = lambda fields: _remote_unlock(a.remote, fields)  # noqa: E731
+    else:
+        apply = lambda fields: admin.unlock_audit(fields, source="reapply", wait=False)  # noqa: E731
+    res = admin.reapply_from_log(lines, a.by, apply)
+    print(json.dumps(res, ensure_ascii=False, indent=1))
+    return 0 if all(r.get("result") != "error" for r in res) else 1

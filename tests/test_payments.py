@@ -28,6 +28,13 @@ def session(**kw):
     return s
 
 
+def fake_full(runs, url, out_dir):
+    """Stand-in for the paid full audit: records the call and writes the report like the real one."""
+    runs.append(url)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "report.zh.html").write_text("full report")
+
+
 class FakeResp:
     def __init__(self, code, obj):
         self.status_code, self._obj = code, obj
@@ -125,7 +132,7 @@ class TestServerPaid(unittest.TestCase):
             p.start()
             self.addCleanup(p.stop)
         self.runs = []
-        p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: self.runs.append(url))
+        p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: fake_full(self.runs, url, out_dir))
         p.start()
         self.addCleanup(p.stop)
         self.srv = server.make_server("127.0.0.1", 0)
@@ -160,18 +167,25 @@ class TestServerPaid(unittest.TestCase):
              mock.patch("aiv.payments.requests.get", return_value=FakeResp(200, session())) as g:
             code, h, _ = self.get(f"/paid?session_id={SID}")
             self.assertEqual(code, 303)
-            self.assertEqual(h["Location"], f"/order/{AID}")
+            self.assertEqual(h["Location"], f"/order/{AID}?s={SID}")
             g.assert_called_once()
             self.assertTrue((self.d / "paid.json").exists())
-            code, _, body = self.get(f"/order/{AID}")
-            self.assertEqual(code, 200)
-            self.assertIn("generating", body.lower())
-            self.assertIn('http-equiv="refresh"', body)
-            # replay: re-verified via API, but no second unlock / second full run
-            (self.d / "paid.json").unlink()
+            time.sleep(0.2)
+            (self.d / "full" / "report.zh.html").unlink()       # pretend it is still running
+            server._running.add(AID)
+            try:
+                code, _, body = self.get(f"/order/{AID}")
+                self.assertEqual(code, 200)
+                self.assertIn("generating", body.lower())
+                self.assertIn('http-equiv="refresh"', body)
+            finally:
+                server._running.discard(AID)
+            (self.d / "full" / "report.zh.html").write_text("full report")
+            time.sleep(0.2)
+            # replay: re-verified via the API; it can only re-open the SAME audit (client_reference_id is fixed
+            # by Stripe), no second ledger entry and no second full run while the report exists
             code, h, _ = self.get(f"/paid?session_id={SID}")
-            self.assertEqual(code, 303)
-            self.assertFalse((self.d / "paid.json").exists())
+            self.assertEqual((code, h["Location"]), (303, f"/order/{AID}?s={SID}"))
             time.sleep(0.2)
             self.assertEqual(len(self.runs), 1)
             ledger = (Path(self.tmp.name) / "data" / "stripe" / "used_sessions.jsonl").read_text().splitlines()

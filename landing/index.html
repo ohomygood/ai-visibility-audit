@@ -113,7 +113,8 @@ document.getElementById("checkForm").addEventListener("submit", function(ev){
     .then(function(x){
       if(!x.ok){ box.innerHTML = '<div class="card">' + (x.j.error || "error") + "</div>"; return; }
       var j = x.j, url = (window.AIV_CONFIG.API_BASE || "") + (zh ? j.report_url : j.report_url_en),
-          pay = window.AIV_payUrl(j.audit_id);   // payment link + ?client_reference_id=<audit_id>
+          pay = (j.pay_url && j.pay_url.indexOf(window.AIV_CONFIG.STRIPE_PAYMENT_LINK + "?") === 0) ? j.pay_url
+                : window.AIV_payUrl(j.audit_id);   // payment link + ?client_reference_id=<audit_id>_<store domain, base32>
       box.innerHTML = '<div class="card"><div class="amount">' + (j.score === null ? "–" : j.score) + '<small>/100 · ' + j.grade + '</small></div>' +
         (zh ? "发现 " + j.findings + " 个问题，用时 " + j.seconds + " 秒。" : j.findings + " findings in " + j.seconds + "s.") +
         '<p><a class="btn" href="' + url + '" target="_blank">' + (zh ? "查看报告" : "Open report") + "</a>" +

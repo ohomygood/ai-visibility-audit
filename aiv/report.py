@@ -40,10 +40,11 @@ def _wechat_block(audit_id: str) -> str:
             f'<li>付款后把付款截图 + audit id 发到 <b>{e(w["contact"])}</b>，24 小时内开通。</li></ol></div>')
 
 
-def _pay_url(audit_id: str) -> str:
+def _pay_url(audit_id: str, root: str | None = None) -> str:
+    from urllib.parse import urlparse
     from .payments import payment_url
     try:
-        return payment_url(audit_id)
+        return payment_url(audit_id, domain=urlparse(root or "").hostname)
     except ValueError:
         from .payments import payment_link_url
         return payment_link_url()
@@ -195,7 +196,7 @@ def render_html(res: dict, lang: str = "zh") -> str:
     else:
         out.append(f'<div class="lock"><h3>{bi(f"解锁完整报告 + 修复包（银行卡 $19 或微信支付 ¥{_wx()['price']}，一次性；7 天内可退款）" if _wx()["enabled"] else "解锁完整报告 + 修复包（$19 一次性，可用人民币等本地货币支付，金额以 Stripe 结账页为准；7 天内可退款）", "Unlock the full report + fix pack ($19 one-off, shown in your local currency at Stripe's rate; 7-day refund)")}</h3>'
                    f'<p>{bi("25 个买家问题 × AI 引擎（Gemini 每题采样 3 次；ChatGPT / Perplexity 启用后各 2 次）、竞品份额、AI 引用来源缺口，以及可直接粘贴的 robots.txt、JSON-LD、llms.txt、5 篇内容草稿和 Cloudflare 放行步骤。", "25 buyer questions × AI engines (Gemini 3 samples each; ChatGPT / Perplexity 2 each once enabled), competitor share of voice, cited-source gaps, plus paste-ready robots.txt, JSON-LD, llms.txt, 5 content drafts and Cloudflare steps.")}</p>'
-                   f'<a class="btn" href="{e(_pay_url(res["audit_id"]))}">{bi("银行卡支付 $19（Stripe）", "Unlock for $19 (pay in your local currency)")}</a>'
+                   f'<a class="btn" href="{e(_pay_url(res["audit_id"], res.get("root")))}">{bi("银行卡支付 $19（Stripe）", "Unlock for $19 (pay in your local currency)")}</a>'
                    f'{_wechat_block(res["audit_id"])}</div>')
     out.append(f'<h2>{bi("方法与隐私", "Method & privacy")}</h2><p class="muted">' + bi(
         f"只读检测：共 {res['request_count']} 个 GET 请求，每个域名每秒最多 1 个。AI 推荐测试只调用官方 API，不抓取 chatgpt.com 等网页端。原始数据 7 天后自动删除。爬取耗时 {res['crawl_seconds']} 秒，总耗时 {res['total_seconds']} 秒，AI 调用 {res['llm_calls']} 次，成本 ${res['llm_cost_usd']:.4f}。",

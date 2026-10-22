@@ -42,7 +42,9 @@ Render: auto-deploy is off. Push to GitHub `main`, then press **Manual Deploy** 
 - **Cold start:** the service spins down after 15 min idle. The first request then takes about 30–60 s, and a free check adds about 60 s on top.
   The landing page shows "约 1–2 分钟", so a cold first check can take about 2 minutes.
 - **Ephemeral disk:** reports, `data/stripe/used_sessions.jsonl` and `data/admin/*.jsonl` are lost on every restart or redeploy.
-  The durable record is the `ADMIN_AUDIT {json}` lines in Render's logs. Paid reports need external storage before real volume.
+  **Paid orders still survive.** Stripe orders rebuild from the session (`/order/<id>?s=…`). Manual unlocks rebuild from
+  the signed order link (`?u=…`) or from the `ADMIN_AUDIT` log (`python3 -m aiv admin-reapply`). See docs/recovery.md.
+  Free quick reports don't survive.
 - **Free-check rate limit** (3/h per IP) keys on `X-Forwarded-For`. It is per-instance memory and resets on restart.
 - **Gemini free tier:** quota falls back through the model chain, e.g. `gemini-3.5-flash` → `-lite`. It answers without live search when grounding quota runs out, and the report labels this.
 

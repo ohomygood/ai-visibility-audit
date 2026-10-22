@@ -20,6 +20,13 @@ BODY = {"audit_id": AID, "by": "cashier-li", "reason": "WeChat Pay ¥129 confirm
         "amount": 129, "currency": "CNY", "ref": "4200001234202610220000"}
 
 
+def fake_full(runs, url, out_dir):
+    """Stand-in for the paid full audit: records the call and writes the report like the real one."""
+    runs.append(url)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "report.zh.html").write_text("full report")
+
+
 class Base(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -32,7 +39,7 @@ class Base(unittest.TestCase):
             p.start()
             self.addCleanup(p.stop)
         self.runs = []
-        p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: self.runs.append(url))
+        p = mock.patch("aiv.server.run_audit", side_effect=lambda url, mode, out_dir: fake_full(self.runs, url, out_dir))
         p.start()
         self.addCleanup(p.stop)
         admin.reset_lockout()
@@ -74,7 +81,7 @@ class TestEndpoint(Base):
         with mock.patch.dict(os.environ, {"ADMIN_TOKEN": TOKEN}):
             code, j = self.post(BODY)
             self.assertEqual((code, j["result"]), (200, "unlocked"))
-            self.assertEqual(j["order_url"], f"/order/{AID}")
+            self.assertTrue(j["order_url"].startswith(f"/order/{AID}?u="))   # server-signed, survives a wipe
             paid = json.loads((self.d / "paid.json").read_text())
             self.assertEqual(paid["source"], "admin:wechat:4200001234202610220000")
             self.assertEqual(paid["manual"]["amount"], 129.0)
@@ -276,7 +283,7 @@ class TestHealth(Base):
                                               "STRIPE_RESTRICTED_KEY": "", "ADMIN_TOKEN": TOKEN}):
                 j = json.loads(urllib.request.urlopen(f"http://127.0.0.1:{srv.server_address[1]}/healthz").read())
             self.assertEqual(j, {"ok": True, "production": True, "engines": "gemini", "payments_configured": False,
-                                 "admin_enabled": True, "dev_unlock": False})
+                                 "admin_enabled": True, "order_links": True, "dev_unlock": False})
             self.assertNotIn("x" * 39, json.dumps(j))
         finally:
             srv.shutdown()

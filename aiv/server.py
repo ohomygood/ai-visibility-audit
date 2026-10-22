@@ -10,8 +10,11 @@ Routes
   GET  /api/status/<id>          {paid, full_ready}
   GET  /paid?session_id=cs_...   Payment Link success redirect. Retrieves the Checkout Session from the
                                  Stripe API (STRIPE_RESTRICTED_KEY, read-only), verifies it (see
-                                 aiv/payments.py), unlocks client_reference_id once -> 303 /order/<id>
-  GET  /order/<id>               "generating" page (auto-refresh) -> full report when ready
+                                 aiv/payments.py), unlocks client_reference_id -> 303 /order/<id>?s=<session>
+  GET  /order/<id>[?s=cs_..|?u=<signed>]  "generating" page (auto-refresh) -> full report when ready.
+                                 If the local state is gone (Render free disk wiped), ?s= re-verifies the
+                                 session with Stripe and ?u= checks the server-signed admin link (aiv/orders.py),
+                                 then the unlock is rebuilt and the report re-generated once.
   POST /stripe/webhook           optional 2nd route (alias /api/stripe/webhook): verifies Stripe-Signature
                                  (STRIPE_WEBHOOK_SECRET); checkout.session.completed -> same API re-check
                                  and same used-session ledger, so a session unlocks exactly once
@@ -39,7 +42,7 @@ from .audit import DATA_DIR, run_audit
 from .crawl import normalize_url
 from .http import is_public_host
 from .llm import is_production
-from . import admin, payments
+from . import admin, orders, payments
 
 ROOT = Path(__file__).resolve().parents[1]
 LANDING = ROOT / "landing"
@@ -80,31 +83,88 @@ def report_dir(audit_id: str) -> Path:
     return DATA_DIR / "reports" / audit_id
 
 
-def mark_paid_and_run_full(audit_id: str, source: str, wait: bool = False, extra: dict | None = None) -> bool:
-    """Unlock + start the full audit once. Returns False if the audit doesn't exist (e.g. purged).
+_running: set[str] = set()
+_run_lock = threading.Lock()
+_order_fail: dict[str, float] = {}     # session id -> last failed Stripe check (throttles /order?s= retries)
 
-    Shared by /paid, the Stripe webhook, /admin/unlock and the admin-unlock CLI (wait=True: the CLI
-    process would otherwise exit before the background job finishes)."""
+
+def order_meta(d: Path) -> dict | None:
+    """The quick audit's audit.json, or the order.json rebuilt after a wipe (both carry the store url)."""
+    for name in ("audit.json", "order.json"):
+        p = d / name
+        if p.exists():
+            try:
+                return json.loads(p.read_text())
+            except ValueError:
+                return None
+    return None
+
+
+def store_domain(meta: dict | None) -> str | None:
+    return urlparse((meta or {}).get("root") or (meta or {}).get("url") or "").hostname if meta else None
+
+
+def start_full(audit_id: str, wait: bool = False) -> bool:
+    """Run the paid full audit at most once at a time, and only while there is no result yet."""
     d = report_dir(audit_id)
-    with _paid_lock:
-        if not d.exists() or not (d / "audit.json").exists():
+    with _run_lock:
+        if (audit_id in _running or not (d / "paid.json").exists() or (d / "full" / "report.zh.html").exists()
+                or (d / "full_error.txt").exists()):
             return False
-        if (d / "paid.json").exists():
-            return True
-        meta = json.loads((d / "audit.json").read_text())
-        (d / "paid.json").write_text(json.dumps({"paid_at": time.strftime("%Y-%m-%d %H:%M:%S %Z"), "source": source, **(extra or {})},
-                                                ensure_ascii=False))
+        meta = order_meta(d)
+        if not meta or not meta.get("url"):
+            return False
+        _running.add(audit_id)
 
     def job():
         try:
             run_audit(meta["url"], mode="full", out_dir=d / "full")
         except Exception as e:  # noqa: BLE001
             (d / "full_error.txt").write_text(str(e))
+        finally:
+            with _run_lock:
+                _running.discard(audit_id)
     if wait:
         job()
     else:
         threading.Thread(target=job, daemon=True).start()
     return True
+
+
+def ensure_paid(audit_id: str, domain: str | None, source: str, wait: bool = False, extra: dict | None = None) -> bool:
+    """Idempotent unlock. Unlocks the existing audit; if its files are gone (wiped disk) and the payment proof
+    carried the store domain, rebuilds the order (order.json) for that domain. Then makes sure the full report
+    exists or is being generated (never two runs at once). False if the audit is unknown and not rebuildable."""
+    if not ID_RE.match(audit_id or ""):
+        return False
+    d = report_dir(audit_id)
+    with _paid_lock:
+        meta = order_meta(d)
+        recovered = False
+        if meta is None:
+            if not domain:
+                return False
+            url = f"https://{domain}/"
+            if not is_public_host(url):
+                return False
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "order.json").write_text(json.dumps({"audit_id": audit_id, "url": url, "root": url, "recovered": True,
+                                                      "recovered_at": time.strftime("%Y-%m-%d %H:%M:%S %Z")}))
+            recovered = True
+        if not (d / "paid.json").exists():
+            (d / "paid.json").write_text(json.dumps({"paid_at": time.strftime("%Y-%m-%d %H:%M:%S %Z"), "source": source,
+                                                     "recovered": recovered, **(extra or {})}, ensure_ascii=False))
+    start_full(audit_id, wait=wait)
+    return True
+
+
+def mark_paid_and_run_full(audit_id: str, source: str, wait: bool = False, extra: dict | None = None) -> bool:
+    """Unlock an existing audit (no rebuild). Kept for the admin path and older callers."""
+    return ensure_paid(audit_id, None, source, wait=wait, extra=extra)
+
+
+def _ensure(aid: str, domain: str | None, source: str) -> bool:
+    return ensure_paid(aid, domain, source)
 
 
 PAGE = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -120,6 +180,9 @@ PAY_ERRORS = {
     "wrong_payment_link": ("这笔付款不是本产品的订单。", "This payment isn't an order for this product."),
     "wrong_amount": ("付款金额与订单不符。", "The amount paid doesn't match the order."),
     "no_audit_id": ("这笔付款没有关联体检报告。请先做免费体检，再从报告页点击解锁。", "This payment isn't linked to a report. Run the free check first, then unlock from the report page."),
+    "session_mismatch": ("这笔付款属于另一份报告。", "This payment belongs to a different report."),
+    "bad_link": ("链接无效或已被修改。请使用开通邮件里的完整链接。", "This link is invalid or was altered. Use the full link from your confirmation."),
+    "retry_later": ("刚才验证失败，请 30 秒后刷新。", "Verification just failed; refresh in 30 seconds."),
     "audit_not_found": ("付款已确认，但对应的体检记录已过期或不存在。我们会全额退款或免费重新生成，请联系我们。", "Payment confirmed, but the audit has expired or doesn't exist. We'll refund in full or re-run it free; please contact us."),
 }
 
@@ -174,26 +237,65 @@ class Handler(BaseHTTPRequestHandler):
     def _html(self, code, body: bytes):
         self._send(code, body, "text/html; charset=utf-8")
 
+    def _pay_error(self, e: "payments.PaymentError", sid: str = ""):
+        zh, en = PAY_ERRORS.get(e.reason, ("验证付款时出错，请稍后刷新重试。", "Something went wrong verifying the payment. Refresh to retry in a moment."))
+        ref = f"<p class='muted'>Ref: <code>{escape(e.reason)}</code>{' · ' + escape(sid) if payments.SESSION_RE.match(sid) else ''}</p>"
+        return self._html(e.http, page("Payment", f"<h1>付款验证 / Payment check</h1><p>{zh}</p><p>{en}</p>{ref}"))
+
     def _paid(self, query: str):
         sid = (parse_qs(query).get("session_id") or [""])[0]
         try:
-            res = payments.redeem(sid, "paid-redirect", mark_paid_and_run_full)
+            res = payments.redeem(sid, "paid-redirect", _ensure)
         except payments.PaymentError as e:
-            zh, en = PAY_ERRORS.get(e.reason, ("验证付款时出错，请稍后刷新重试。", "Something went wrong verifying the payment. Refresh to retry in a moment."))
-            ref = f"<p class='muted'>Ref: <code>{escape(e.reason)}</code>{' · ' + escape(sid) if payments.SESSION_RE.match(sid) else ''}</p>"
-            return self._html(e.http, page("Payment", f"<h1>付款验证 / Payment check</h1><p>{zh}</p><p>{en}</p>{ref}"))
+            return self._pay_error(e, sid)
         self.send_response(303)
-        self.send_header("Location", f"/order/{res['audit_id']}")
+        # the session id in the order URL lets the buyer's bookmark rebuild the order after a server wipe
+        self.send_header("Location", f"/order/{res['audit_id']}?s={sid}")
         self.send_header("Content-Length", "0")
         self.end_headers()
 
-    def _order(self, aid: str):
+    def _recover(self, aid: str, query: str) -> bool:
+        """Local state missing: rebuild from the Stripe session (?s=) or the server-signed admin link (?u=).
+        Returns True if it already answered the request (error page)."""
+        q = parse_qs(query)
+        sid, tok = (q.get("s") or [""])[0], (q.get("u") or [""])[0]
+        if sid:
+            last = _order_fail.get(sid)
+            if last and time.time() - last < 30:
+                self._pay_error(payments.PaymentError("retry_later", 503), sid)
+                return True
+            try:
+                payments.redeem(sid, "order-recover", _ensure, expect_audit_id=aid)
+            except payments.PaymentError as e:
+                if len(_order_fail) > 10000:
+                    _order_fail.clear()
+                _order_fail[sid] = time.time()
+                self._pay_error(e, sid)
+                return True
+        elif tok:
+            dom = orders.verify(aid, tok)
+            if not dom:
+                self._pay_error(payments.PaymentError("bad_link", 403))
+                return True
+            if ensure_paid(aid, dom, "admin-link"):
+                admin._emit({"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "event": "order_link_recover",
+                             "audit_id": aid, "domain": dom})
+        return False
+
+    def _order(self, aid: str, query: str = ""):
+        if not ID_RE.match(aid):
+            return self._html(404, page("Not found", "<p>报告不存在或已过期（7 天）。/ Report not found or expired (7 days).</p>"))
         d = report_dir(aid)
-        if not ID_RE.match(aid) or not (d / "audit.json").exists():
+        if not (d / "paid.json").exists() and query:
+            if self._recover(aid, query):
+                return
+        meta = order_meta(d)
+        if meta is None:
             return self._html(404, page("Not found", "<p>报告不存在或已过期（7 天）。/ Report not found or expired (7 days).</p>"))
         if not (d / "paid.json").exists():
-            url = escape(payments.payment_url(aid))
+            url = escape(payments.payment_url(aid, domain=store_domain(meta)))
             return self._html(402, page("Locked", f"<p>完整报告尚未解锁。/ The full report isn't unlocked yet.</p><a class='btn' href='{url}'>解锁 Unlock $19</a>"))
+        start_full(aid)    # no-op if the report exists, failed, or is already running
         if (d / "full" / "report.zh.html").exists():
             body = (f"<h1>完整报告已生成 / Your full report is ready</h1><a class='btn' href='/r/{aid}/full/report.zh.html'>中文报告</a>"
                     f"<a class='btn' href='/r/{aid}/full/report.en.html'>English report</a><a class='btn' href='/r/{aid}/full/fixpack.zip'>fixpack.zip</a>"
@@ -203,7 +305,7 @@ class Handler(BaseHTTPRequestHandler):
             return self._html(200, page("Error", f"<p>生成失败，我们会自动全额退款或重新生成。/ Generation failed; we'll refund in full or re-run it.</p><p class='muted'>Report ID: <code>{aid}</code></p>"))
         return self._html(200, page("Generating", "<h1>付款成功，正在生成完整报告 / Payment received, generating your full report</h1>"
                                    "<p>通常需要几分钟，本页每 10 秒自动刷新。/ This usually takes a few minutes; this page refreshes every 10 seconds.</p>"
-                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code></p>", refresh=10))
+                                   f"<p class='muted'>报告 ID / Report ID: <code>{aid}</code> · 请收藏本页链接，随时可回来查看。/ Bookmark this page to come back any time.</p>", refresh=10))
 
     def do_GET(self):
         u = urlparse(self.path)
@@ -216,11 +318,12 @@ class Handler(BaseHTTPRequestHandler):
                 engines = f"unavailable: {type(e).__name__}"
             return self._json(200, {"ok": True, "production": is_production(), "engines": engines,
                                     "payments_configured": payments.configured(), "admin_enabled": admin.enabled(),
+                                    "order_links": orders.enabled(),
                                     "dev_unlock": os.environ.get("AIV_DEV_UNLOCK") == "1" and not is_production()})
         if path == "/paid":
             return self._paid(u.query)
         if path.startswith("/order/"):
-            return self._order(path.rsplit("/", 1)[-1])
+            return self._order(path.rsplit("/", 1)[-1], u.query)
         if path in ("/", "/index.html"):
             return self._file(LANDING / "index.html")
         if path.startswith("/r/"):
@@ -298,7 +401,7 @@ class Handler(BaseHTTPRequestHandler):
                                     "seconds": res["total_seconds"],
                                     "report_url": f"/r/{res['audit_id']}/report.zh.html",
                                     "report_url_en": f"/r/{res['audit_id']}/report.en.html",
-                                    "pay_url": payments.payment_url(res["audit_id"], email)})
+                                    "pay_url": payments.payment_url(res["audit_id"], email, domain=urlparse(res["root"]).hostname)})
         if path == "/admin/unlock":
             return self._admin_unlock(body)
         if path in ("/stripe/webhook", "/api/stripe/webhook"):
@@ -316,7 +419,7 @@ class Handler(BaseHTTPRequestHandler):
             sid = (ev.get("data", {}).get("object", {}) or {}).get("id", "")
             try:
                 # even a signed event is re-checked against the API, through the same once-only ledger
-                res = payments.redeem(sid, "webhook", mark_paid_and_run_full)
+                res = payments.redeem(sid, "webhook", _ensure)
             except payments.PaymentError as e:
                 # 5xx -> Stripe retries later (config/network); 200 for permanent rejections
                 code = 503 if e.http >= 500 else 200

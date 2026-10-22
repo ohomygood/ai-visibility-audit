@@ -61,6 +61,11 @@ Field rules:
 This uses the same unlocked state (`paid.json`) and the same full-report trigger as Stripe's `/paid`.
 An audit that is paid twice, by WeChat and by card, still generates once. Refund the duplicate.
 
+### Send the buyer the signed order link
+
+The response includes `order_url` (`/order/<id>?u=…`) and, on Render, a full `order_link`. Send **that** link to the buyer:
+it keeps working after a server restart wipes the disk. See docs/recovery.md, including `admin-reapply` and `--url`.
+
 ## 3. Security
 
 - The token is compared in constant time and is never logged or echoed.

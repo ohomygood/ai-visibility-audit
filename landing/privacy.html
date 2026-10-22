@@ -12,7 +12,7 @@
 <h3>我们收集什么</h3>
 <ul><li>你提交的店铺网址，以及我们从该公开网站只读抓取到的页面内容（首页、少量商品页、robots.txt、sitemap、llms.txt）。</li>
 <li>为限流而临时记录的 IP 地址（只保存在内存中，最多 1 小时）。</li>
-<li>付款时：Stripe 处理你的支付信息，我们只收到订单号、金额、邮箱和报告 ID，不接触银行卡号。</li>
+<li>付款时：Stripe 处理你的支付信息，我们只收到订单号、金额、邮箱和报告 ID，不接触银行卡号。付款链接会把报告 ID 和店铺域名交给 Stripe 一起保存，用于在 30 天内凭付款记录找回或重新生成你的报告。</li>
 <li>如果你给我们发邮件：邮件内容和邮箱地址。</li></ul>
 <h3>我们怎么用</h3>
 <p>只用于生成你的体检报告和修复包、交付报告、处理退款和客服。不出售、不出租，也不用于广告。</p>
@@ -33,7 +33,7 @@
 <h3>What we collect</h3>
 <ul><li>The store URL you submit, and page content we fetch read-only from that public website (homepage, a few product pages, robots.txt, sitemap, llms.txt).</li>
 <li>Your IP address, held in memory for at most one hour for rate limiting.</li>
-<li>For payments: Stripe processes your payment details; we receive only the order id, amount, email and report id, never card numbers.</li>
+<li>For payments: Stripe processes your payment details; we receive only the order id, amount, email and report id, never card numbers. The payment link passes the report id and your store's domain to Stripe, stored with the payment, so your paid report can be recovered or regenerated for 30 days.</li>
 <li>If you email us: the message and your email address.</li></ul>
 <h3>How we use it</h3>
 <p>Only to produce and deliver your audit and fix pack, handle refunds and support. We never sell or rent data or use it for advertising.</p>

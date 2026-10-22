@@ -16,9 +16,16 @@ Flow (no Stripe SDK, stdlib + requests):
      the same redeem(): it re-fetches the session from the API too, so both routes share one ledger
      and a session unlocks exactly once.
 Without STRIPE_RESTRICTED_KEY or AIV_STRIPE_PAYMENT_LINK_ID nothing unlocks.
+
+Surviving a wiped disk (Render free): client_reference_id is "<audit_id>_<base32(store domain)>" (<= 200 chars,
+Stripe's allowed alphabet), so a verified session alone says WHICH audit was paid and WHICH store to (re)generate
+it for. /paid redirects to /order/<id>?s=<session_id>; when the local state is gone, /order re-verifies the
+session with Stripe and rebuilds the unlock (and re-runs the report once). The session is bound to its audit id
+by Stripe, so replaying it can only re-open the same order: harmless.
 """
 from __future__ import annotations
 
+import base64
 import json
 import os
 import re
@@ -35,6 +42,8 @@ DEFAULT_PAYMENT_LINK = "https://buy.stripe.com/fZu00k2l84Zz9YibSt0Ny02"   # $19 
 SESSION_RE = re.compile(r"^cs_(test|live)_[A-Za-z0-9]{10,200}$")
 AUDIT_ID_RE = re.compile(r"^[0-9]{8}-[0-9]{6}-[0-9a-f]{6}$")
 EMAIL_RE = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,190}\.[A-Za-z]{2,24}$")
+REF_RE = re.compile(r"^([0-9]{8}-[0-9]{6}-[0-9a-f]{6})(?:_([a-z2-7]{1,176}))?$")
+HOST_RE = re.compile(r"^(?=.{1,110}$)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z][a-z0-9-]{0,61}[a-z0-9]$")
 API = "https://api.stripe.com/v1/checkout/sessions/"
 _ledger_lock = threading.Lock()
 
@@ -43,11 +52,43 @@ def payment_link_url() -> str:
     return os.environ.get("AIV_STRIPE_PAYMENT_LINK") or DEFAULT_PAYMENT_LINK
 
 
-def payment_url(audit_id: str, email: str | None = None) -> str:
-    """Buy-button URL that maps the payment back to the audit."""
+def encode_domain(domain: str) -> str | None:
+    d = (domain or "").lower().strip().rstrip(".")
+    if not HOST_RE.match(d):
+        return None
+    return base64.b32encode(d.encode()).decode().rstrip("=").lower()
+
+
+def decode_domain(b32: str) -> str | None:
+    try:
+        raw = base64.b32decode(b32.upper() + "=" * (-len(b32) % 8)).decode("ascii")
+    except (ValueError, UnicodeDecodeError):
+        return None
+    return raw if HOST_RE.match(raw) else None
+
+
+def make_ref(audit_id: str, domain: str | None = None) -> str:
+    """client_reference_id: audit id, plus the store domain when it fits (it always does for real domains)."""
     if not AUDIT_ID_RE.match(audit_id or ""):
         raise ValueError("bad audit id")
-    url = f"{payment_link_url()}?client_reference_id={quote(audit_id)}"
+    enc = encode_domain(domain) if domain else None
+    ref = f"{audit_id}_{enc}" if enc else audit_id
+    return ref if len(ref) <= 200 else audit_id
+
+
+def parse_ref(ref: str) -> tuple[str, str | None] | None:
+    m = REF_RE.match(ref or "")
+    if not m:
+        return None
+    dom = decode_domain(m.group(2)) if m.group(2) else None
+    if m.group(2) and not dom:
+        return None
+    return m.group(1), dom
+
+
+def payment_url(audit_id: str, email: str | None = None, domain: str | None = None) -> str:
+    """Buy-button URL that maps the payment back to the audit (and its store, for recovery after a wipe)."""
+    url = f"{payment_link_url()}?client_reference_id={quote(make_ref(audit_id, domain))}"
     if email and EMAIL_RE.match(email):
         url += f"&prefilled_email={quote(email)}"
     return url
@@ -106,6 +147,11 @@ def _integration_amount(s: dict) -> tuple[int | None, str]:
 
 def verify_session(s: dict, session_id: str | None = None) -> str:
     """Return the audit id if the session is a real, complete $19 purchase from our Payment Link."""
+    return verify_session_ref(s, session_id)[0]
+
+
+def verify_session_ref(s: dict, session_id: str | None = None) -> tuple[str, str | None]:
+    """(audit_id, store domain or None) of a real, complete $19 purchase from our Payment Link."""
     if s.get("object") != "checkout.session" or (session_id and s.get("id") != session_id):
         raise PaymentError("session_mismatch", 400)
     link_id = os.environ.get("AIV_STRIPE_PAYMENT_LINK_ID", "")
@@ -120,10 +166,10 @@ def verify_session(s: dict, session_id: str | None = None) -> str:
     want_cur = os.environ.get("AIV_STRIPE_EXPECTED_CURRENCY", "usd").lower()
     if amount != want_amt or cur != want_cur:
         raise PaymentError("wrong_amount", 402, f"{amount} {cur}")
-    aid = s.get("client_reference_id") or ""
-    if not AUDIT_ID_RE.match(aid):
+    parsed = parse_ref(s.get("client_reference_id") or "")
+    if not parsed:
         raise PaymentError("no_audit_id", 400)
-    return aid
+    return parsed
 
 
 def ledger_path() -> Path:
@@ -144,24 +190,35 @@ def _used(session_id: str) -> dict | None:
     return None
 
 
-def redeem(session_id: str, source: str, unlock) -> dict:
-    """Verify via the Stripe API, then unlock once. `unlock(audit_id, source)` -> bool (audit exists).
+def redeem(session_id: str, source: str, ensure, expect_audit_id: str | None = None) -> dict:
+    """Verify via the Stripe API, then make sure the order is unlocked. Idempotent and replay-safe.
 
+    `ensure(audit_id, domain, source)` -> bool: unlocks the existing audit, or rebuilds the order from the
+    domain when the local state was wiped; False if neither is possible. The used-session ledger records the
+    first redemption; a replay (or a redemption after a wipe) can only re-open the same audit id, because the
+    id comes from the session's client_reference_id, which Stripe stores and the buyer cannot change.
     Returns {"audit_id", "status": "unlocked" | "already_redeemed"}; raises PaymentError otherwise.
     """
     s = fetch_session(session_id)
-    aid = verify_session(s, session_id)
+    aid, domain = verify_session_ref(s, session_id)
+    if expect_audit_id and aid != expect_audit_id:
+        raise PaymentError("session_mismatch", 400, "session belongs to another order")
+    # rebuilding a wiped/purged order is allowed for AIV_RECOVERY_DAYS (default 30) after purchase, so an old
+    # bookmarked link can't regenerate a report forever; existing orders are re-opened regardless
+    max_age = float(os.environ.get("AIV_RECOVERY_DAYS", "30")) * 86400
+    created = s.get("created")
+    if domain and isinstance(created, (int, float)) and time.time() - created > max_age:
+        domain = None
     with _ledger_lock:
         prev = _used(session_id)
-        if prev:
-            return {"audit_id": prev["audit_id"], "status": "already_redeemed"}
-        ok = unlock(aid, f"{source}:{session_id}")
-        rec = {"session_id": session_id, "audit_id": aid, "source": source, "at": int(time.time()),
-               "livemode": bool(s.get("livemode")), "audit_found": bool(ok)}
-        ledger_path().parent.mkdir(parents=True, exist_ok=True)
-        with ledger_path().open("a") as f:
-            f.write(json.dumps(rec) + "\n")
+        ok = ensure(aid, domain, f"{source}:{session_id}")
+        if not prev:
+            rec = {"session_id": session_id, "audit_id": aid, "source": source, "at": int(time.time()),
+                   "livemode": bool(s.get("livemode")), "audit_found": bool(ok)}
+            ledger_path().parent.mkdir(parents=True, exist_ok=True)
+            with ledger_path().open("a") as f:
+                f.write(json.dumps(rec) + "\n")
     if not ok:
-        # paid, but the audit is gone (purged after 7 days or wrong id): needs a manual refund/re-run
+        # paid, but the audit is gone and the session carries no store domain: manual refund/re-run
         raise PaymentError("audit_not_found", 404, aid)
-    return {"audit_id": aid, "status": "unlocked"}
+    return {"audit_id": aid, "status": "already_redeemed" if prev else "unlocked"}

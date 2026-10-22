@@ -13,6 +13,13 @@ Security
   * The token is never logged or echoed; failures are logged with IP only.
   * Every attempt that passes auth is appended to data/admin/unlocks.jsonl (append-only, also no-ops) and
     printed to stdout as `ADMIN_AUDIT {json}` (survives in Render logs); failed auth too (IP only).
+
+Surviving a wiped disk (Render free)
+  * The response carries `order_url` (and `order_link` with the public base): /order/<id>?u=<signed>. Send that
+    link to the buyer; it rebuilds the unlock + report by itself after a wipe (aiv/orders.py).
+  * Each log record includes the store `domain`, so `python3 -m aiv admin-reapply <exported log> --remote <URL>`
+    re-applies every logged unlock (idempotent).
+  * Pass `url` (store URL or domain) to unlock an audit whose files are already gone.
 """
 from __future__ import annotations
 
@@ -129,6 +136,15 @@ def validate(body: dict) -> dict:
     out["ref"] = ref or None
     if ch in ("wechat", "alipay", "bank") and not ref:
         raise AdminError(f"ref (payment transaction/note reference) is required for channel {ch}")
+    # optional: the store, to rebuild an audit whose files were wiped (Render free disk) and to sign the order link
+    dom = str(body.get("url") or body.get("domain") or "").strip().lower()
+    if dom:
+        from urllib.parse import urlparse
+        from .payments import HOST_RE
+        host = urlparse(dom if "://" in dom else f"https://{dom}").hostname or ""
+        if not HOST_RE.match(host):
+            raise AdminError("url/domain: a public store domain, e.g. shop.example.com")
+        out["domain"] = host
     return out
 
 
@@ -165,21 +181,69 @@ def _security_log(rec: dict):
 
 
 def unlock_audit(fields: dict, source: str, wait: bool = False) -> dict:
-    """Same unlocked state + report trigger as /paid. Idempotent; every call is logged."""
-    from .server import mark_paid_and_run_full, report_dir
+    """Same unlocked state + report trigger as /paid. Idempotent; every call is logged (with the store domain, so
+    the log alone can re-apply it after a wipe: reapply_from_log). Returns a server-signed order link the buyer can
+    keep: it rebuilds the unlock by itself if the server's disk was wiped (aiv/orders.py)."""
+    from .server import ensure_paid, order_meta, report_dir, store_domain
+    from . import orders
     aid = fields["audit_id"]
     d = report_dir(aid)
-    if not (d / "audit.json").exists():
+    meta = order_meta(d)
+    domain = store_domain(meta) or fields.get("domain")
+    if meta is None and not domain:
         result = "not_found"
     elif (d / "paid.json").exists():
         result = "already_unlocked"
     else:
-        result = "unlocked"
-    rec = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), **fields, "source": source, "result": result}
+        result = "unlocked" if meta is not None else "rebuilt"
+    rec = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), **{k: v for k, v in fields.items() if k != "domain"},
+           "domain": domain, "source": source, "result": result}
+    if result in ("unlocked", "rebuilt", "already_unlocked"):
+        pay = {k: fields.get(k) for k in ("channel", "amount", "currency", "ref", "by")}
+        ok = ensure_paid(aid, domain, f"admin:{fields['channel']}:{fields.get('ref') or '-'}", wait=wait,
+                         extra={"manual": pay})
+        if not ok:
+            rec["result"] = result = "not_found"
     _append(rec)
     if result == "not_found":
-        raise AdminError("audit not found (expired after 7 days or wrong id)", 404)
-    if result == "unlocked":
-        pay = {k: fields[k] for k in ("channel", "amount", "currency", "ref", "by")}
-        mark_paid_and_run_full(aid, f"admin:{fields['channel']}:{fields.get('ref') or '-'}", wait=wait, extra={"manual": pay})
-    return {"audit_id": aid, "result": result, "order_url": f"/order/{aid}"}
+        raise AdminError("audit not found (expired/wiped): pass the store url/domain to rebuild it", 404)
+    path = orders.order_path(aid, domain)
+    out = {"audit_id": aid, "result": result, "order_url": path}
+    if orders.public_base():
+        out["order_link"] = orders.public_base() + path
+    return out
+
+
+def parse_log(lines) -> list[dict]:
+    """Admin unlock records from an exported log: `ADMIN_AUDIT {json}` lines (Render logs) or plain JSONL."""
+    out = []
+    for line in lines:
+        line = line.strip()
+        j = line.find("{")
+        if j < 0 or ("ADMIN_AUDIT" not in line[:j] and j != 0):
+            continue
+        try:
+            rec = json.loads(line[j:])
+        except ValueError:
+            continue
+        if isinstance(rec, dict) and rec.get("audit_id") and rec.get("result") in ("unlocked", "rebuilt", "already_unlocked"):
+            out.append(rec)
+    return out
+
+
+def reapply_from_log(lines, by: str, apply) -> list[dict]:
+    """Re-apply every logged manual unlock once per audit id. `apply(fields)` performs it (locally or remotely)."""
+    seen, results = set(), []
+    for rec in parse_log(lines):
+        aid = rec["audit_id"]
+        if aid in seen:
+            continue
+        seen.add(aid)
+        fields = {"audit_id": aid, "by": by, "reason": f"reapply after wipe: {str(rec.get('reason') or '')[:150]}",
+                  "channel": rec.get("channel") or "other", "amount": rec.get("amount"),
+                  "currency": rec.get("currency"), "ref": rec.get("ref"), "url": rec.get("domain")}
+        try:
+            results.append({"audit_id": aid, **apply(validate(fields))})
+        except AdminError as e:
+            results.append({"audit_id": aid, "result": "error", "error": str(e)})
+    return results

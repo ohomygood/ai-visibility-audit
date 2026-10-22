@@ -89,8 +89,8 @@ So whichever route arrives first, redirect or webhook, unlocks the audit, and th
 | `status` / `mode` / `payment_status` | `complete` / `payment` / `paid` |
 | `payment_link` | `== AIV_STRIPE_PAYMENT_LINK_ID` |
 | amount + currency | `amount_total == 1900` and `currency == usd` (integration currency, see Adaptive Pricing below) |
-| `client_reference_id` | a well-formed audit id that still exists (audits are deleted after 7 days) |
-| single use | session id not already in `data/stripe/used_sessions.jsonl` |
+| `client_reference_id` | `<audit_id>[_<base32 store domain>]`; the audit must exist, or be rebuildable from the domain within `AIV_RECOVERY_DAYS` (docs/recovery.md) |
+| single use / replay | the session can only ever open the audit named in its own `client_reference_id`, so a replay re-opens the same order; first redemption logged in `data/stripe/used_sessions.jsonl` |
 
 ## Adaptive Pricing notes
 
