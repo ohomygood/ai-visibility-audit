@@ -18,6 +18,8 @@ for p in pathlib.Path("site").glob("*"):
             t = re.sub(r'https://buy\.stripe\.com/__PENDING_USD_19__', pay, t)
         p.write_text(t, encoding="utf-8")
 PY
+# WeChat block: off unless AIV_WECHAT_ENABLED=1 AND the QR is uploaded next to the site (never from git).
+if [ "${AIV_WECHAT_ENABLED:-0}" != "1" ]; then sed -i 's/ENABLED: true,/ENABLED: false,/' site/config.js; fi
 touch site/.nojekyll
 left=$(grep -l "__AIV_DOMAIN__\|__PENDING" site/* || true)
 if [ -n "$left" ] && [ "${ALLOW_PLACEHOLDERS:-0}" != "1" ]; then
