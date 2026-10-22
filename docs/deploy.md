@@ -6,12 +6,16 @@
 | Backend API | https://ai-visibility-audit-api.onrender.com (health: `/healthz`) | Render free web service `ai-visibility-audit-api` (Docker, Singapore), `srv-dbcpdg29lscs73em5hsg` |
 | Source | https://github.com/ohomygood/ai-visibility-audit | public, all rights reserved (`LICENSE`) |
 
-State: **test-safe**.
+State (updated 2026-10-22 13:25 UTC+8): **payments live**.
 - `AIV_ENV=production`, engines are Gemini only (free tier). The stub is refused and `/dev/unlock` returns 404.
-- There is no `STRIPE_RESTRICTED_KEY` or Payment Link ID, so `/paid` refuses every session and the paywall stays locked.
+- `STRIPE_RESTRICTED_KEY` (`rk_live`, read-only) and `AIV_STRIPE_PAYMENT_LINK_ID=plink_1UTDOTJvue1A936QJOyknFEh` are set on Render.
+  `/healthz` shows `"payments_configured": true`. Fake sessions are rejected (`session_not_found`).
+  `AIV_ORDER_LINK_SECRET` is set for signed admin order links.
+- Payment Link (verified read-only via the API): active, 1900 USD × 1, promo codes off, after-completion redirect to the `/paid` URL below.
+- Key permissions (verified): Read on Payment Links, Checkout Sessions, Charges, Balance transactions and PaymentIntents. Customers is denied.
 - The WeChat block is off (`AIV_WECHAT_ENABLED=0` on Render; `ENABLED: false` in the deployed `config.js`). The QR is not uploaded anywhere.
 
-## Stripe, when ready (owner's dashboard)
+## Stripe settings (done; for reference)
 
 - Payment Link `https://buy.stripe.com/fZu00k2l84Zz9YibSt0Ny02` → After payment → redirect to:
   `https://ai-visibility-audit-api.onrender.com/paid?session_id={CHECKOUT_SESSION_ID}`
